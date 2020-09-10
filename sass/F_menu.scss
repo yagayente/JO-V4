@@ -1,0 +1,84 @@
+$hauteur_menu: 100px;
+$hauteur_menu_mobile: 150px;
+
+.navigation .is-active {
+  color: red;
+}
+
+.menu {
+  z-index: 88888;
+  background-color: white;
+  @include prefix(transition, background-color 0.4s linear, moz webkit ms);
+  position: fixed;
+}
+.whiteit {
+    @include respond-to(small-screens){height: $hauteur_menu_mobile; margin-bottom: $gouttiere_small;};
+    @include respond-to(medium-screens){height: $hauteur_menu; margin-bottom: $gouttiere_medium;};
+    @include respond-to(wide-screens){height: $hauteur_menu; margin-bottom: $gouttiere_large;};
+    width: 100%;
+    display: block;
+}
+.active_gauche {
+    background-color: #f86720;
+    @include prefix(transition, background-color 0.4s linear, moz webkit ms);
+    a.bouton_color_gauche {
+      color: white;
+    }
+    a.bouton_color_droite {
+      color: white;
+    }
+}
+.active_droite {
+  background-color: #60b540;
+  @include prefix(transition, background-color 0.4s linear, moz webkit ms);
+  a.bouton_color_droite {
+    color: white;
+  }
+  a.bouton_color_gauche {
+    color: white;
+  }
+}
+
+.menu {
+  width: 100%;
+  border-bottom: 1px solid black;
+  @include respond-to(wide-screens){height: $hauteur_menu;};
+  @include respond-to(medium-screens){height: $hauteur_menu;};
+  @include respond-to(small-screens){height: $hauteur_menu_mobile;};
+  .left {
+    @include respond-to(wide-screens){width: 50%;};
+    @include respond-to(medium-screens){width: 50%;};
+    @include respond-to(small-screens){width: 100% ; text-align: center};
+    float: left;
+    h1 {
+      @include respond-to(wide-screens){padding: $gouttiere_large 0 0 $gouttiere_large};
+      @include respond-to(medium-screens){padding: $gouttiere_medium 0 0 $gouttiere_medium};
+      @include respond-to(small-screens){padding: $gouttiere_small 0 0 $gouttiere_small};
+    }
+  }
+  .right {
+    @include respond-to(wide-screens){width: 50%;};
+    @include respond-to(medium-screens){width: 50%;};
+    @include respond-to(small-screens){width: 100%; float: none};
+    float: left;
+    text-align: right;
+    .linking {
+      @include respond-to(wide-screens){padding: $gouttiere_large $gouttiere_large 0 0};
+      @include respond-to(medium-screens){padding: $gouttiere_medium $gouttiere_medium 0 0};
+      @include respond-to(small-screens){padding: 0};
+    }
+    .linking h2
+      {display: inline-block;
+        @include respond-to(small-screens){ text-align: center;position: relative; bottom: 0;};}
+    .linking h2:first-child{
+      @include respond-to(small-screens){float: left; padding-left: $gouttiere_small;};
+      @include respond-to(medium-screens){padding-right: $gouttiere_medium;};
+      @include respond-to(wide-screens){padding-right: $gouttiere_large;};
+    }
+    .linking h2:nth-of-type(2){
+      @include respond-to(small-screens){float: right;  padding-right: $gouttiere_small};
+      @include respond-to(medium-screens){float: none;};
+      @include respond-to(wide-screens){float: none;};
+    }
+  }
+}

@@ -1,0 +1,12 @@
+Diaporama
+Fonctionnalités 
+- Lazy load image
+- Image srcset
+- Repeater ACF
+
+Instructions
+- include le diaporama dans la page correspondante
+<?php get_template_part( 'parts/diaporama/diaporama' ); ?>
+- function php : intégrer le css + le js
+- ACF Repeater : sortir les images en "ID"
+- Vérifier les champs ACF et leurs appellations

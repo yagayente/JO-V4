@@ -1,0 +1,275 @@
+@import "D_grid.scss";
+// Variable
+$black: black;
+$gris: gray;
+$white: white;
+$blue: blue;
+$green: #5cff8d;
+$yellow: yellow;
+$red: #ff6c5c;
+$color1: red;
+$color2: yellow;
+
+$space: 20px;
+
+ // button
+$color_hover: $blue;
+$color_check: #1818c9;
+$color_disabled: #dbdbdb;
+$input_padding: $space/2 $space/3 $space/2 $space/3; // input et boutons
+$input_margin: $space/2;
+
+
+$exposant:  0.6em;
+
+// NORMALISATION
+$font_size_norm:20px;
+$line_height_norm: 23px;
+
+
+@font-face {
+    font-family: 'vonnesttthinregular';
+    src: url('fonts/vonntthn-webfont.woff2') format('woff2'),
+         url('fonts/vonntthn-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'vonnesttmediumextregular';
+    src: url('fonts/vonntmde-webfont.woff2') format('woff2'),
+         url('fonts/vonntmde-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'gt_alpina_typewriterlight';
+    src: url('fonts/GT-Alpina-Typewriter-Light.woff2') format('woff2'),
+         url('fonts/GT-Alpina-Typewriter-Light.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@mixin parameter ($font-size-global, $line-height-global, $hauteur_descente){
+  @include font-size($font-size-global);
+  @include line-height($line-height-global);
+    @include respond-to(wide-screens) {@include font-size($font-size-global); @include line-height($line-height-global);}
+    @include respond-to(medium-screens) {@include font-size($font-size-global/1.1); @include line-height($line-height-global/1.1);}
+    @include respond-to(small-screens){@include font-size($font-size-global*1.1); @include line-height($line-height-global*1.1);}
+}
+
+$trait:  $font_size_norm/19 solid black;
+$trait_over: $font_size_norm/15 solid white;
+
+
+@mixin fontstack_1 {font-family: 'vonnesttthinregular', arial;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;}
+
+@mixin fontstack_2 {font-family: 'vonnesttmediumextregular', arial;
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;}
+
+@mixin fontstack_3 {font-family: 'gt_alpina_typewriterlight', arial;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;}
+
+
+@mixin fontstack_mono {font-family: monospace;}
+
+
+// Feuille de style texte 1
+$font_1 : times;
+@mixin typo_texte{@include fontstack_1; @include parameter($font_size_norm, $line_height_norm, 0);}
+// Feuille de style texte 2
+@mixin typo_titre{@include fontstack_1; color: $black; text-decoration: none; @include parameter($font_size_norm*1.2, $line_height_norm*1.2, 0);}
+// Feuille de style BOLD
+@mixin glyph{@include fontstack_3; @include parameter($font_size_norm, $line_height_norm, 0);}
+// Feuille de style barré
+@mixin typo_grostexte{@include fontstack_1; color: $black; text-decoration: none; @include parameter($font_size_norm*1.8, $line_height_norm*1.8, 0);}
+// Feuille de style BOLD
+@mixin typo_bold{@include fontstack_2; @include parameter($font_size_norm, $line_height_norm, 0);}
+// Feuille de style italic
+@mixin italic{@include fontstack_1; font-style: italic; @include parameter($font_size_norm, $line_height_norm, 0);}
+// Feuille de style barré
+@mixin typo_titre_liste_mobile{color: $black; @include fontstack_1; @include parameter($font_size_norm/1.5, $line_height_norm/1.5, 0);}
+// Typo nom des projets sur mobile
+
+// Feuille de style petit texte
+@mixin petit_texte {font-size: 70%; line-height: 70%;}
+// Feuille de style monospace
+@mixin monospace{@include fontstack_mono; @include parameter($font_size_norm, $line_height_norm, 0);}
+
+
+// Calculateurs
+@function calculateRem($size) {$remSize: $size / 16px; @return $remSize * 1rem;}
+@mixin font-size($size) {font-size: $size; font-size: calculateRem($size);}
+@function calculateRem_lh($size) {$remSize: $size / 16px; @return $remSize * 1rem;}
+@mixin line-height($size) {line-height: $size; line-height: calculateRem_lh($size);}
+
+
+// Mixin à ne pas toucher (? pour l'instant)
+@mixin h1 {@include typo_titre;} // h2h3h4h5...
+@mixin a{position: relative; text-decoration: none; color:$red;}
+@mixin a_hover{color:$color_hover;}
+@mixin b{@include typo_bold;} // bold html
+@mixin strong {@include typo_bold;}// important text
+@mixin small {@include petit_texte;}// petit text
+@mixin s{position: relative; text-decoration: none; }
+@mixin del {position: relative; text-decoration: none;} // fragment texte supprimé comme github
+@mixin ins { text-decoration: none;} // fragment texte inséré comme github
+@mixin sup {vertical-align: 20%;}// exposant
+@mixin sub {vertical-align: bottom;}// exposant bas H20
+@mixin mark {background-color:yellow; } // mettre les paddings
+@mixin i{@include italic;} // italic
+@mixin u{position: relative; text-decoration: none;} // erreur orthographe et autre soulignement
+@mixin em {@include italic;}
+@mixin p {@include typo_texte;}
+@mixin q {@include typo_texte;}
+@mixin blockquote($ol_ul_gen) {padding-left: $ol_ul_gen; margin: 0; border-left: $trait;}
+@mixin hr($ol_ul_gen) {clear: both; visibility: hidden; height: $ol_ul_gen; margin: 0; padding: 0; border-width: 0px;}
+@mixin cite {@include typo_texte;};
+
+@mixin table {width: 100%;}
+@mixin thead {border-bottom: $trait;}
+@mixin tfoot {}
+@mixin tbody {}
+@mixin th {text-align: left; @include parameter($font_size_norm, $line_height_norm, 0)}
+@mixin td { @include parameter($font_size_norm, $line_height_norm, 0)}
+@mixin caption {text-align: left;}
+@mixin code {@include monospace}
+@mixin samp{@include monospace}// message type 404
+@mixin fig_caption {}
+@mixin kdb {@include monospace; @include petit_texte; text-transform: uppercase; border : $trait;}
+// citation et guillemet
+
+@mixin strong{@include typo_bold}
+@mixin ul {list-style: none; }
+@mixin ol {counter-reset: number; list-style-type: none; }
+@mixin ol_li_before($ol_ul_here) { width: $ol_ul_here; margin-left: -$ol_ul_here; counter-increment: number; content: counter(number)"\a0"; display: inline-block; }
+@mixin ul_li_before($ol_ul_here) {width: $ol_ul_here; margin-left: -$ol_ul_here;  content: "-"; display: inline-block;  }
+@mixin ul_li_before_sansbullet($ol_ul_here) {width: $ol_ul_here; margin-left: -$ol_ul_here;  display: inline-block;  }
+
+@mixin abbr { text-decoration: none; cursor: crosshair;}
+// autre
+@mixin guillemet_gauche {content: "\0022\0000A0"}// avec espace
+@mixin guillemet_droite {content: "\0000A0\0022";}// avec espace
+@mixin cesure {word-wrap: break-word; hyphens: auto; }
+
+
+
+
+h1, h2, h3, h4, h5, h6, h1 a, h2 a, h3 a, h4 a, h5 a, h6 a, .signe{@include h1;};
+h1, h2 {text-transform: uppercase; }
+blockquote {@include blockquote(20px);};
+p {@include p}
+a:hover{@include a_hover}
+b {@include b}
+i{@include i}
+.soulignement{@include u; color: $black;} // anciennement "u"
+p em {@include em;}
+s {@include s}
+strong {@include strong}
+small {@include small}
+del {@include del;}
+mark {@include mark;}
+ins {@include ins}
+abbr {@include abbr}
+ol {@include ol}
+q {@include q}
+q:before {@include guillemet_gauche}
+q:after {@include guillemet_droite}
+
+
+em {@include em}
+ul li em {@include em}
+blockquote {@include blockquote(20px);}
+blockquote cite {@include cite;}
+dt:after {content: ": ";}
+hr {@include hr(20px)}
+cite {@include cite;}
+
+table {@include table}
+caption {@include caption}
+tbody {@include tbody}
+thead {@include thead}
+tfoot {@include tfoot}
+td{@include td}
+th{@include th}
+kbd{@include kdb}
+code{@include code}
+samp{@include samp}
+pre{@include monospace}
+figcaption{@include fig_caption}
+
+
+
+// FONCTION RESPONSIVE
+
+// les barrés
+s::after, del::after {
+border-bottom: $font_size_norm/19 solid black; content: ""; left: 0; position: absolute; right: 0; top: 52%;}
+@mixin barre($epaisseur_barre, $distance_barre, $padding_left, $padding_right) {
+    s::after, del::after {border-bottom: $epaisseur_barre solid black; top: $distance_barre;}
+    s, del {padding-left: $padding_left; padding-right: $padding_right}
+  }
+// les soulignés
+.soulignement:after {
+  content: "";
+  left: 0; position: absolute; right: 0;}
+@mixin soulignement($epaisseur, $colorimetrie, $distance) {
+    .soulignement:after {@include ins; border-bottom: $epaisseur solid $colorimetrie; bottom: $distance !important;}
+  }
+// surligne
+@mixin surlignement ($left, $right){
+  mark, ins, kbd {
+  padding-left: $left;
+  padding-right: $right;
+}
+  mark{background-color: $yellow;}
+  ins{background-color: $green;}
+}
+//liste
+//TOUJOURS SPECIFIER UNE CLASS SINON TOUS LES UL SAUTES
+#pageinfos ol li, #pageinfos ul li{display: block;}
+#pageinfos ol li::before {@include ol_li_before(20px)}
+#pageinfos ul {@include ul;}
+#pageinfos ul li::before {@include ul_li_before_sansbullet(20px)}
+
+#pageinfos ul.social {@include ul; }
+#pageinfos ul.social li{margin-left: 0;}
+
+#pageinfos .signe {width: 20px; @include glyph;  white-space: nowrap; display: inline-block;}
+#pageinfos ul.services li:before {content: "\2717"; @include glyph; @include ul_li_before_sansbullet(20px)}
+
+@mixin liste($marge_list){
+  #pageinfos ol li, #pageinfos ul li {margin-left: $marge_list;}
+  #pageinfos ol li::before {width: $marge_list; margin-left: -$marge_list;}
+  #pageinfos .signe {width: $marge_list;}
+  #pageinfos ul.services li:before {width: $marge_list; margin-left: -$marge_list;}
+
+}
+//exposant
+@mixin exposant ($pourcentage_taille, $m_top, $m_bottom){
+  sup { font-size: $pourcentage_taille; vertical-align: top; position: relative; top: $m_top; } // - 1-
+  sub { font-size: $pourcentage_taille; vertical-align: bottom; position: relative; bottom: $m_bottom; } // - 2
+}
+
+@media #{$large} {
+    @include soulignement(1.2px, black, 1px);
+    @include barre (1.2px, 52%, 2px, 2px);
+    @include liste(20px);
+    @include exposant (70%, -1px, -2px);
+}
+@media #{$medium} {
+    @include soulignement(1.2px, black, 1px);
+    @include barre (1.2px, 52%, 2px, 2px);
+    @include liste(20px);
+    @include exposant (70%, -1px, -2px);
+}
+@media #{$small} {
+    @include soulignement(1.5px, black, 1px);
+    @include barre (1.5px, 52%, 2px, 2px);
+    @include surlignement (2px, 6px);
+    @include liste (30px);
+    @include exposant (70%, -1px, -3px);
+}

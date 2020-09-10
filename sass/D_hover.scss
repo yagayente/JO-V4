@@ -1,0 +1,30 @@
+@import "0_MIXIN.scss";
+
+.post_hover {
+  margin-left: 28px;
+  color:white;
+  padding: 10px;
+  width:200px;
+  z-index: 9999;
+}
+.post_hover_home {
+  margin-top: -20px;
+
+}
+.post_hover_img {
+  @include fadein(0.3s);
+  z-index: 99999;
+  margin-top: -80px;
+}
+.back:hover .bar {
+}
+
+.Boxtwo {
+    z-index: 9999;
+    top: 0;
+    color: white;
+    width: 300px  !important;
+    height: 100px  !important;
+    left:-400px;
+    white-space: nowrap;
+}

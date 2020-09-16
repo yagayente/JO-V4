@@ -1,71 +1,162 @@
 @import "0_MIXIN.scss";
 @import "Wordpress_typo.scss";
+@import "0_MIXIN.scss";
+
+
 #pageinfos {
-  @include respond-to(small-screens){padding: 0 $gouttiere_small 0 $gouttiere_small};
-  @include respond-to(medium-screens){padding:  0 $gouttiere_medium 0 $gouttiere_medium};
-  @include respond-to(wide-screens){padding:  0 $gouttiere_large 0 $gouttiere_large};
-  h3{
+h3{
     display: inline-block;
+    white-space: nowrap;
     @include typo_bold;
-    @include respond-to(small-screens){padding-bottom: $gouttiere_small};
+    @include respond-to(small-screens){padding-bottom: $gouttiere_small/3};
     @include respond-to(medium-screens){padding-bottom:   $gouttiere_medium};
     @include respond-to(wide-screens){padding-bottom:   $gouttiere_large};
   }
-  .information_gauche {
-    width: 30%;
-    float: left;
-    .col_gauche_one {
-      display: block;
-      width: 100%;
-      h3 {
-        width: 100%;
-      }
-      p.adresse {
-        @include respond-to(small-screens){padding-bottom: $gouttiere_small};
-        @include respond-to(medium-screens){padding-bottom:   $gouttiere_medium};
-        @include respond-to(wide-screens){padding-bottom:   $gouttiere_large};
-      }
+  .ligne_info_un {
+    background-color: white;
+    width: 100%;
+    height: 350px;
+    @include respond-to(wide-screens){height: 400px;};
+    @include respond-to(medium-screens){height: 300px;};
+    display: block;
+    @include global_border;
+    .texte_gauche {
+      width: 50%;
+      height: 100%;
+      border-right: $border_johl;
+      @include global_border;
+      float: left;
+      overflow-y: hidden;
+      @include respond-to(wide-screens){padding: $gouttiere_large;};
+      @include respond-to(medium-screens){padding: $gouttiere_medium;};
+      @include respond-to(small-screens){padding: $gouttiere_small; border-bottom: $border_johl; width: 100%; border-right: none; height: auto;};
     }
-    .col_gauche_two {
-      display: block;
-      width: 100%;
-      h3 {
-        width: 100%;
-      }
-
-    }
-    img.profilpic {
-      width: 20%;
-      position: fixed;
-      @include respond-to(small-screens){bottom: $gouttiere_small};
-      @include respond-to(medium-screens){bottom: $gouttiere_medium};
-      @include respond-to(wide-screens){bottom: $gouttiere_large};
+    .image_droite {
+        display: block;
+        background-color: rgb(77, 77, 255);
+        float: left;
+        overflow: hidden;
+        height: 100%;
+        background-position: 50% 50%;
+        background-repeat: no-repeat;
+        text-indent: -9999px;
+        -moz-background-size: cover;
+        -webkit-background-size: cover;
+        background-size: cover;
+        @include respond-to(wide-screens){width: calc(50% - #{$gouttiere_large*2}); height: calc(100% - #{$gouttiere_large*2});  margin: $gouttiere_large;};
+        @include respond-to(medium-screens){width: calc(50% - #{$gouttiere_medium*2});height: calc(100% - #{$gouttiere_medium*2}); margin: $gouttiere_medium;};
+        @include respond-to(small-screens){display: inline-block; position: relative; height: 400px; width: calc(100% - #{$gouttiere_small*2}); margin: $gouttiere_small;};
     }
   }
-  .information_droite {
-    width: 70%;
-    float: left;
-    .info_generale {
-      display: block;
-      @include respond-to(small-screens){margin-bottom: $gouttiere_small};
-      @include respond-to(medium-screens){margin-bottom: $gouttiere_medium};
-      @include respond-to(wide-screens){margin-bottom: $gouttiere_large};
-      .header_infos {
-        width: 100%;
-        @include respond-to(small-screens){margin-bottom: $gouttiere_small};
-        @include respond-to(medium-screens){margin-bottom: $gouttiere_medium};
-        @include respond-to(wide-screens){margin-bottom: $gouttiere_large};
-        @include typo_grostexte;
-      }
-    }
+  .ligne_info_deux {
+    width: 100%;
+    background-color: yellow;
+    border-top: $border_johl;
+    height: 600px;
+    display: block;
+    @include respond-to(wide-screens){width: calc(100% - #{$gouttiere_large*2}); padding: $gouttiere_large $gouttiere_large 0 $gouttiere_large;};
+    @include respond-to(medium-screens){width: calc(100% - #{$gouttiere_medium*2}); padding: $gouttiere_medium $gouttiere_medium 0 $gouttiere_medium;};
+    @include respond-to(small-screens){ display: inline-block; width: calc(100% - #{$gouttiere_small*2}); padding: $gouttiere_small $gouttiere_small $gouttiere_small $gouttiere_small;};
     ul.colab, ul.clients, ul.services {
-      @include respond-to(small-screens){margin-bottom: $gouttiere_small};
-      @include respond-to(medium-screens){margin-bottom: $gouttiere_medium};
-      @include respond-to(wide-screens){margin-bottom: $gouttiere_large};
-
+      @include respond-to(wide-screens){padding-bottom: $gouttiere_large;};
+      @include respond-to(medium-screens){padding-bottom: $gouttiere_medium;};
+      @include respond-to(small-screens){padding-bottom: $gouttiere_small;};
     }
-
+    .info_block01 {
+      width: 40%;
+      float: left;
+      @include respond-to(medium-screens){width: 50%; margin-right: 50%; padding-bottom: $gouttiere_medium*2};
+      @include respond-to(small-screens){width: 100%; padding-bottom: $gouttiere_small;}
+    }
+    .info_block02 {
+      width: 20%;
+      float: left;
+      @include respond-to(medium-screens){width:25% ;};
+      @include respond-to-middle(MD-screens){width:33.333%; margin-left: 0;};
+      @include respond-to(small-screens){width: 100%; display: block;}
+    }
+    .info_block03 {
+      width: 20%;
+      float: left;
+      @include respond-to(medium-screens){width:25%;};
+      @include respond-to-middle(MD-screens){width:33.333%; margin-left: 0;};
+      @include respond-to(small-screens){width: 100%; display: block;}
+    }
+    .info_block04 {
+      width: 20%;
+      float: left;
+      @include respond-to(medium-screens){width:25%;};
+      @include respond-to-middle(MD-screens){width:33.333%; margin-left: 0;};
+      @include respond-to(small-screens){width: 100%; display: block;}
+    }
+    .detail_mobile {
+      @include respond-to(medium-screens){display: none};
+      @include respond-to(wide-screens){display: none}
+      .lieu {
+        padding-bottom: $gouttiere_small;
+      }
+    }
   }
+  .ligne_info_trois {
+      height: 100px;
+      bottom: 0; position: fixed;
+      @include respond-to(wide-screens){ width: calc(100% - #{$gouttiere_large*2}); padding: $gouttiere_large $gouttiere_large 0 $gouttiere_large;};
+      @include respond-to(medium-screens){width: calc(100% - #{$gouttiere_medium*2}); padding: $gouttiere_medium $gouttiere_medium 0 $gouttiere_medium;};
+      @include respond-to(small-screens){display: none};
+
+      .info_detail_01 {
+        height: 100%;
+        position:relative;
+        bottom:0;
+        width: 20%;
+        float: left;
+        @include respond-to(medium-screens){width: 25%; };
+        @include respond-to-middle(MD-screens){width:33.333%;};
+        .contenu_detail {
+          position: absolute;
+          bottom: 0;
+          @include respond-to(wide-screens){padding-bottom: $gouttiere_large;};
+          @include respond-to(medium-screens){padding-bottom: $gouttiere_medium;};
+        }
+      }
+      .info_detail_02 {
+        height: 100%;
+        position:relative;
+        bottom:0;
+        width: 40%;
+        float: left;
+        @include respond-to(small-screens){width: 100%; bottom:unset;}
+        .contenu_detail {
+          position: absolute;
+          bottom: 0;
+          width: 100%;
+          @include respond-to(wide-screens){padding-bottom: $gouttiere_large;};
+          @include respond-to(medium-screens){padding-bottom: $gouttiere_medium;};
+          @include respond-to(small-screens){padding: 0 $gouttiere_small $gouttiere_small $gouttiere_small;};
+        }
+      }
+      .info_detail_03 {
+        height: 100%;
+        position:relative;
+        bottom:0;
+        width: 40%;
+        @include respond-to(medium-screens){width: 35%;};
+        @include respond-to-middle(MD-screens){display: none;};
+        @include respond-to(small-screens){width: 100%; height: auto;}
+        float: left;
+        .contenu_detail {
+          position: absolute;
+          text-align: right;
+          right: 0;
+          bottom: 0;
+          @include respond-to(wide-screens){padding-bottom: $gouttiere_large;};
+          @include respond-to(medium-screens){padding-bottom: $gouttiere_medium;};
+          @include respond-to(small-screens){padding-bottom: $gouttiere_small; text-align: left; left: 0;};
+        }
+      }
+  }
+
+
 
 }
 

@@ -12,24 +12,41 @@
 <link href="<?php the_field('favicon', 'options'); ?>" rel="shortcut icon" type="image/x-icon" />
 <link rel="profile" href="http://gmpg.org/xfn/11">
 <?php wp_head(); ?>
-
-
 </head>
+<style>
+.active_gauche, .active_droite, .homepagecolor {
+  <?php if ( have_rows( 'degrade_ou_aplat_copie', 'option' ) ): ?>
+  	<?php while ( have_rows( 'degrade_ou_aplat_copie', 'option' ) ) : the_row(); ?>
+  		<?php if ( get_row_layout() == 'aplatbloc' ) : ?>
+  			background-color: <?php the_sub_field( 'aplat' ); ?>;
+  		<?php elseif ( get_row_layout() == 'degrade_de_couleurs' ) : ?>
+        background: linear-gradient(
+        <?php the_sub_field( 'degrade_un' ); ?>,
+  			<?php the_sub_field( 'degrade_deux' ); ?>
+        );
+  		<?php endif; ?>
+  	<?php endwhile; ?>
+  <?php else: ?>
+  	<?php // no layouts found ?>
+  <?php endif; ?>
+}
+.active_droite_second, .pageinformationcolor {
+  <?php if ( have_rows( 'degrade_ou_aplat', 'option' ) ): ?>
+  	<?php while ( have_rows( 'degrade_ou_aplat', 'option' ) ) : the_row(); ?>
+  		<?php if ( get_row_layout() == 'aplatbloc' ) : ?>
+        background-color:<?php the_sub_field( 'aplat' ); ?>;
+  		<?php elseif ( get_row_layout() == 'degrade_de_couleurs' ) : ?>
+        background: linear-gradient(
+  			<?php the_sub_field( 'degrade_un' ); ?>,
+  			<?php the_sub_field( 'degrade_deux' ); ?>
+        );
+  		<?php endif; ?>
+  	<?php endwhile; ?>
+  <?php else: ?>
+  	<?php // no layouts found ?>
+  <?php endif; ?>
+}
+</style>
 <body id="johl" onmousemove="fn(event)">
 
-
-<nav class="menu" id="Menu_background">
-  <div class="left">
-  <h1><a id="showButton" onmouseover="changeColorIn()"  onmouseout="changeColorOut()" class="homepage" href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
-  </div>
-
-  <div class="right">
-    <div class="linking">
-      <h2><a id="ButtonRight" href="<?php echo esc_url( home_url( '/' ) ); ?>" class="nav-link" onmouseover="changeColorIn_right()"  onmouseout="changeColorOut_right()">Work</a></H2>
-        <h2><a id="ButtonRight" href="<?php echo get_permalink(2); ?>" class="nav-link" onmouseover="changeColorIn_right()"  onmouseout="changeColorOut_right()">Infos</a></H2>
-    </div>
-
-
-  </div>
-</nav>
 <div class="whiteit">&nbsp</div>

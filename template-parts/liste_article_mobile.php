@@ -1,9 +1,9 @@
 <div class="liste_mobile_access" onclick="loadmenu()">
 		<div class="block_link">
 			<div class="block_link_centering">
-					<div class="arrow"><span class="spacein">&#8593;</span></div>
+					<div class="arrow"><p id="animationfleche">&#8593;</p></div>
 						<div class="nameit">Projects</div>
-					<div class="arrowdeux"><span class="spacein">&#8593;</span></div>
+					<div class="arrowdeux"><p id="animationflechedeux">&#8593;</p></div>
 			</div>
 		</div>
 </div>

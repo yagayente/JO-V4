@@ -14,8 +14,8 @@
 
         <li <?php if ( $post->ID == $wp_query->post->ID ) { echo ' class="current"'; } else {} ?>>
 
-            <a id="<?php the_ID(); ?>" class="back" onmouseover="listeFunc(<?php the_ID(); ?>)" onmouseout="listeFuncOut(<?php the_ID(); ?>)"  href="<?php the_permalink() ?>">  <?php the_title(); ?></a>
-            <span class="arrow">></span>
+            <a id="<?php the_ID(); ?>" onmouseover="listeFunc(<?php the_ID(); ?>)" onmouseout="listeFuncOut(<?php the_ID(); ?>)"  href="<?php the_permalink() ?>">  <?php the_title(); ?></a>
+            <span class="arrow">&rarr;</span>
 
             <div id="<?php the_ID(); ?>_box" class="post_hover post_hover_img" style="opacity:0; display:none;">
               <picture class="back_small">

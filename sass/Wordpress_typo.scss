@@ -13,7 +13,7 @@ $color2: yellow;
 $space: 20px;
 
  // button
-$color_hover: $blue;
+$color_hover: $gris;
 $color_check: #1818c9;
 $color_disabled: #dbdbdb;
 $input_padding: $space/2 $space/3 $space/2 $space/3; // input et boutons
@@ -23,8 +23,8 @@ $input_margin: $space/2;
 $exposant:  0.6em;
 
 // NORMALISATION
-$font_size_norm:20px;
-$line_height_norm: 23px;
+$font_size_norm:17px;
+$line_height_norm: 20px;
 
 
 @font-face {
@@ -76,18 +76,22 @@ $trait_over: $font_size_norm/15 solid white;
 
 @mixin fontstack_mono {font-family: monospace;}
 
-
-// Feuille de style texte 1
 $font_1 : times;
+// Feuille de style texte 1
 @mixin typo_texte{@include fontstack_1; @include parameter($font_size_norm, $line_height_norm, 0);}
-// Feuille de style texte 2
+// Feuille de style BOLD
+@mixin typo_bold{@include fontstack_2; @include parameter($font_size_norm/1.1, $line_height_norm/1.1, 0);}
+// Feuille de style BOLD titre
+@mixin typo_bold_titre{@include typo_bold; text-transform: uppercase;}
+// Feuille de style BOLD titre
+@mixin typo_titre_caps{@include typo_texte; text-transform: uppercase;}
+
+
 @mixin typo_titre{@include fontstack_1; color: $black; text-decoration: none; @include parameter($font_size_norm*1.2, $line_height_norm*1.2, 0);}
 // Feuille de style BOLD
-@mixin glyph{@include fontstack_3; @include parameter($font_size_norm, $line_height_norm, 0);}
+@mixin glyph{@include fontstack_3;}
 // Feuille de style barré
 @mixin typo_grostexte{@include fontstack_1; color: $black; text-decoration: none; @include parameter($font_size_norm*1.8, $line_height_norm*1.8, 0);}
-// Feuille de style BOLD
-@mixin typo_bold{@include fontstack_2; @include parameter($font_size_norm, $line_height_norm, 0);}
 // Feuille de style italic
 @mixin italic{@include fontstack_1; font-style: italic; @include parameter($font_size_norm, $line_height_norm, 0);}
 // Feuille de style barré
@@ -109,7 +113,7 @@ $font_1 : times;
 
 // Mixin à ne pas toucher (? pour l'instant)
 @mixin h1 {@include typo_titre;} // h2h3h4h5...
-@mixin a{position: relative; text-decoration: none; color:$red;}
+@mixin a{position: relative; text-decoration: none; color:$black;}
 @mixin a_hover{color:$color_hover;}
 @mixin b{@include typo_bold;} // bold html
 @mixin strong {@include typo_bold;}// important text
@@ -230,16 +234,18 @@ border-bottom: $font_size_norm/19 solid black; content: ""; left: 0; position: a
 }
 //liste
 //TOUJOURS SPECIFIER UNE CLASS SINON TOUS LES UL SAUTES
+
+$largeur_du_glyph_fleche : 20px;
+
 #pageinfos ol li, #pageinfos ul li{display: block;}
 #pageinfos ol li::before {@include ol_li_before(20px)}
 #pageinfos ul {@include ul;}
 #pageinfos ul li::before {@include ul_li_before_sansbullet(20px)}
 
 #pageinfos ul.social {@include ul; }
-#pageinfos ul.social li{margin-left: 0;}
+#pageinfos ul.social li{margin-left: 0; padding-right: 10px; float: left;}
 
 #pageinfos .signe {width: 20px; @include glyph;  white-space: nowrap; display: inline-block;}
-#pageinfos ul.services li:before {content: "\2717"; @include glyph; @include ul_li_before_sansbullet(20px)}
 
 @mixin liste($marge_list){
   #pageinfos ol li, #pageinfos ul li {margin-left: $marge_list;}

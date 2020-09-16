@@ -1,51 +1,45 @@
+
 ////// MENU HOVER COLOR
 
-function changeColorIn() {
+function changeColorIn_work() {
     var fond = document.getElementById("Menu_background");
-    var boutonleft = document.getElementById("showButton");
-    var boutonright = document.getElementById("ButtonRight");
     fond.classList.toggle('active_gauche');
-    boutonleft.classList.toggle('bouton_color_gauche');
-    boutonright.classList.toggle('bouton_color_droite');
 }
-function changeColorOut() {
+function changeColorOut_work() {
     var fond = document.getElementById("Menu_background");
-    var boutonleft = document.getElementById("showButton");
-    var boutonright = document.getElementById("ButtonRight");
     fond.classList.toggle('active_gauche');
-    boutonleft.classList.toggle('bouton_color_gauche');
-    boutonright.classList.toggle('bouton_color_droite');
+}
+function changeColorIn_infos() {
+    var fond = document.getElementById("Menu_background");
+    fond.classList.toggle('active_droite_second');
+}
+function changeColorOut_infos() {
+    var fond = document.getElementById("Menu_background");
+    fond.classList.toggle('active_droite_second');
 }
 
-function changeColorIn_right() {
-    var fond = document.getElementById("Menu_background");
-    var boutonright = document.getElementById("ButtonRight");
-    var boutonleft = document.getElementById("showButton");
-    fond.classList.toggle('active_droite');
-    boutonright.classList.toggle('bouton_color_droite');
-    boutonleft.classList.toggle('bouton_color_gauche');
-}
-function changeColorOut_right() {
-    var fond = document.getElementById("Menu_background");
-    var boutonright = document.getElementById("ButtonRight");
-    var boutonleft = document.getElementById("showButton");
-    fond.classList.toggle('active_droite');
-    boutonright.classList.toggle('bouton_color_droite');
-    boutonleft.classList.toggle('bouton_color_gauche');
-}
 ////// CALL THE MOBILE MENU
 
 function loadmenu() {
       var archive = document.getElementById("listing");
       var bodyscroll = document.getElementById("johl");
+      var arrow = document.getElementById("animationfleche");
+      var arrowsec = document.getElementById("animationflechedeux");
       archive.classList.toggle('close');
       bodyscroll.classList.toggle('noscroll');
+      arrow.classList.toggle('tourne');
+      arrowsec.classList.toggle('tournedeux');
+
 }
 function hidemenu() {
       var archive = document.getElementById("listing");
       var bodyscroll = document.getElementById("johl");
+      var arrowclose = document.getElementById("animationfleche");
+      var arrowsecclose = document.getElementById("animationflechedeux");
       archive.classList.toggle('close');
       bodyscroll.classList.toggle('noscroll');
+      arrowclose.classList.toggle('tourne');
+      arrowsecclose.classList.toggle('tournedeux');
 }
 function remove_no_scroll() {
       var bodyscroll = document.getElementById("johl");
@@ -68,12 +62,14 @@ function fn(e) {
 function myFunction(i) {
         var box = document.getElementById(i + '_box');
         box.style.opacity = 1;
+        box.style.display = 'block';
         box.style.position = 'fixed';
 }
 
 function normalImg(p) {
     var box = document.getElementById(p + '_box');
     box.style.opacity = 0;
+    box.style.display = 'none';
     box.style.position = 'absolute';
 }
 
@@ -89,11 +85,6 @@ function listeFuncOut(p) {
     box.style.opacity = 0;
     box.style.display = 'none';
    box.style.position = 'absolute';
-}
-
-function addClassCurrent() {
-    var current = document.getElementById('statut');
-    current.classList.toggle('current_page');
 }
 
 //////
@@ -132,26 +123,14 @@ function delay(n) {
     });
 }
 
+
 barba.hooks.enter(() => {
   window.scrollTo(0, 0);
-
 });
 
 
-console.log("First loading of »myPage«…");
 barba.init({
     sync: true,
-    views: [
-        {
-        namespace: 'single',
-           beforeEnter({ next }) {
-            setuphover();
-           },
-           enter(data) {
-               addClassCurrent();
-           }
-        },
-        ],// a poursuivre
     transitions: [
         {
         name: 'default',
@@ -162,12 +141,11 @@ barba.init({
             done();
 
         },
-        async enter(date) {
+        async enter(data) {
             PageTransitionEnter();
             contentAnimation();
-
         },
-        async once(date) {
+        async once(data) {
         }
     },
     {
@@ -190,7 +168,7 @@ barba.init({
           hidemenu();
           PageTransitionEnter();
           remove_no_scroll();// disparition de la class no scroll body
-          
+
       },
     },
     {
@@ -226,6 +204,7 @@ barba.init({
               }
             }
           },
+
           async leave(data) {
               const done = this.async();
               PageTransition();
@@ -239,7 +218,6 @@ barba.init({
 
         },
         async once(date) {
-            setuphover();
             contentAnimation();
         }
 

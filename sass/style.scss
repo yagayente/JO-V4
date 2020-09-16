@@ -11,7 +11,6 @@
 @import "P_single.scss";
 @import "Q_page.scss";
 @import "menu_mobile.scss";
-
 @import "Wordpress_typo.scss";
 
 @mixin small_image {
@@ -26,14 +25,19 @@ body {
   @include p;
 
 }
+
 body.noscroll {
   overflow-y: hidden;
+  @include respond-to(medium-screens){overflow-y: scroll;};
+  @include respond-to(wide-screens){overflow-y: scroll;};
 }
-
 
 // home
 ul.projet {
   width: 100%;
+  @include respond-to(small-screens){padding-top: $gouttiere_small;};
+  @include respond-to(medium-screens){padding-top: $gouttiere_medium; };
+  @include respond-to(wide-screens){padding-top: $gouttiere_large; };
   li.article {    height: 40vw;
     float: left;
     @include respond-to(small-screens){margin-bottom: $gouttiere_small;height: 60vw;};
@@ -86,7 +90,7 @@ section ul.project_list{
 
   }
     li.current a{
-      color: black !important;
+      color: $black !important;
     }
     a {
       text-decoration: none;

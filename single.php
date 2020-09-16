@@ -1,19 +1,43 @@
 <?php get_header(); ?>
 
 
+<?php if(have_posts()) : ?><?php while(have_posts()) : the_post(); ?>
+
+
+
 <div data-barba="wrapper">
+<main data-barba="container" data-barba-namespace="single">
 
+<?php get_template_part('template-parts/menu');?>
+<div
+		class="couleur_du_sommet"
+		style="
+		<?php if ( have_rows( 'degrade_ou_aplat_copie2' ) ): ?>
+			<?php while ( have_rows( 'degrade_ou_aplat_copie2' ) ) : the_row(); ?>
+				<?php if ( get_row_layout() == 'aplatbloc' ) : ?>
+					background-color: <?php the_sub_field( 'aplat' ); ?>;
+				<?php elseif ( get_row_layout() == 'degrade_de_couleurs' ) : ?>
+					background: linear-gradient(
+					<?php the_sub_field( 'degrade_un' ); ?>,
+					<?php the_sub_field( 'degrade_deux' ); ?>
+					);
+				<?php endif; ?>
+			<?php endwhile; ?>
+		<?php else: ?>
+			background-color: white;
+			<?php // no layouts found ?>
+		<?php endif; ?>
+		">
+      &nbsp
+</div>
 
-
-	<main data-barba="container" data-barba-namespace="single">
-
-	<section class="liste" >
+	<section class="liste">
 		<?php get_template_part('template-parts/liste_article');?>
 	</section>
 
-		<div class="rendu" id="rendu_single">
 
-											<?php if(have_posts()) : ?><?php while(have_posts()) : the_post(); ?>
+
+		<div class="rendu" id="rendu_single">
 
 											<div class="en_tete_article" id="yo">
 													<?php get_template_part('template-parts/presentation_projet');?>

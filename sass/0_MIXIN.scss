@@ -36,7 +36,11 @@ animation: fadeout 1s;
     top: 50%;
     @include prefix(transform, translateY(-50%), 'webkit' 'ms');
   }
-
+  @mixin positiontop {// mettre le parent en position relative
+    position: absolute;
+    top: 0%;
+    @include prefix(transform, translateY(-0%), 'webkit' 'ms');
+  }
   @mixin global_border {
     box-sizing:border-box;  -webkit-box-sizing: border-box;
        -moz-box-sizing: border-box;

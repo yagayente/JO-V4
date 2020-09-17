@@ -71,11 +71,12 @@ section.liste_deux {
       width: 100%;
   }
 }
+
 .project_list li {
   border-bottom: $border_johl;
   @include typo_titre_caps;
-height: 50px;
-position: relative;
+  height: 50px;
+  position: relative;
   a {
     @include a;
     @include center-vertically;
@@ -106,8 +107,8 @@ position: relative;
   z-index: 1;
   @include typo_bold_titre;
   @include respond-to(small-screens){margin-top: $gouttiere_small; margin-bottom: $gouttiere_small};
-  @include respond-to(medium-screens){margin-top: $gouttiere_medium*2; margin-bottom: $gouttiere_medium};
-  @include respond-to(wide-screens){margin-top: $gouttiere_large*2; margin-bottom: $gouttiere_large};
+  @include respond-to(medium-screens){margin-top: $gouttiere_medium*2.4; margin-bottom: $gouttiere_medium};
+  @include respond-to(wide-screens){margin-top: $gouttiere_large*2.05; margin-bottom: $gouttiere_large};
 }
 .third {
   width: 70%;

@@ -32,7 +32,7 @@
 </div>
 
 	<section class="liste">
-		<?php get_template_part('template-parts/liste_article');?>
+		<?php get_template_part('template-parts/liste_article_sans_hover');?>
 	</section>
 
 

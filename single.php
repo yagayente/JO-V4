@@ -3,6 +3,9 @@
 
 <?php if(have_posts()) : ?><?php while(have_posts()) : the_post(); ?>
 
+	<section class="liste">
+		<?php get_template_part('template-parts/liste_article');?>
+	</section>
 
 
 <div data-barba="wrapper">
@@ -31,9 +34,6 @@
       &nbsp
 </div>
 
-	<section class="liste">
-		<?php get_template_part('template-parts/liste_article_sans_hover');?>
-	</section>
 
 
 

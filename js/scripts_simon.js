@@ -144,6 +144,7 @@ barba.init({
         async enter(data) {
             PageTransitionEnter();
             contentAnimation();
+            let projects = data.next.container.querySelector('.liste');  
         },
         async once(data) {
         }
@@ -164,7 +165,7 @@ barba.init({
           ListeTransition(); // disparition de la liste
           done();
       },
-      async enter(date) {
+      async enter(data) {
           hidemenu();
           PageTransitionEnter();
           remove_no_scroll();// disparition de la class no scroll body

@@ -42,7 +42,7 @@ section.liste {
   overflow-y: scroll;
   top:$hauteur_menu;
   border-right: 1px solid black;
-  @include respond-to(small-screens){display: none;};
+  @include respond-to(small-screens){display: none !important;};
   @include respond-to(medium-screens){width: calc(30% - #{$gouttiere_medium_double}); padding-top:$gouttiere_medium*2; padding-left: $gouttiere_medium; padding-right: $gouttiere_medium};
   @include respond-to(wide-screens){width: calc(30% - #{$gouttiere_large_double}); padding-top:$gouttiere_large*2; padding-left: $gouttiere_large; padding-right: $gouttiere_large};
   -ms-overflow-style: none;  /* Hide scrollbar for  IE and Edge */
@@ -65,14 +65,20 @@ section.liste_deux {
    text-overflow: ellipsis;
    white-space: nowrap;
   @include typo_bold_titre;
+  .icon_active {
+      display: inline-block;
+      @include fadein(1s)
+  }
   .arrow {
       display: none;
   }
   a{
       @include center-vertically;
       text-align: right;
-        @include fadein(1s);
-      width: 100%;
+      @include fadein(1s);
+      @include respond-to(small-screens){width: calc(100% - (25px +  #{$gouttiere_small})); padding-left: $gouttiere_small;};
+      @include respond-to(medium-screens){width: calc(100% - (25px +  #{$gouttiere_medium})); padding-left: $gouttiere_medium;};
+      @include respond-to(wide-screens){width: calc(100% - (25px +  #{$gouttiere_large})); padding-left: $gouttiere_large;};
   }
 }
 
@@ -81,6 +87,22 @@ section.liste_deux {
   @include typo_titre_caps;
   height: 50px;
   position: relative;
+  .icon_active {
+    display: none;
+    width: 25px;
+    float: left;
+    height: 100%;
+    position: relative;
+    .icone_current {
+        @include center-vertically;
+        @include fontstack_3;
+        font-size: 130%;
+    }
+  }
+  .link_to_post {
+    width: 70%;
+    float: left;
+  }
   a {
     @include a;
     @include center-vertically;

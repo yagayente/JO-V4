@@ -13,6 +13,22 @@
         setup_postdata($post); ?>
 
         <li id="lien_article" class="selectionactive" onmouseover="listeFunc(<?php the_ID(); ?>)" onmouseout="listeFuncOut(<?php the_ID(); ?>)" >
+            <div class="icon_active">
+
+
+            <div class="icone_current">
+                ⚐
+             </div>
+
+
+            </div>
+
+
+
+
+
+
+
 
             <a class="link_to_post"  href="<?php the_permalink() ?>">  <?php the_title(); ?></a>
             <span class="arrow">&rarr;</span>

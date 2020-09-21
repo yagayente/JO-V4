@@ -14,6 +14,9 @@
 <?php wp_head(); ?>
 </head>
 <style>
+
+body, a:hover {cursor: url('<?php the_field('curseur', 'options'); ?>'), default;}
+
 .active_gauche, .active_droite, .homepagecolor {
   <?php if ( have_rows( 'degrade_ou_aplat_copie', 'option' ) ): ?>
   	<?php while ( have_rows( 'degrade_ou_aplat_copie', 'option' ) ) : the_row(); ?>
@@ -50,3 +53,5 @@
 <body id="johl" onmousemove="fn(event)">
 
 <div class="whiteit">&nbsp</div>
+
+<div data-barba="wrapper">

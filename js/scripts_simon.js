@@ -21,7 +21,7 @@ function changeColorOut_infos() {
 ////// CALL THE MOBILE MENU
 
 function loadmenu() {
-      var archive = document.getElementById("listing");
+      var archive = document.getElementById("liste_slide_mobile");
       var bodyscroll = document.getElementById("johl");
       var arrow = document.getElementById("animationfleche");
       var arrowsec = document.getElementById("animationflechedeux");
@@ -32,7 +32,7 @@ function loadmenu() {
 
 }
 function hidemenu() {
-      var archive = document.getElementById("listing");
+      var archive = document.getElementById("liste_slide_mobile");
       var bodyscroll = document.getElementById("johl");
       var arrowclose = document.getElementById("animationfleche");
       var arrowsecclose = document.getElementById("animationflechedeux");
@@ -48,7 +48,6 @@ function remove_no_scroll() {
      }
 }
 
-
 ////// CALL THE INFO
 
 function fn(e) {
@@ -60,14 +59,14 @@ function fn(e) {
 }
 
 function myFunction(i) {
-        var box = document.getElementById(i + '_box');
+        var box = document.getElementById(i + '_liste');
         box.style.opacity = 1;
         box.style.display = 'block';
         box.style.position = 'fixed';
 }
 
 function normalImg(p) {
-    var box = document.getElementById(p + '_box');
+    var box = document.getElementById(p + '_liste');
     box.style.opacity = 0;
     box.style.display = 'none';
     box.style.position = 'absolute';
@@ -75,14 +74,12 @@ function normalImg(p) {
 
 function listeFunc(i) {
     var box = document.getElementById(i + '_box');
-    box.style.opacity = 1;
     box.style.display = 'block';
     box.style.position = 'fixed';
 
 }
 function listeFuncOut(p) {
     var box = document.getElementById(p + '_box');
-    box.style.opacity = 0;
     box.style.display = 'none';
    box.style.position = 'absolute';
 }
@@ -98,15 +95,29 @@ function PageTransitionEnter(){
     tl.from('.rendu', {duration: 0.5, opacity: 0})
 }
 
-function ListeTransition(){
-    var tl = gsap.timeline();
-    tl.to('.liste', {duration: 0.5, opacity: 0 })
-}
-function ListeTransitionEnter(){
-    var tl = gsap.timeline();
-    tl.from('.liste', {duration: 0.5, opacity: 0 })
+function AddCurrentClass(){
+  var lien_actif = window.location.href;
+  var currentURLLink = document.querySelector("a.link_to_post[href='"+lien_actif+"']");
+  var parent = currentURLLink.parentNode;
+
+  const active = document.querySelector('.current');
+  if(active){
+    active.classList.remove('current');
+  }
+  parent.classList.add('current');
 }
 
+function ListeTransition(){
+     var tl = gsap.timeline();
+     tl.to('.liste', {duration: 0.5, opacity: 0, display:'none'})
+}
+function ListeTransitionEnter(){
+    var box = document.getElementById('listing');
+     box.style.display = 'block';
+     var tl = gsap.timeline();
+     tl.to('.liste', {duration: 0.5, opacity: 1})
+     box.scrollTo(0, 0);
+}
 function contentAnimation(){
     var tl = gsap.timeline();
     tl.from('.first', {duration: 0.5, x: 30, opacity: 0, stagger: 0.4 })
@@ -114,6 +125,13 @@ function contentAnimation(){
     tl.from('.third', {duration: 0.5,  x: 30, opacity: 0, stagger: 0.4 }, '.1')
 }
 
+
+////
+
+function hide_liste(){
+  var tl = gsap.timeline();
+  tl.from('.liste', {duration: 0.5, opacity: 0 })
+}
 function delay(n) {
     n = n || 2000;
     return new Promise(done => {
@@ -132,8 +150,13 @@ barba.hooks.enter(() => {
 barba.init({
     sync: true,
     transitions: [
+
         {
         name: 'default',
+        async beforeOnce(data) {
+          AddCurrentClass();
+        },
+
         async leave(data) {
             const done = this.async();
             PageTransition();
@@ -144,11 +167,33 @@ barba.init({
         async enter(data) {
             PageTransitionEnter();
             contentAnimation();
-            let projects = data.next.container.querySelector('.liste');  
         },
         async once(data) {
+
         }
     },
+    {
+    name: 'liste_Current',
+    from: {
+        custom: ({ trigger }) => {
+          if (trigger.classList && trigger.classList.contains('link_to_post')) {
+            return true
+          }
+        }
+      },
+    async leave(data) {
+        const done = this.async();
+        PageTransition();
+        await delay(700);
+        done();
+
+    },
+    async enter(data) {
+        AddCurrentClass();
+        PageTransitionEnter();
+        contentAnimation();
+    },
+},
     {
       name: 'menu_end',
       from: {
@@ -166,8 +211,7 @@ barba.init({
           done();
       },
       async enter(data) {
-          hidemenu();
-          PageTransitionEnter();
+            PageTransitionEnter();
           remove_no_scroll();// disparition de la class no scroll body
 
       },
@@ -205,7 +249,9 @@ barba.init({
               }
             }
           },
-
+          async beforeOnce(data) {
+            ListeTransitionEnter();
+          },
           async leave(data) {
               const done = this.async();
               PageTransition();
@@ -214,16 +260,13 @@ barba.init({
           },
           async enter(data) {
             PageTransitionEnter();
-            ListeTransitionEnter();
+            AddCurrentClass();
             contentAnimation();
-
+            ListeTransitionEnter();
         },
         async once(date) {
             contentAnimation();
         }
-
     },
-
-
 ],
 })

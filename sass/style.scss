@@ -12,6 +12,12 @@
 @import "Q_page.scss";
 @import "menu_mobile.scss";
 @import "Wordpress_typo.scss";
+@import "divers/curseur.scss";
+
+
+
+
+
 
 @mixin small_image {
   @include respond-to(small-screens){

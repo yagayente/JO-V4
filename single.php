@@ -1,15 +1,19 @@
 <?php get_header(); ?>
 
+<section class="liste" id="listing" style="z-index:4;">
+	<?php get_template_part('template-parts/liste_article');?>
+</section>
 
-<?php if(have_posts()) : ?><?php while(have_posts()) : the_post(); ?>
+	<?php
+	if ( have_posts() ) :
+		while ( have_posts() ) : the_post();
+			?>
 
-	<section class="liste">
-		<?php get_template_part('template-parts/liste_article');?>
-	</section>
 
-
-<div data-barba="wrapper">
 <main data-barba="container" data-barba-namespace="single">
+
+
+
 
 <?php get_template_part('template-parts/menu');?>
 <div
@@ -37,7 +41,7 @@
 
 
 
-		<div class="rendu" id="rendu_single">
+		<div class="rendu" id="rendu_single" style="position: relative; z-index:-3;">
 
 											<div class="en_tete_article" id="yo">
 													<?php get_template_part('template-parts/presentation_projet');?>

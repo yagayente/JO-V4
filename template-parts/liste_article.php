@@ -12,13 +12,13 @@
         foreach($lastposts as $post) :
         setup_postdata($post); ?>
 
-        <li <?php if ( $post->ID == $wp_query->post->ID ) { echo ' class="current"'; } else {} ?>>
+        <li id="lien_article" class="selectionactive" onmouseover="listeFunc(<?php the_ID(); ?>)" onmouseout="listeFuncOut(<?php the_ID(); ?>)" >
 
-            <a id="<?php the_ID(); ?>" onmouseover="listeFunc(<?php the_ID(); ?>)" onmouseout="listeFuncOut(<?php the_ID(); ?>)"  href="<?php the_permalink() ?>">  <?php the_title(); ?></a>
+            <a class="link_to_post"  href="<?php the_permalink() ?>">  <?php the_title(); ?></a>
             <span class="arrow">&rarr;</span>
 
-            <div id="<?php the_ID(); ?>_box" class="post_hover post_hover_img" style="opacity:0; display:none;">
-              <picture class="back_small">
+            <div id="<?php the_ID(); ?>_box" class="post_hover post_hover_img" style="display:none">
+              <picture class="back_small" style="position:relative; z-index:9999;">
                 <?php $image_article = get_field( 'image_article' ); ?>
                 <?php $size = 'Medium'; ?>
                 <?php if ( $image_article ) : ?>

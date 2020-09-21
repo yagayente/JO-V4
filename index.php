@@ -1,8 +1,11 @@
 <?php get_header(); ?>
 
+<section class="liste" id="listing" style="display:none;">
+	<?php get_template_part('template-parts/liste_article');?>
+</section>
 
-<div data-barba="wrapper">
-<main data-barba="container">
+
+<main data-barba="container" data-barba-namespace="homepage">
 
 <?php get_template_part('template-parts/menu');?>
 <div class="couleur_du_sommet homepagecolor">&nbsp</div>
@@ -27,7 +30,7 @@
 															</picture>
 														</a>
 
-														<div id="<?php the_ID(); ?>_box" class="post_hover post_hover_home" style="opacity:0;">
+														<div id="<?php the_ID(); ?>_liste" class="post_hover post_hover_home" style="opacity:0;">
 															<p class="titre_hover"><?php the_field( 'titre' ); ?></p>
 															<p class="sous_titre_hover"><?php the_field( 'description_breve' )?></p>
 														</div>

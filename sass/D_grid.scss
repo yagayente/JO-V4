@@ -40,6 +40,7 @@ $break-large: 1524px;
 }
 
 
+
 $small: "only screen and (max-width:"$break-small")";
 $medium: "only screen and (min-width:"$break-small + 1") and (max-width: "$break-large - 1")";
 $large: "only screen and (min-width: "$break-large")";

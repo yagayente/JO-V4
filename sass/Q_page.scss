@@ -51,12 +51,26 @@ h3{
     width: 100%;
     border-top: $border_johl;
     display: block;
-    @include respond-to(small-screens){height: unset};
 
     .info_block01 {
       width: calc(50% - 10px);
       float: left;
       @include respond-to(small-screens){width: 100%;};
+      .social_links {
+        width: 100%;
+        display: none;
+        @include respond-to(wide-screens){padding: $gouttiere_large 0 0 $gouttiere_large};
+        @include respond-to(medium-screens){padding: $gouttiere_medium 0 0 $gouttiere_medium};
+        @include respond-to(small-screens){padding: $gouttiere_small 0 0 $gouttiere_small};
+        .info_detail_01 {
+          width: 30%; float: left;
+        }
+        .info_detail_02 {
+          width: 50%; float: left;
+          p {padding: 0;}
+        }
+      }
+
 
       p {
         @include respond-to(wide-screens){padding: $gouttiere_large $gouttiere_large*4 0 $gouttiere_large;};
@@ -125,7 +139,7 @@ h3{
       display: inline-block;
       margin-top: 200px;
       @include respond-to(wide-screens){padding-bottom: $gouttiere_large;};
-      @include respond-to(medium-screens){padding-bottom: $gouttiere_medium;};
+      @include respond-to(medium-screens){padding-bottom: $gouttiere_medium; margin-top: 300px;};
       @include respond-to(small-screens){display: none};
       p.about_this_website {
         @include respond-to(wide-screens){padding-right: $gouttiere_large;};
@@ -136,12 +150,11 @@ h3{
 
   }
 
-
   .ligne_info_trois {
-      height: 100px;
+      height: 80px;
       bottom: 0; position: fixed;
-      @include respond-to(wide-screens){ width: calc(100% - #{$gouttiere_large*2}); padding: $gouttiere_large $gouttiere_large 0 $gouttiere_large;};
-      @include respond-to(medium-screens){width: calc(100% - #{$gouttiere_medium*2}); padding: $gouttiere_medium $gouttiere_medium 0 $gouttiere_medium;};
+      @include respond-to(wide-screens){ width: calc(100% - #{$gouttiere_large}); padding: $gouttiere_large $gouttiere_large 0 0;};
+      @include respond-to(medium-screens){width: calc(100% - #{$gouttiere_medium}); padding: $gouttiere_medium $gouttiere_medium 0 0;};
       @include respond-to(small-screens){display: none};
 
       .info_detail_01 {
@@ -150,8 +163,9 @@ h3{
         bottom:0;
         width: 15%;
         float: left;
-        @include respond-to(medium-screens){width: 15%; };
-        @include respond-to-middle(MD-screens){width: 15%; };
+        @include respond-to(wide-screens){width: 15%; padding-left: $gouttiere_medium;};
+        @include respond-to(medium-screens){width: 15%; padding-left: $gouttiere_medium;};
+        @include respond-to-middle(MD-screens){width: 15%; padding-left: $gouttiere_medium;};
         .contenu_detail {
           position: absolute;
           bottom: 0;
@@ -176,9 +190,17 @@ h3{
         }
       }
   }
-
-
-
+}
+@media screen and (max-height: calc(33vw + #{$hauteur_menu*2.2})) {
+  #pageinfos .ligne_info_trois {
+      display: none;
+  }
+  #pageinfos .ligne_info_deux .info_block01 .social_links {
+        display: inline-block; position: relative;
+    }
+  #pageinfos  .ligne_info_deux .about_simon{
+          margin-top: 100px;
+    }
 }
 
 #pageinfos a {@include a;}

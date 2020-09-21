@@ -22,6 +22,7 @@
 	<div class="ligne_info_deux" style="background-color: <?php the_field( 'couleur_de_fond', 'option' ); ?>">
 				<div class="info_block01">
 					<?php the_field( 'premiere_ligne', 'option' ); ?>
+					<?php get_template_part('template-parts/responsive_adresse_social');?>
 				</div>
 
 
@@ -129,7 +130,7 @@
 					</ul>
 			</div>
 		</div>
-		<div class="info_detail_02">
+		<div class="info_detail_02" >
 				<div class="contenu_detail">
 				<h3><?php the_field( 'location_basdepage', 'option' ); ?></h3>
 				<p class="adresse"><?php the_field( 'location', 'option' ); ?></p>

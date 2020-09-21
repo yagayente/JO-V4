@@ -7,13 +7,10 @@
   padding: 10px;
   width:200px;
   display: inline;
-  @include respond-to(small-screens){
   display: none;
-  }
 }
 .post_hover_home {
   margin-top: -12px;
-  @include respond-to(small-screens){display: none;};
   p.titre_hover {
     @include typo_titre_caps;
     @include respond-to(small-screens){padding-bottom: $gouttiere_small;};

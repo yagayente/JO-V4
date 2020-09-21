@@ -22,9 +22,6 @@ ul.projet {
     .back:hover img {
       opacity: 0;
       @include prefix(transition, 0.3s, moz webkit ms);
-      @include respond-to(small-screens){
-        opacity: 1;
-      }
     }
 
     .Box {

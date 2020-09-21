@@ -68,7 +68,7 @@ Theme URI: Base de travail - Simon Bouchard
 Description: Base pour construire un theme
 Author: Simon Bouchard
 Author URI: www.simonbouchard.fr
-Version: 4
+Version: 5
 */
 img.tns-lazy-img {
   height: 80vh;
@@ -6893,17 +6893,17 @@ s::after, del::after {
 }
 @media only screen and (min-width: 1524px) {
   #pageinfos .ligne_info_deux .info_block01 p {
-    padding: 15px 0 0 15px;
+    padding: 15px 60px 0 15px;
   }
 }
 @media only screen and (min-width: 721px) and (max-width: 1523px) {
   #pageinfos .ligne_info_deux .info_block01 p {
-    padding: 12px 0 0 12px;
+    padding: 12px 48px 0 12px;
   }
 }
 @media only screen and (max-width: 720px) {
   #pageinfos .ligne_info_deux .info_block01 p {
-    padding: 18px 0 0 18px;
+    padding: 18px 72px 0 18px;
   }
 }
 #pageinfos .ligne_info_deux .colonnes_listes {

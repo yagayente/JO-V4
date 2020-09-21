@@ -59,9 +59,9 @@ h3{
       @include respond-to(small-screens){width: 100%;};
 
       p {
-        @include respond-to(wide-screens){padding: $gouttiere_large 0 0 $gouttiere_large;};
-        @include respond-to(medium-screens){padding: $gouttiere_medium 0 0 $gouttiere_medium;};
-        @include respond-to(small-screens){padding: $gouttiere_small 0 0 $gouttiere_small;};
+        @include respond-to(wide-screens){padding: $gouttiere_large $gouttiere_large*4 0 $gouttiere_large;};
+        @include respond-to(medium-screens){padding: $gouttiere_medium $gouttiere_medium*4 0 $gouttiere_medium;};
+        @include respond-to(small-screens){padding: $gouttiere_small $gouttiere_small*4 0 $gouttiere_small;};
       }
     }
     .colonnes_listes {

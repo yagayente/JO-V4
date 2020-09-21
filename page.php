@@ -24,57 +24,67 @@
 					<?php the_field( 'premiere_ligne', 'option' ); ?>
 				</div>
 
-				<div class="info_block02">
-							<h3><span class="signe">&#8594;</span><?php the_field( 'titre_liste_un', 'option' ); ?></h3>
-							<ul class="colab">
-								<?php if( have_rows('listage_first', 'option') ):?>
 
-										<?php while ( have_rows('listage_first', 'option') ) : the_row();?>
-											<li>
-												<?php if (get_sub_field('lien_un')){ ?>
-												<a href="<?php the_sub_field('lien_un'); ?>" target="_blank">
-													<?php the_sub_field('appelation_un'); ?>
-												</a>
-												<?php } else {	the_sub_field('appelation_un'); }?>
-											</li>
-							<?php endwhile; else : endif; ?>
-							</ul>
-				</div>
+				<div class="colonnes_listes">
+						<div class="info_block02">
+							<div class="fer_a_gauche">
+									<h3><span class="signe">&#8594;</span><?php the_field( 'titre_liste_un', 'option' ); ?></h3>
+									<ul class="colab">
+										<?php if( have_rows('listage_first', 'option') ):?>
 
-				<div class="info_block03">
-					<h3><span class="signe">&#8594;</span><?php the_field( 'titre_liste_deux', 'option' ); ?></h3>
-					<ul class="clients">
-					<?php if( have_rows('listage_second', 'option') ):?>
+												<?php while ( have_rows('listage_first', 'option') ) : the_row();?>
+													<li>
+														<?php if (get_sub_field('lien_un')){ ?>
+														<a href="<?php the_sub_field('lien_un'); ?>" target="_blank">
+															<?php the_sub_field('appelation_un'); ?>
+														</a>
+														<?php } else {	the_sub_field('appelation_un'); }?>
+													</li>
+									<?php endwhile; else : endif; ?>
+									</ul>
+								</div>
+						</div>
 
-							<?php while ( have_rows('listage_second', 'option') ) : the_row();?>
-								<li>
-									<?php if (get_sub_field('lien_deux')){ ?>
-									<a href="<?php the_sub_field('lien_deux'); ?>" target="_blank">
-										<?php the_sub_field('appelation_deux'); ?>
-									</a>
-									<?php } else {	the_sub_field('appelation_deux'); }?>
-								</li>
-					<?php endwhile; else : endif; ?>
-					</ul>
-				</div>
+						<div class="info_block03">
+							<div class="fer_a_gauche">
+							<h3><span class="signe">&#8594;</span><?php the_field( 'titre_liste_deux', 'option' ); ?></h3>
+							<ul class="clients">
+							<?php if( have_rows('listage_second', 'option') ):?>
 
-				<div class="info_block04">
-							<h3><span class="signe">&#8594;
-							</span><?php the_field( 'titre_liste_trois', 'option' ); ?></h3>
-								<ul class="services">
-							<?php if( have_rows('listage_third', 'option') ):?>
-									<?php while ( have_rows('listage_third', 'option') ) : the_row();?>
+									<?php while ( have_rows('listage_second', 'option') ) : the_row();?>
 										<li>
-											<?php if (get_sub_field('lien_trois')){ ?>
-											<a href="<?php the_sub_field('lien_trois'); ?>" target="_blank">
-												<?php the_sub_field('appelation_trois'); ?>
+											<?php if (get_sub_field('lien_deux')){ ?>
+											<a href="<?php the_sub_field('lien_deux'); ?>" target="_blank">
+												<?php the_sub_field('appelation_deux'); ?>
 											</a>
-											<?php } else {	the_sub_field('appelation_trois'); }?>
+											<?php } else {	the_sub_field('appelation_deux'); }?>
 										</li>
 							<?php endwhile; else : endif; ?>
-								</ul>
+							</ul>
+							</div>
+						</div>
 
-				</div>
+						<div class="info_block04">
+								<div class="fer_a_gauche">
+									<h3><span class="signe">&#8594;
+									</span><?php the_field( 'titre_liste_trois', 'option' ); ?></h3>
+										<ul class="services">
+									<?php if( have_rows('listage_third', 'option') ):?>
+											<?php while ( have_rows('listage_third', 'option') ) : the_row();?>
+												<li>
+													<?php if (get_sub_field('lien_trois')){ ?>
+													<a href="<?php the_sub_field('lien_trois'); ?>" target="_blank">
+														<?php the_sub_field('appelation_trois'); ?>
+													</a>
+													<?php } else {	the_sub_field('appelation_trois'); }?>
+												</li>
+									<?php endwhile; else : endif; ?>
+										</ul>
+								</div>
+						</div>
+			</div>
+
+
 			<div class="detail_mobile">
 					<h3><?php the_field( 'location_title', 'option' ); ?></h3>
 					<p class="lieu"><?php the_field( 'location_basdepage', 'option' ); ?></p>
@@ -93,8 +103,14 @@
 								<?php endwhile; else : endif; ?>
 							</ul>
 				</div>
+
+				<div class="about_simon">
+						<p class="about_this_website">website <a href="http://simonbouchard.fr/" target="_blank">@ateliersimonbouchard</a></p>
+				</div>
+
+
 	</div>
-	<div class="ligne_info_trois" style="background: linear-gradient(rgba(0,0,0,0) 5%, <?php the_field( 'couleur_de_fond', 'option' ); ?> 40%);">
+	<div class="ligne_info_trois">
 
 		<div class="info_detail_01">
 			<div class="contenu_detail">
@@ -117,11 +133,6 @@
 				<div class="contenu_detail">
 				<h3><?php the_field( 'location_basdepage', 'option' ); ?></h3>
 				<p class="adresse"><?php the_field( 'location', 'option' ); ?></p>
-				</div>
-		</div>
-		<div class="info_detail_03">
-				<div class="contenu_detail">
-				<p class="about_this_website">website <a href="http://simonbouchard.fr/" target="_blank">@ateliersimonbouchard</a></p>
 				</div>
 		</div>
 	</div>

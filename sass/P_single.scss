@@ -71,6 +71,7 @@ section.liste_deux {
   a{
       @include center-vertically;
       text-align: right;
+        @include fadein(1s);
       width: 100%;
   }
 }
@@ -114,7 +115,8 @@ section.liste_deux {
   @include respond-to(wide-screens){margin-top: $gouttiere_large*2.05; margin-bottom: $gouttiere_large};
 }
 .third {
-  width: 70%;
+  width: 67%;
+  margin-right: 3%;
   float: left;
   z-index: 1;
   @include respond-to(small-screens){  width: 100%; margin-bottom: $gouttiere_small*2};
@@ -122,8 +124,8 @@ section.liste_deux {
   @include respond-to(wide-screens){margin-bottom: $gouttiere_large*3};
 }
 .second {
-  width: 20%;
-  margin-left: 10%;
+  width: 27%;
+  margin-left: 3%;
   float: left;
   z-index: 1;
   @include respond-to(small-screens){  margin-left: 0%; width: 100%; margin-bottom: $gouttiere_small};

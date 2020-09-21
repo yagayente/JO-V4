@@ -12,7 +12,7 @@
   }
 }
 .post_hover_home {
-  margin-top: -20px;
+  margin-top: -12px;
   @include respond-to(small-screens){display: none;};
   p.titre_hover {
     @include typo_titre_caps;

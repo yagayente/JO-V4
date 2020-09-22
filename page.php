@@ -1,5 +1,10 @@
 <?php get_header(); ?>
-<div data-barba="wrapper">
+
+<section class="liste" id="listing" style="display:none;">
+	<?php get_template_part('template-parts/liste_article');?>
+</section>
+
+
 <main data-barba="container" data-barba-namespace="informations">
 
 <?php get_template_part('template-parts/menu');?>

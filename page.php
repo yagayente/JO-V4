@@ -12,10 +12,13 @@
 						<div class="texte_gauche">
 							<?php the_field( 'deuxieme_ligne', 'option' ); ?>
 						</div>
-						<?php $image_presentation = get_field( 'image_presentation', 'option' ); ?>
-						<?php if ( $image_presentation ) : ?>
-						<?php $size = 'large'; // (thumbnail, medium, large, full or custom size) ?>
-						<div class="image_droite" style="background-image: url(<?php echo esc_url( $image_presentation['url'] ); ?>)">
+						<div class="marges_image">
+							<?php $image_presentation = get_field( 'image_presentation', 'option' ); ?>
+							<?php if ( $image_presentation ) : ?>
+							<?php $size = 'large'; // (thumbnail, medium, large, full or custom size) ?>
+
+							<div class="image_droite" style="background-image: url(<?php echo esc_url( $image_presentation['url'] ); ?>)">
+							</div>
 						</div>
 						<?php endif; ?>
 	</div>

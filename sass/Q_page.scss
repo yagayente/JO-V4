@@ -18,6 +18,7 @@ h3{
     display: block;
     @include respond-to(small-screens){height: unset;};
     @include global_border;
+
     .texte_gauche {
       width: 50%;
       height: 100%;
@@ -28,7 +29,16 @@ h3{
       overflow-y: hidden;
       @include respond-to(wide-screens){padding: $gouttiere_large;};
       @include respond-to(medium-screens){padding: $gouttiere_medium;};
-      @include respond-to(small-screens){padding: $gouttiere_small; border-bottom: $border_johl; width: 100%; border-right: none; height: auto;};
+      @include respond-to(small-screens){padding: $gouttiere_small; border-bottom: $border_johl; width: 100%; border-right: none; height: unset;};
+    }
+    .marges_image {
+      @include respond-to(wide-screens){  width: 50%; float: left; height: 100%;};
+      @include respond-to(medium-screens){  width: 50%; float: left; height: 100%;};
+      @include respond-to(small-screens){
+        background-color: white;
+        width: 100%;
+        display: inline-block;
+      };
     }
     .image_droite {
         display: block;
@@ -42,8 +52,9 @@ h3{
         -moz-background-size: cover;
         -webkit-background-size: cover;
         background-size: cover;
-        @include respond-to(wide-screens){width: calc(50% - #{$gouttiere_large*2}); height: calc(100% - #{$gouttiere_large*2});  margin: $gouttiere_large;};
-        @include respond-to(medium-screens){width: calc(50% - #{$gouttiere_medium*2});height: calc(100% - #{$gouttiere_medium*2}); margin: $gouttiere_medium;};
+        background-color: white;
+        @include respond-to(wide-screens){width: calc(100% - #{$gouttiere_large*2}); height: calc(100% - #{$gouttiere_large*2});  margin: $gouttiere_large;};
+        @include respond-to(medium-screens){width: calc(100% - #{$gouttiere_medium*2});height: calc(100% - #{$gouttiere_medium*2}); margin: $gouttiere_medium;};
         @include respond-to(small-screens){display: inline-block; position: relative; height: 60vw; width: calc(100% - #{$gouttiere_small*2}); margin: $gouttiere_small;};
     }
   }

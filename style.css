@@ -6868,7 +6868,28 @@ s::after, del::after {
     border-bottom: 1px solid black;
     width: 100%;
     border-right: none;
-    height: auto;
+    height: unset;
+  }
+}
+@media only screen and (min-width: 1524px) {
+  #pageinfos .ligne_info_un .marges_image {
+    width: 50%;
+    float: left;
+    height: 100%;
+  }
+}
+@media only screen and (min-width: 721px) and (max-width: 1523px) {
+  #pageinfos .ligne_info_un .marges_image {
+    width: 50%;
+    float: left;
+    height: 100%;
+  }
+}
+@media only screen and (max-width: 720px) {
+  #pageinfos .ligne_info_un .marges_image {
+    background-color: white;
+    width: 100%;
+    display: inline-block;
   }
 }
 #pageinfos .ligne_info_un .image_droite {
@@ -6883,17 +6904,18 @@ s::after, del::after {
   -moz-background-size: cover;
   -webkit-background-size: cover;
   background-size: cover;
+  background-color: white;
 }
 @media only screen and (min-width: 1524px) {
   #pageinfos .ligne_info_un .image_droite {
-    width: calc(50% - 30px);
+    width: calc(100% - 30px);
     height: calc(100% - 30px);
     margin: 15px;
   }
 }
 @media only screen and (min-width: 721px) and (max-width: 1523px) {
   #pageinfos .ligne_info_un .image_droite {
-    width: calc(50% - 24px);
+    width: calc(100% - 24px);
     height: calc(100% - 24px);
     margin: 12px;
   }

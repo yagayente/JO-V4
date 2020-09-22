@@ -14,24 +14,15 @@
 
         <li id="lien_article" class="selectionactive" onmouseover="listeFunc(<?php the_ID(); ?>)" onmouseout="listeFuncOut(<?php the_ID(); ?>)" >
             <div class="icon_active">
-
-
-            <div class="icone_current">
-                ⚐
-             </div>
-
-
-            </div>
-
-
-
-
-
+                    <div class="icone_current">
+                      ⚐
+                   </div>
+              </div>
 
 
 
             <a class="link_to_post"  href="<?php the_permalink() ?>">  <?php the_title(); ?></a>
-            <span class="arrow">&rarr;</span>
+            <div class="arrow">&rarr;</div>
 
             <div id="<?php the_ID(); ?>_box" class="post_hover post_hover_img" style="display:none">
               <picture class="back_small" style="position:relative; z-index:9999;">

@@ -59,7 +59,7 @@ section.liste_deux {
 
 }
 .project_list li.current {
-  height: 50px;
+  height: 40px;
   position: relative;
     overflow: hidden;
    text-overflow: ellipsis;
@@ -85,7 +85,7 @@ section.liste_deux {
 .project_list li {
   border-bottom: $border_johl;
   @include typo_titre_caps;
-  height: 50px;
+  height: 40px;
   position: relative;
   .icon_active {
     display: none;
@@ -100,7 +100,7 @@ section.liste_deux {
     }
   }
   .link_to_post {
-    width: 70%;
+    width: 90%;
     float: left;
   }
   a {
@@ -113,7 +113,12 @@ section.liste_deux {
   }
   .arrow {
     right: 0px;
+    width: 10%;
+    float: left;
+text-align: right;
     @include center-vertically;
+    @include fontstack_3;
+    font-size: 160%;
   }
 }
 .project_list li:first-child {

@@ -5248,7 +5248,7 @@ section.liste ul.project_list {
 }
 
 .project_list li.current {
-  height: 50px;
+  height: 40px;
   position: relative;
   overflow: hidden;
   text-overflow: ellipsis;
@@ -5343,7 +5343,7 @@ section.liste ul.project_list {
   line-height: 20px;
   line-height: 1.25rem;
   text-transform: uppercase;
-  height: 50px;
+  height: 40px;
   position: relative;
 }
 @media only screen and (min-width: 1524px) {
@@ -5389,7 +5389,7 @@ section.liste ul.project_list {
   font-size: 130%;
 }
 .project_list li .link_to_post {
-  width: 70%;
+  width: 90%;
   float: left;
 }
 .project_list li a {
@@ -5408,11 +5408,18 @@ section.liste ul.project_list {
 }
 .project_list li .arrow {
   right: 0px;
+  width: 10%;
+  float: left;
+  text-align: right;
   position: absolute;
   top: 50%;
   -webkit-transform: translateY(-50%);
   -ms-transform: translateY(-50%);
   transform: translateY(-50%);
+  font-family: "gt_alpina_typewriterlight", arial;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-size: 160%;
 }
 
 @media only screen and (max-width: 720px) {

@@ -1,0 +1,82 @@
+@import "../func/mixin.scss";
+
+
+  @mixin small_image {
+    @include respond-to(small-screens){
+      width: 100%;
+      padding: 0 $gouttiere_small 0 $gouttiere_small;
+    }
+  }
+
+  ul.projet {
+    width: 100%;
+    @include respond-to(small-screens){padding-top: $gouttiere_small;};
+    @include respond-to(medium-screens){padding-top: $gouttiere_medium; };
+    @include respond-to(wide-screens){padding-top: $gouttiere_large; };
+    li.article {
+      height: 40vw;
+      float: left;
+      -webkit-box-sizing: border-box;
+      -moz-box-sizing: border-box;
+      box-sizing: border-box;
+      @include respond-to(small-screens){margin-bottom: $gouttiere_small;height: 60vw;};
+      @include respond-to(medium-screens){margin-bottom: $gouttiere_medium; height: 40vw;};
+      @include respond-to(wide-screens){margin-bottom: $gouttiere_large; height: 40vw;};
+      .back {
+        display: block;
+        z-index: 3!important;
+        bottom: 0px;
+        height:100%;
+        width: 100%;
+        background-color: black;
+      }
+      .back:hover img {
+        opacity: 0;
+        @include prefix(transition, 0.3s, moz webkit ms);
+      }
+      .Box {
+        color:blue;
+        text-align: right;
+        z-index: 99999;
+        position: absolute;
+        top: 0;
+        color: white;
+        left: 0;
+        display: block;
+        white-space: nowrap;
+      }
+    }
+      li.article:nth-child(8n+1) {
+      @include respond-to(medium-screens){ width: 67%; padding: 0 $gouttiere_medium/2 0 $gouttiere_medium;}
+      @include respond-to(wide-screens){ width: 67%; padding: 0 $gouttiere_large/2 0 $gouttiere_large;}
+      @include small_image;}
+      li.article:nth-child(8n+2) {
+      @include respond-to(medium-screens){width: 33%;padding: 0 $gouttiere_medium 0 $gouttiere_medium/2;}
+      @include respond-to(wide-screens){width: 33%;padding: 0 $gouttiere_large 0 $gouttiere_large/2;}
+      @include respond-to(small-screens){width: 100%; height: 110vw; padding: 0 $gouttiere_small 0 $gouttiere_small;}
+    }
+      li.article:nth-child(8n+3) {
+      @include respond-to(medium-screens){width: 50%; height: 33vw; padding: 0 $gouttiere_medium/2 0 $gouttiere_medium;}
+      @include respond-to(wide-screens){width: 50%; height: 33vw; padding: 0 $gouttiere_large/2 0 $gouttiere_large;}
+      @include small_image;}
+      li.article:nth-child(8n+4) {
+      @include respond-to(medium-screens){width: 50%; height: 33vw; padding: 0 $gouttiere_medium 0 $gouttiere_medium/2;}
+      @include respond-to(wide-screens){width: 50%; height: 33vw; padding: 0 $gouttiere_large 0 $gouttiere_large/2;}
+      @include small_image;}
+      li.article:nth-child(8n+5) {
+      @include respond-to(medium-screens){width: 33%;padding: 0 $gouttiere_medium/2 0 $gouttiere_medium;}
+      @include respond-to(wide-screens){width: 33%;padding: 0 $gouttiere_large/2 0 $gouttiere_large;}
+      @include respond-to(small-screens){width: 100%; height: 110vw; padding: 0 $gouttiere_small 0 $gouttiere_small;}}
+      li.article:nth-child(8n+6) {
+      @include respond-to(medium-screens){ width: 67%;padding: 0 $gouttiere_medium 0 $gouttiere_medium/2;}
+      @include respond-to(wide-screens){ width: 67%;padding: 0 $gouttiere_large 0 $gouttiere_large/2;}
+      @include small_image;}
+      li.article:nth-child(8n+7) {
+      @include respond-to(medium-screens){width: 50%;  height: 33vw;  padding: 0 $gouttiere_medium/2 0 $gouttiere_medium;}
+      @include respond-to(wide-screens){width: 50%; height: 33vw;  padding: 0 $gouttiere_large/2 0 $gouttiere_large;}
+      @include small_image;}
+      li.article:nth-child(8n+8) {
+      @include respond-to(medium-screens){width: 50%;  height: 33vw;  padding: 0 $gouttiere_medium 0 $gouttiere_medium/2;}
+      @include respond-to(wide-screens){width: 50%; height: 33vw;  padding: 0 $gouttiere_large 0 $gouttiere_large/2;}
+      @include small_image;}
+  }

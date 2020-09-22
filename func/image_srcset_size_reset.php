@@ -18,16 +18,7 @@ function responsive_image($image_id,$image_size,$max_width){
 	$image_src = wp_get_attachment_image_url( $image_id, $image_size );
 	$image_srcset = wp_get_attachment_image_srcset( $image_id, $image_size );
 	$image_alt = get_post_meta($image_id, '_wp_attachment_image_alt', TRUE);
-  echo
-	'
-	alt="'.$image_alt.'"
-	data-sizes="auto"
-	data-src="'.$image_src.'"
-	data-srcset="'.$image_srcset.'"
-	srcset="'.$image_srcset.'"
-	class="lazyload"
-	';
-
+  echo 'alt="'.$image_alt.'" data-sizes="auto" data-src="'.$image_src.'" data-srcset="'.$image_srcset.'" srcset="'.$image_srcset.'" class="lazyload"';
 	}
 }
 

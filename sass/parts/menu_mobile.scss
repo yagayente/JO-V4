@@ -1,29 +1,12 @@
-@import "0_MIXIN.scss";
-@import "F_menu.scss";
-@import "Wordpress_typo.scss";
+@import "../func/mixin.scss";
+@import "menu.scss";
+@import "../func/typo.scss";
 
 $hauteur_bouton_project_mobile: $gouttiere_small*3;
 $espacelistearticlemobile : $hauteur_bouton_project_mobile + $hauteur_menu_mobile;
 
-
-#animationfleche, #animationflechedeux {
- transition: transform 0.5s;
- text-align: center;
-  @include glyph;
-}
-.tourne  {
-    transform: rotate(180deg);
-}
-.tournedeux  {
-    transform: rotate(-180deg);
-}
-
-.project_mobile_liste #block_list:nth-child(2n+1) {
-    border-right: $border_johl;
-    @include global_border;
-}
 .liste_mobile_access :hover {
-    cursor: pointer;
+  cursor: pointer;
 }
 .liste_mobile_access {
   width: 100%;
@@ -45,10 +28,44 @@ $espacelistearticlemobile : $hauteur_bouton_project_mobile + $hauteur_menu_mobil
       width: calc(100% - #{$gouttiere_small*2} );
       padding-left: $gouttiere_small;
       padding-right: $gouttiere_small;
+      .arrow {
+        @include glyph;
+        width: 5%;
+        float: left;
+      }
+      .nameit {
+        width: 90%;
+        float: left;
+        text-align: center;
+        text-transform: uppercase;
+      }
+      .arrowdeux {
+        @include glyph;
+        width: 5%;
+        float: left;
+        text-align: right;
+        transform-origin: center;
+        transition: transform 1s
+      }
+      #animationfleche, #animationflechedeux {
+        transition: transform 0.5s;
+        text-align: center;
+        @include glyph;
+      }
+      .tourne  {
+        transform: rotate(180deg);
+      }
+      .tournedeux  {
+        transform: rotate(-180deg);
+      }
+
     }
   }
 }
-
+.liste_mobile.close {
+  top: 100%;
+  height: 0;
+}
 .liste_mobile {
   z-index: 55555;
   position: fixed;
@@ -61,17 +78,21 @@ $espacelistearticlemobile : $hauteur_bouton_project_mobile + $hauteur_menu_mobil
   color: $black;
   transition: all 1s;
   overflow-y: scroll;
- -webkit-overflow-scrolling:touch; // mobile safari
- @include respond-to(medium-screens){display: none;};
- @include respond-to(wide-screens){display: none;};
- a {
-   text-decoration: none;
-   text-transform: uppercase;
- }
+  -webkit-overflow-scrolling:touch; // mobile safari
+  @include respond-to(medium-screens){display: none;};
+  @include respond-to(wide-screens){display: none;};
+  a {
+    text-decoration: none;
+    text-transform: uppercase;
+  }
   .project_mobile_liste {
     width: 100%;
     display: block;
     min-height: 100%;
+    #block_list:nth-child(2n+1) {
+      border-right: $border_johl;
+      @include global_border;
+    }
     #block_list {
       width: 50%;
       height: 200px;
@@ -105,28 +126,3 @@ $espacelistearticlemobile : $hauteur_bouton_project_mobile + $hauteur_menu_mobil
     }
   }
 }
-.liste_mobile.close {
-  top: 100%;
-  height: 0;
-}
-  .arrow {
-  @include glyph;
-  width: 5%;
-  float: left;
-
-  }
-
-  .nameit {
-  width: 90%;
-  float: left;
-  text-align: center;
-  text-transform: uppercase;
-  }
-  .arrowdeux {
-  @include glyph;
-  width: 5%;
-  float: left;
-  text-align: right;
-  transform-origin: center;
-  transition: transform 1s
-  }

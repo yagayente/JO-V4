@@ -1,104 +1,20 @@
-@use 'reset';
-@use 'A_ID';
-@use 'B_Diaporama';
-@use 'C_Object_fit';
-@import "D_grid.scss";
-@import "0_MIXIN.scss";
-@import "E_home.scss";
-@import "E_transitions.scss";
-@import "D_hover.scss";
-@import "F_menu.scss";
-@import "P_single.scss";
-@import "Q_page.scss";
-@import "menu_mobile.scss";
-@import "Wordpress_typo.scss";
-@import "divers/curseur.scss";
+@import 'ID';
+@import 'reset';
 
+@import "func/mixin.scss";
+@import "func/hover.scss";
+@import 'func/object_fit.scss';
+@import "func/grid.scss";
+@import "func/typo.scss";
 
-
-
-
-
-@mixin small_image {
-  @include respond-to(small-screens){
-    width: 100%;
-    padding: 0 $gouttiere_small 0 $gouttiere_small;
-  }
-}
-
-body {
-  overflow-x: hidden;
-  @include p;
-
-}
+@import "parts/home.scss";
+@import "parts/menu.scss";
+@import "parts/single.scss";
+@import "parts/page.scss";
+@import "parts/menu_mobile.scss";
 
 body.noscroll {
   overflow-y: hidden;
   @include respond-to(medium-screens){overflow-y: scroll;};
   @include respond-to(wide-screens){overflow-y: scroll;};
 }
-
-// home
-ul.projet {
-  width: 100%;
-  @include respond-to(small-screens){padding-top: $gouttiere_small;};
-  @include respond-to(medium-screens){padding-top: $gouttiere_medium; };
-  @include respond-to(wide-screens){padding-top: $gouttiere_large; };
-  li.article {    height: 40vw;
-    float: left;
-    @include respond-to(small-screens){margin-bottom: $gouttiere_small;height: 60vw;};
-    @include respond-to(medium-screens){margin-bottom: $gouttiere_medium; height: 40vw;};
-    @include respond-to(wide-screens){margin-bottom: $gouttiere_large; height: 40vw;};
-    .Box {
-      color:blue;
-      text-align: right;
-    }
-  }
-    li.article:nth-child(8n+1) {
-    @include respond-to(medium-screens){ width: 67%; padding: 0 $gouttiere_medium/2 0 $gouttiere_medium;}
-    @include respond-to(wide-screens){ width: 67%; padding: 0 $gouttiere_large/2 0 $gouttiere_large;}
-    @include small_image;}
-    li.article:nth-child(8n+2) {
-    @include respond-to(medium-screens){width: 33%;padding: 0 $gouttiere_medium 0 $gouttiere_medium/2;}
-    @include respond-to(wide-screens){width: 33%;padding: 0 $gouttiere_large 0 $gouttiere_large/2;}
-    @include respond-to(small-screens){width: 100%; height: 110vw; padding: 0 $gouttiere_small 0 $gouttiere_small;}
-  }
-    li.article:nth-child(8n+3) {
-    @include respond-to(medium-screens){width: 50%; height: 33vw; padding: 0 $gouttiere_medium/2 0 $gouttiere_medium;}
-    @include respond-to(wide-screens){width: 50%; height: 33vw; padding: 0 $gouttiere_large/2 0 $gouttiere_large;}
-    @include small_image;}
-    li.article:nth-child(8n+4) {
-    @include respond-to(medium-screens){width: 50%; height: 33vw; padding: 0 $gouttiere_medium 0 $gouttiere_medium/2;}
-    @include respond-to(wide-screens){width: 50%; height: 33vw; padding: 0 $gouttiere_large 0 $gouttiere_large/2;}
-    @include small_image;}
-    li.article:nth-child(8n+5) {
-    @include respond-to(medium-screens){width: 33%;padding: 0 $gouttiere_medium/2 0 $gouttiere_medium;}
-    @include respond-to(wide-screens){width: 33%;padding: 0 $gouttiere_large/2 0 $gouttiere_large;}
-    @include respond-to(small-screens){width: 100%; height: 110vw; padding: 0 $gouttiere_small 0 $gouttiere_small;}}
-    li.article:nth-child(8n+6) {
-    @include respond-to(medium-screens){ width: 67%;padding: 0 $gouttiere_medium 0 $gouttiere_medium/2;}
-    @include respond-to(wide-screens){ width: 67%;padding: 0 $gouttiere_large 0 $gouttiere_large/2;}
-    @include small_image;}
-    li.article:nth-child(8n+7) {
-    @include respond-to(medium-screens){width: 50%;  height: 33vw;  padding: 0 $gouttiere_medium/2 0 $gouttiere_medium;}
-    @include respond-to(wide-screens){width: 50%; height: 33vw;  padding: 0 $gouttiere_large/2 0 $gouttiere_large;}
-    @include small_image;}
-    li.article:nth-child(8n+8) {
-    @include respond-to(medium-screens){width: 50%;  height: 33vw;  padding: 0 $gouttiere_medium 0 $gouttiere_medium/2;}
-    @include respond-to(wide-screens){width: 50%; height: 33vw;  padding: 0 $gouttiere_large 0 $gouttiere_large/2;}
-    @include small_image;}
-}
-
-
-section ul.project_list{
-
-  li.current {
-
-  }
-    li.current a{
-      color: $black !important;
-    }
-    a {
-      text-decoration: none;
-    }
-  }

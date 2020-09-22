@@ -1,8 +1,10 @@
-@import "0_MIXIN.scss";
-@import "Wordpress_typo.scss";
-@import "0_MIXIN.scss";
+@import "../func/mixin.scss";
+@import "../func/typo.scss";
 
 #pageinfos {
+
+a {@include a;}
+a:hover {@include a_hover}
 h3{
     display: inline-block;
     white-space: nowrap;
@@ -202,6 +204,7 @@ h3{
       }
   }
 }
+
 @media screen and (max-height: calc(33vw + #{$hauteur_menu*2.2})) {
   #pageinfos .ligne_info_trois {
       display: none;
@@ -213,6 +216,3 @@ h3{
           margin-top: 100px;
     }
 }
-
-#pageinfos a {@include a;}
-#pageinfos a:hover {@include a_hover}

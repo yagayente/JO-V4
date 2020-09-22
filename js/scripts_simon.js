@@ -107,9 +107,15 @@ function AddCurrentClass(){
   parent.classList.add('current');
 }
 
+function displaynone() {
+  var box = document.getElementById('listing');
+  myVar = setTimeout(function(){  box.style.display = 'none'; }, 700);
+}
+
 function ListeTransition(){
      var tl = gsap.timeline();
-     tl.to('.liste', {duration: 0.5, opacity: 0, display:'none'})
+     tl.to('.liste', {duration: 0.5, opacity: 0});
+     displaynone();
 }
 function ListeTransitionEnter(){
     var box = document.getElementById('listing');

@@ -16,7 +16,7 @@
 <style>
 
 body{cursor: url('<?php the_field('curseur', 'options'); ?>'), default;}
-a:hover {cursor: url('<?php the_field('curseur_hover', 'options'); ?>'), default;}
+a:hover {cursor: url('<?php the_field('curseur_hover', 'options'); ?>'), pointer;}
 
 .active_gauche, .active_droite, .homepagecolor {
   <?php if ( have_rows( 'degrade_ou_aplat_copie', 'option' ) ): ?>

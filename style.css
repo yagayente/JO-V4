@@ -2437,6 +2437,7 @@ ul.projet li.article {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
+  position: relative;
 }
 @media only screen and (max-width: 720px) {
   ul.projet li.article {
@@ -2462,10 +2463,16 @@ ul.projet li.article .back {
   bottom: 0px;
   height: 100%;
   width: 100%;
-  background-color: black;
 }
 ul.projet li.article .back:hover img {
   opacity: 0;
+  -moz-transition: 0.3s;
+  -webkit-transition: 0.3s;
+  -ms-transition: 0.3s;
+  transition: 0.3s;
+}
+ul.projet li.article .back:hover {
+  background-color: black;
   -moz-transition: 0.3s;
   -webkit-transition: 0.3s;
   -ms-transition: 0.3s;

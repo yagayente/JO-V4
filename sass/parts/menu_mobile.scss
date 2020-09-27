@@ -11,7 +11,6 @@ $espacelistearticlemobile : $hauteur_bouton_project_mobile + $hauteur_menu_mobil
 .liste_mobile_access {
   width: 100%;
   z-index: 66666;
-  background-color: white;
   border-top: $border_johl;
   bottom: 0;
   position: fixed;
@@ -73,7 +72,6 @@ $espacelistearticlemobile : $hauteur_bouton_project_mobile + $hauteur_menu_mobil
   width: 100%;
   height: calc(100% - #{$espacelistearticlemobile} );
   top: $hauteur_menu_mobile;
-  background-color: $white;
   border-top: $border_johl;
   @include global_border;
   color: $black;

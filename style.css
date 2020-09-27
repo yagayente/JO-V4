@@ -6058,7 +6058,6 @@ s::after, del::after {
 .liste_mobile_access {
   width: 100%;
   z-index: 66666;
-  background-color: white;
   border-top: 1px solid black;
   bottom: 0;
   position: fixed;
@@ -6175,7 +6174,6 @@ s::after, del::after {
   width: 100%;
   height: calc(100% - 230.5px );
   top: 150px;
-  background-color: white;
   border-top: 1px solid black;
   box-sizing: border-box;
   -webkit-box-sizing: border-box;
@@ -10632,7 +10630,6 @@ s::after, del::after {
 .liste_mobile_access {
   width: 100%;
   z-index: 66666;
-  background-color: white;
   border-top: 1px solid black;
   bottom: 0;
   position: fixed;
@@ -10749,7 +10746,6 @@ s::after, del::after {
   width: 100%;
   height: calc(100% - 230.5px );
   top: 150px;
-  background-color: white;
   border-top: 1px solid black;
   box-sizing: border-box;
   -webkit-box-sizing: border-box;

@@ -6278,6 +6278,11 @@ s::after, del::after {
   }
 }
 
+section.liste::-webkit-scrollbar {
+  display: none;
+  /* Hide scrollbar for Chrome, Safari and Opera */
+}
+
 section.liste {
   border-top: 1px solid black;
   height: calc(100% - 150px);
@@ -6289,6 +6294,8 @@ section.liste {
   /* Hide scrollbar for  IE and Edge */
   scrollbar-width: none;
   /* Hide scrollbar for Firefox */
+  -webkit-overflow-scrolling: auto !important;
+  overflow: visible;
 }
 @media only screen and (max-width: 720px) {
   section.liste {
@@ -6308,10 +6315,6 @@ section.liste {
     padding-left: 18px;
     padding-right: 18px;
   }
-}
-section.liste ::-webkit-scrollbar {
-  display: none;
-  /* Hide scrollbar for Chrome, Safari and Opera */
 }
 section.liste ul.project_list {
   padding-bottom: 50px;
@@ -10862,6 +10865,16 @@ body.noscroll {
   body.noscroll {
     overflow-y: scroll;
   }
+}
+
+.lazyload,
+.lazyloading {
+  opacity: 0;
+}
+
+.lazyloaded {
+  opacity: 1;
+  transition: opacity 500ms;
 }
 
 /*# sourceMappingURL=style.css.map */

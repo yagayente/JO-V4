@@ -13,7 +13,7 @@
 				if ( have_posts() ) :
 					while ( have_posts() ) : the_post();
 					?>
-					<li class="article">
+					<li class="article lazyload" >
 						<a class="linked" href="<?php the_permalink(); ?>">
 							<picture class="back" onmouseover="myFunction(<?php the_ID(); ?>)" onmouseout="normalImg(<?php the_ID(); ?>)" ><img <?php responsive_image(get_field( 'image_article' ),'Full size','2500px'); ?> /></picture>
 						</a>

@@ -18,3 +18,12 @@ body.noscroll {
   @include respond-to(medium-screens){overflow-y: scroll;};
   @include respond-to(wide-screens){overflow-y: scroll;};
 }
+
+.lazyload,
+.lazyloading {
+	opacity: 0;
+}
+.lazyloaded {
+	opacity: 1;
+	transition: opacity 500ms;
+}

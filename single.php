@@ -85,8 +85,8 @@ if ( have_posts() ) :
 								<?php $color = get_field( 'background_body', 'options' ); ?>
 
 								<div class="text_vid"><p style="font-size: 0.1%; color:<?php echo $color ?>"><?php	the_sub_field( 'video' ); ?></P>
-									<div class="embed-container">
-								  <iframe src="https://player.vimeo.com/video/<?php echo $size ?>" frameborder="0" webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe>
+									<div class="embed-container lazyload">
+								  <iframe class="lazyload" src="https://player.vimeo.com/video/<?php echo $size ?>" frameborder="0" webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe>
 								</div>
 								</div>
 								<?php endif; ?>

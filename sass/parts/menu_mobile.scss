@@ -2,7 +2,7 @@
 @import "menu.scss";
 @import "../func/typo.scss";
 
-$hauteur_bouton_project_mobile: $gouttiere_small*3;
+$hauteur_bouton_project_mobile: $gouttiere_small*3.5;
 $espacelistearticlemobile : $hauteur_bouton_project_mobile + $hauteur_menu_mobile;
 
 .liste_mobile_access :hover {
@@ -34,6 +34,7 @@ $espacelistearticlemobile : $hauteur_bouton_project_mobile + $hauteur_menu_mobil
         float: left;
       }
       .nameit {
+        @include h1;
         width: 90%;
         float: left;
         text-align: center;
@@ -95,31 +96,28 @@ $espacelistearticlemobile : $hauteur_bouton_project_mobile + $hauteur_menu_mobil
     }
     #block_list {
       width: 50%;
-      height: 200px;
+      height: 40vw;
       float: left;
       text-align: center;
       border-bottom: $border_johl;
       @include global_border;
       .top_block_mb {
-        height: 140px;
+        height: calc(25vw + #{$gouttiere_small});
         width: 100%;
-        .back_small_mobile {
-          width: 80%;
-          height: 100px;
-        }
+
       }
       .bottom_block_mb {
-        height: 60px;
+        height: calc(15vw - #{$gouttiere_small});
         width: 100%;
         position: relative;
         p {
           @include typo_titre_liste_mobile;
           @include center-vertically-horizontally;
-          width: 80%;
+          width: 90%;
           overflow: hidden;
           text-overflow: ellipsis;
           display: -webkit-box;
-          -webkit-line-clamp: 2; /* number of lines to show */
+          -webkit-line-clamp: 1; /* number of lines to show */
           -webkit-box-orient: vertical;
         }
       }

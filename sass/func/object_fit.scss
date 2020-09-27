@@ -16,9 +16,9 @@
    }
 .back_small_mobile img{
         object-fit: cover;
-        height: calc(100% - #{$gouttiere_small});
+        height: 25vw;
         margin-top: $gouttiere_small;
-        width: calc(100% - #{$gouttiere_small*2});
+        width: calc(50vw - #{$gouttiere_small*2});
         object-position: 50% 50%;
       }
 }

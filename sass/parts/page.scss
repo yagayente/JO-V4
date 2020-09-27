@@ -9,22 +9,21 @@ h3{
     display: inline-block;
     white-space: nowrap;
     @include typo_bold;
-    @include respond-to(small-screens){padding-bottom: $gouttiere_small/3};
-    @include respond-to(medium-screens){padding-bottom:   $gouttiere_medium};
-    @include respond-to(wide-screens){padding-bottom:   $gouttiere_large};
+    @include respond-to(small-screens){padding-bottom: $petit_espace_small };
+    @include respond-to(medium-screens){padding-bottom:   $petit_espace_medium};
+    @include respond-to(wide-screens){padding-bottom:   $petit_espace_large};
   }
   .ligne_info_un {
-    background-color: white;
     width: 100%;
-    height: 33vw;
+    height: 30vw;
     display: block;
     @include respond-to(small-screens){height: unset;};
     @include global_border;
+    @include respond-to-middle(MD-screens){height: 40vw;};
 
     .texte_gauche {
       width: 50%;
       height: 100%;
-      background-color: white;
       border-right: $border_johl;
       @include global_border;
       float: left;
@@ -36,8 +35,9 @@ h3{
     .marges_image {
       @include respond-to(wide-screens){  width: 50%; float: left; height: 100%;};
       @include respond-to(medium-screens){  width: 50%; float: left; height: 100%;};
+      @include respond-to-middle(MD-screens){width: 50%;  height: 75%;};
+
       @include respond-to(small-screens){
-        background-color: white;
         width: 100%;
         display: inline-block;
       };
@@ -101,7 +101,7 @@ h3{
               float: left;
               @include respond-to(small-screens){width: 90%;};
                 .fer_a_gauche {
-                  width: 250px;
+                  width: 350px;
                     h3 {
                       @include respond-to(wide-screens){padding-top: $gouttiere_large;};
                       @include respond-to(medium-screens){padding-top: $gouttiere_medium;};
@@ -113,7 +113,7 @@ h3{
               float: left;
               @include respond-to(small-screens){width: 90%;};
               .fer_a_gauche {
-                width: 250px;
+                width: 350px;
                 @include respond-to(small-screens){width: 100%;};
                 h3 {
                   @include respond-to(wide-screens){padding-top: $gouttiere_large;};
@@ -127,7 +127,7 @@ h3{
       float: left;
       @include respond-to(small-screens){width: 90%;};
       .fer_a_gauche {
-        width: 250px;
+        width: 350px;
         @include respond-to(small-screens){width: 100%;};
         h3 {
           @include respond-to(wide-screens){padding-top: $gouttiere_large;};
@@ -151,12 +151,13 @@ h3{
       bottom: 0px;
       display: inline-block;
       margin-top: 200px;
-      @include respond-to(wide-screens){padding-bottom: $gouttiere_large;};
-      @include respond-to(medium-screens){padding-bottom: $gouttiere_medium; margin-top: 300px;};
+      @include respond-to(wide-screens){padding-bottom: $gouttiere_large; margin-top: 400px;};
+      @include respond-to(medium-screens){padding-bottom: $gouttiere_medium; margin-top: 500px;};
       @include respond-to(small-screens){display: none};
       p.about_this_website {
         @include respond-to(wide-screens){padding-right: $gouttiere_large;};
         @include respond-to(medium-screens){padding-right: $gouttiere_medium;};
+        @include respond-to-middle(MD-screens){display: none;};
         @include respond-to(small-screens){padding-right: $gouttiere_small;};
       }
     }
@@ -176,9 +177,9 @@ h3{
         bottom:0;
         width: 15%;
         float: left;
-        @include respond-to(wide-screens){width: 15%; padding-left: $gouttiere_medium;};
-        @include respond-to(medium-screens){width: 15%; padding-left: $gouttiere_medium;};
-        @include respond-to-middle(MD-screens){width: 15%; padding-left: $gouttiere_medium;};
+        @include respond-to(wide-screens){padding-left: $gouttiere_medium;};
+        @include respond-to(medium-screens){padding-left: $gouttiere_medium;};
+        @include respond-to-middle(MD-screens){width: 20%; padding-left: $gouttiere_medium;};
         .contenu_detail {
           position: absolute;
           bottom: 0;
@@ -190,7 +191,7 @@ h3{
         height: 100%;
         position:relative;
         bottom:0;
-        width: 35%;
+        width: 50%;
         float: left;
         @include respond-to(small-screens){width: 100%; bottom:unset;}
         .contenu_detail {
@@ -205,7 +206,7 @@ h3{
   }
 }
 
-@media screen and (max-height: calc(33vw + #{$hauteur_menu*2.2})) {
+@media screen and (max-height: calc(42vw + #{$hauteur_menu})) {
   #pageinfos .ligne_info_trois {
       display: none;
   }

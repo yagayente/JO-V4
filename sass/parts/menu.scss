@@ -1,6 +1,6 @@
 @import "../func/typo.scss";
 
-$hauteur_menu: 100px;
+$hauteur_menu: 150px;
 $hauteur_menu_mobile: 150px;
 $glyph_current_page_width: 20px;
 
@@ -83,13 +83,12 @@ $glyph_current_page_width: 20px;
         }
       }
       li.current-menu-item {
-        a.nav-link::before {content: "	\002690 "; @include glyph; position: absolute; margin-left: -$glyph_current_page_width;}
+        @include typo_bold_titre;
+        a.nav-link::before {font-size: 110%; content: "	\002690 "; @include glyph; @include center-vertically; margin-left: -$glyph_current_page_width*1.2;}
       }
-      li:first-child.current-menu-item {
+      li:first-child.current-menu-item a.nav-link{
         @include respond-to(small-screens){
-        a.nav-link::before {content: unset; position: unset; margin-left: unset;}
-        a.nav-link::after {content: "	\002690 "; @include glyph; position: absolute; margin-left: $glyph_current_page_width/2;}
-        }
+        margin-left: $gouttiere_small*1.2; }
       }
     }
   }

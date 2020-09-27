@@ -2,23 +2,23 @@
 // 8 juillet 2020
 
 /*LARGE */
-$gouttiere_large:15px;
+$gouttiere_large:18px;
   $gouttiere_large_double: $gouttiere_large * 2;
   $gouttiere_large_divide: $gouttiere_large / 2;
 
 /* MEDIUM */
-$gouttiere_medium: 12px;
+$gouttiere_medium: 18px;
   $gouttiere_medium_double: $gouttiere_medium * 2;
   $gouttiere_medium_divide: $gouttiere_medium / 2;
 
 /* SMALL */
-$gouttiere_small:18px;
+$gouttiere_small: 23px;
   $gouttiere_small_double: $gouttiere_small * 2;
   $gouttiere_small_divide: $gouttiere_small / 2;
 
 /* RESPONSIVE */
 $break-small: 720px;
-$break-middle: 1000px; $break-MD: 850px;
+$break-middle: 1000px; $break-MD: 950px;
 $break-large: 1524px;
 
 

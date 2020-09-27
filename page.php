@@ -1,6 +1,6 @@
 <?php get_header(); ?>
 
-<section class="liste" id="listing" style="display:none;">
+<section class="liste" id="listing" style="display:none; z-index:4;">
 	<?php get_template_part('template-parts/liste_article');?>
 </section>
 
@@ -109,7 +109,7 @@
 											</div>
 
 											<div class="about_simon">
-												<p class="about_this_website">website <a href="http://simonbouchard.fr/" target="_blank">@ateliersimonbouchard</a></p>
+												<p class="about_this_website">développement <a href="http://simonbouchard.fr/" target="_blank">Simon Bouchard</a></p>
 											</div>
 
 

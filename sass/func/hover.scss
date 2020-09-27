@@ -11,11 +11,13 @@
 }
 .post_hover_home {
   margin-top: -12px;
+  width:33.33%;
+  @include respond-to(small-screens){width:80%;};
   p.titre_hover {
     @include typo_titre_caps;
-    @include respond-to(small-screens){padding-bottom: $gouttiere_small;};
-    @include respond-to(medium-screens){padding-bottom: $gouttiere_medium;}
-    @include respond-to(wide-screens){padding-bottom: $gouttiere_large;}
+    @include respond-to(small-screens){padding-bottom: $petit_espace_small;};
+    @include respond-to(medium-screens){padding-bottom: $petit_espace_medium;}
+    @include respond-to(wide-screens){padding-bottom: $petit_espace_large;}
   }
   p.sous_titre_hover {
     @include typo_bold;

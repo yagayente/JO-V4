@@ -1,19 +1,22 @@
 @import "menu_mobile.scss";
 
 $border_johl: 1px solid black;
+$hauteur_li: 50px;
+$hauteur_li_moins_border: 48px;
 
+$col_gauche: 25%;
+$col_droite: 75%;
 
 section.liste {
   border-top: $border_johl;
-  background-color: white;
-  height: calc(100% - #{$hauteur_menu+$gouttiere_medium*2});
+  height: calc(100% - #{$hauteur_menu});
   position: fixed;
   overflow-y: scroll;
   top:$hauteur_menu;
   border-right: 1px solid black;
   @include respond-to(small-screens){display: none !important;};
-  @include respond-to(medium-screens){width: calc(30% - #{$gouttiere_medium_double}); padding-top:$gouttiere_medium*2; padding-left: $gouttiere_medium; padding-right: $gouttiere_medium};
-  @include respond-to(wide-screens){width: calc(30% - #{$gouttiere_large_double}); padding-top:$gouttiere_large*2; padding-left: $gouttiere_large; padding-right: $gouttiere_large};
+  @include respond-to(medium-screens){width: calc(#{$col_gauche} - #{$gouttiere_medium_double}); padding-left: $gouttiere_medium; padding-right: $gouttiere_medium};
+  @include respond-to(wide-screens){width: calc(#{$col_gauche} - #{$gouttiere_large_double}); padding-left: $gouttiere_large; padding-right: $gouttiere_large};
   -ms-overflow-style: none;  /* Hide scrollbar for  IE and Edge */
   scrollbar-width: none;  /* Hide scrollbar for Firefox */
   ::-webkit-scrollbar {
@@ -26,7 +29,7 @@ section.liste {
 
     }
     li.current {
-      height: 40px;
+      height: $hauteur_li;
       position: relative;
       overflow: hidden;
       text-overflow: ellipsis;
@@ -46,7 +49,7 @@ section.liste {
     li {
       border-bottom: $border_johl;
       @include typo_titre_caps;
-      height: 40px;
+      height: $hauteur_li;
       position: relative;
       .icon_active {
         display: none;
@@ -57,7 +60,7 @@ section.liste {
         .icone_current {
           @include center-vertically;
           @include fontstack_3;
-          font-size: 130%;
+          font-size: 150%;
         }
       }
       .link_to_post {
@@ -88,8 +91,8 @@ section.liste {
 #rendu_single {
   @include respond-to(small-screens){width: 100%; padding-top: $gouttiere_small; padding-bottom: $hauteur_bouton_project_mobile;
   };
-  @include respond-to(medium-screens){width: calc(70% - #{$gouttiere_medium_double});  padding-top: $gouttiere_medium; padding-left: $gouttiere_medium; padding-right: $gouttiere_medium};
-  @include respond-to(wide-screens){width: calc(70% - #{$gouttiere_large_double});  padding-top: $gouttiere_large; padding-left: $gouttiere_large; padding-right: $gouttiere_large};
+  @include respond-to(medium-screens){width: calc(#{$col_droite} - #{$gouttiere_medium_double});  padding-top: $gouttiere_medium; padding-left: $gouttiere_medium; padding-right: $gouttiere_medium; padding-bottom: $gouttiere_medium;};
+  @include respond-to(wide-screens){width: calc(#{$col_droite} - #{$gouttiere_large_double});  padding-top: $gouttiere_large; padding-left: $gouttiere_large; padding-right: $gouttiere_large; padding-bottom: $gouttiere_large;};
   float: right;
 }
 .rendu {
@@ -98,22 +101,24 @@ section.liste {
     display: inline-block;
     z-index: 1;
     @include respond-to(small-screens){display: none;};
+    @include respond-to(medium-screens){margin-bottom: $gouttiere_medium};
+    @include respond-to(wide-screens){margin-bottom: $gouttiere_large};
     .first {
       width: 70%; margin-right: 30%;
       z-index: 1;
       @include typo_bold_titre;
-      @include respond-to(small-screens){margin-top: $gouttiere_small; margin-bottom: $gouttiere_small};
-      @include respond-to(medium-screens){margin-top: $gouttiere_medium*2.4; margin-bottom: $gouttiere_medium};
-      @include respond-to(wide-screens){margin-top: $gouttiere_large*2.05; margin-bottom: $gouttiere_large};
+      @include respond-to(small-screens){margin-top: $gouttiere_small; margin-bottom: $petit_espace_small};
+      @include respond-to(medium-screens){margin-top: $hauteur_li_moins_border - $gouttiere_medium; margin-bottom: $petit_espace_medium};
+      @include respond-to(wide-screens){margin-top:  $hauteur_li_moins_border - $gouttiere_large; margin-bottom: $petit_espace_large};
     }
     .third {
       width: 67%;
       margin-right: 3%;
       float: left;
       z-index: 1;
-      @include respond-to(small-screens){  width: 100%; margin-bottom: $gouttiere_small*2};
-      @include respond-to(medium-screens){margin-bottom: $gouttiere_medium*3};
-      @include respond-to(wide-screens){margin-bottom: $gouttiere_large*3};
+      @include respond-to(small-screens){  width: 100%; margin-bottom: $hauteur_li_moins_border - $gouttiere_small};
+      @include respond-to(medium-screens){margin-bottom: $hauteur_li_moins_border - $gouttiere_medium};
+      @include respond-to(wide-screens){margin-bottom: $hauteur_li_moins_border - $gouttiere_large};
     }
     .second {
       width: 27%;
@@ -121,47 +126,59 @@ section.liste {
       float: left;
       z-index: 1;
       @include respond-to(small-screens){  margin-left: 0%; width: 100%; margin-bottom: $gouttiere_small};
-      @include respond-to(medium-screens){margin-bottom: $gouttiere_medium};
-      @include respond-to(wide-screens){margin-bottom: $gouttiere_large};
-      p.colab, p.date, ul.liste_categ, p.collaborators {
+      p.date,{
         @include typo_bold; text-transform: lowercase;
+        @include respond-to(small-screens){ padding-bottom: $gouttiere_small;};
+        @include respond-to(medium-screens){padding-bottom: $gouttiere_medium;};
+        @include respond-to(wide-screens){padding-bottom:$gouttiere_large; };
+      }
+      p.colab, ul.liste_categ, p.collaborators {
+        @include typo_bold; text-transform: lowercase;
+        @include respond-to(small-screens){ padding-bottom: $petit_espace_small;};
+        @include respond-to(medium-screens){padding-bottom: $petit_espace_medium;};
+        @include respond-to(wide-screens){padding-bottom:$petit_espace_large; };
       }
       ul.liste_categ {
-        @include respond-to(medium-screens){margin-bottom: $gouttiere_medium*3};
-        @include respond-to(wide-screens){margin-bottom: $gouttiere_large*3};
+        @include respond-to(medium-screens){margin-bottom: $hauteur_li_moins_border - $gouttiere_medium};
+        @include respond-to(wide-screens){margin-bottom: $hauteur_li_moins_border - $gouttiere_large};
       }
       ul li a {
         @include a;
       }
     }
   }
+  .contenu:last-child {
+    @include respond-to(small-screens){margin-bottom: 0px};
+    @include respond-to(medium-screens){margin-bottom: 0px};
+    @include respond-to(wide-screens){margin-bottom: 0px};
+  }
   .contenu {
     width: 100%;
     @include respond-to(small-screens){width: calc(100% - #{$gouttiere_small*2}); padding-left: $gouttiere_small; padding-right: $gouttiere_small; padding-bottom: $hauteur_bouton_project_mobile + $gouttiere_small};
-    div {
-      @include respond-to(small-screens){margin-bottom: $gouttiere_small};
-      @include respond-to(medium-screens){margin-bottom: $gouttiere_medium};
-      @include respond-to(wide-screens){margin-bottom: $gouttiere_large};
+    div.image_et_espacement {
+      @include respond-to(small-screens){margin-top: $gouttiere_small};
+      @include respond-to(medium-screens){margin-top: $gouttiere_medium};
+      @include respond-to(wide-screens){margin-top: $gouttiere_large};
     }
     .entier {
       width: 100%;
-      height: 40vw;
+      height: 45vw;
       float: left;
-      @include respond-to(small-screens){height: 60vw;};
+      @include respond-to(small-screens){height: 59vw;};
 
     }
     .moitie {
       @include respond-to(medium-screens){width: calc(50% - #{$gouttiere_medium_divide}); padding: 0 $gouttiere_medium/2 0 0;}
       @include respond-to(wide-screens){width: calc(50% - #{$gouttiere_large_divide}); padding: 0 $gouttiere_large/2 0 0;}
-      @include respond-to(small-screens){width: 100%;  height: 60vw;};
-      height: 25vw;
+      @include respond-to(small-screens){width: 100%;  height: 120vw;};
+      height: 45vw;
       float: left;
     }
     .moitiedeux {
       @include respond-to(medium-screens){width: calc(50% - #{$gouttiere_medium_divide}); padding: 0 0 0 $gouttiere_medium/2;}
       @include respond-to(wide-screens){width: calc(50% - #{$gouttiere_large_divide}); padding: 0 0 0 $gouttiere_large/2;}
-      @include respond-to(small-screens){width: 100%; height: 60vw;};
-      height: 25vw;
+      @include respond-to(small-screens){width: 100%; height: 120vw;};
+      height: 45vw;
       float: left;
     }
     .en_tete_article_mobile {
@@ -173,10 +190,19 @@ section.liste {
       @include respond-to(wide-screens){display: none;}
       a {@include a}
       a:hover {@include a_hover}
-      .first_mb {@include typo_bold_titre;}
+      .first_mb {@include typo_bold_titre; padding-top: $gouttiere_small; padding-bottom: $petit_espace_small;}
       .second_mb {
         p.collaborateurs_mobile, p.annee_mobile, ul.categories_mobile li,p.collaborators_mobile{@include typo_bold;}
+        p.collaborators_mobile {padding-top: $gouttiere_small; padding-bottom: $petit_espace_small;}
+        p.annee_mobile {padding-top: $gouttiere_small; padding-bottom: $gouttiere_small;}
+
       }
     }
+
+
+
+
+
+
   }
 }

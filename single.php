@@ -9,15 +9,34 @@ if ( have_posts() ) :
 	while ( have_posts() ) : the_post();
 	?>
 	<main data-barba="container" data-barba-namespace="single">
+		<style>
+		section ul.project_list li.current a.link_to_post, section ul.project_list li.current .icon_active .icone_current{color: <?php the_field( 'couleur_en-tete' ); ?>}
+
+	</style>
+
 	<?php get_template_part('template-parts/menu');?>
-		<div	class="top_color" style="<?php if ( have_rows( 'degrade_ou_aplat_copie2' ) ): ?>
-		<?php while ( have_rows( 'degrade_ou_aplat_copie2' ) ) : the_row(); ?>
-		<?php if ( get_row_layout() == 'aplatbloc' ) : ?>background-color: <?php the_sub_field( 'aplat' ); ?>;
-		<?php elseif ( get_row_layout() == 'degrade_de_couleurs' ) : ?>
-		background: linear-gradient(<?php the_sub_field( 'degrade_un' ); ?>,<?php the_sub_field( 'degrade_deux' ); ?>);
-			<?php endif; ?><?php endwhile; ?><?php else: ?>background-color: white;<?php // no layouts found ?><?php endif; ?>">&nbsp</div>
+		<div	class="top_color" style="background-color:
+
+
+<?php $coulen_tete = get_field( 'couleur_en-tete' ); ?>
+	<?php $coulen_tete_back = get_field('background_body', 'options'); ?>
+	<?php if ( $coulen_tete ) : ?>
+		<?php echo $coulen_tete ?>">
+	<?php else :?><?php echo $coulen_tete_back ?>">
+<?php endif; ?>
+	&nbsp</div>
+
+
+
+
 			<div class="rendu" id="rendu_single" style="position: relative; z-index:-3;">
-			<div class="en_tete_article">
+
+<style>.contenu .embed-container {position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; max-width: 100%; } .embed-container iframe, .embed-container object, .embed-container embed { position: absolute; top: 0; left: 0; width: 100%; height: 100%; }</style>
+
+
+
+
+	<div class="en_tete_article">
 				<?php get_template_part('template-parts/presentation_projet');?>
 			</div><!-- en-tête-->
 			<div class="contenu" id="scroll" style="z-index:1;">
@@ -37,7 +56,7 @@ if ( have_posts() ) :
 						<?php if ( get_row_layout() == '100100' ) : ?>
 							<?php $full = get_sub_field( 'full' ); ?>
 							<?php if ( $full ) : ?>
-								<div class="entier" id="imageliste">
+								<div class="entier image_et_espacement" id="imageliste">
 									<picture class="back">
 										<img <?php responsive_image(get_sub_field( 'full' ),'Full size','2500px'); ?> />
 									</picture>
@@ -46,7 +65,7 @@ if ( have_posts() ) :
 						<?php elseif ( get_row_layout() == '50' ) : ?>
 							<?php $half = get_sub_field( 'half' ); ?>
 							<?php if ( $half ) : ?>
-								<div class="moitie" id="imageliste">
+								<div class="moitie image_et_espacement" id="imageliste">
 									<picture class="back">
 										<img <?php responsive_image(get_sub_field( 'half' ),'Full size','2500px'); ?> />
 									</picture>
@@ -56,19 +75,37 @@ if ( have_posts() ) :
 							<?php $other_half = get_sub_field( 'other_half' ); ?>
 							<?php $size = 'full'; ?>
 							<?php if ( $other_half ) : ?>
-								<div class="moitiedeux" id="imageliste">
+								<div class="moitiedeux image_et_espacement" id="imageliste">
 									<picture class="back">
 										<img <?php responsive_image(get_sub_field( 'other_half' ),'Full size','2500px'); ?> />
 									</picture>
 								</div>
 							<?php endif; ?>
 
-						<?php endif; ?>
+
+						<?php elseif ( get_row_layout() == 'video' ) : ?>
+								<?php $size = get_sub_field( 'video' ); ?>
+								<?php $color = get_field( 'background_body', 'options' ); ?>
+
+								<div class="text_vid"><p style="font-size: 0.1%; color:<?php echo $color ?>"><?php	the_sub_field( 'video' ); ?></P>
+									<div class="embed-container">
+								  <iframe src="https://player.vimeo.com/video/<?php echo $size ?>" frameborder="0" webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe>
+								</div>
+								</div>
+								<?php endif; ?>
+
+
+
+
 					<?php endwhile; ?>
 				<?php else: ?>
 					<?php // no layouts found ?>
 				<?php endif; ?>
+
+
+
 		</div>
+
 	<?php endwhile; ?>
 	<?php else : ?>
 		<h2>Aucun Article</h2>

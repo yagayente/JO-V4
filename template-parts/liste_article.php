@@ -27,7 +27,7 @@
             <?php echo wp_get_attachment_image( $image_article, $size ); ?>
           <?php endif; ?>
         </picture>
-      </div>    
+      </div>
     </li>
   <?php endforeach; ?>
   <?php  wp_reset_postdata();?>

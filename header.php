@@ -13,13 +13,16 @@
 <link rel="profile" href="http://gmpg.org/xfn/11">
 <?php wp_head(); ?>
 <style>
-body{cursor: url('<?php the_field('curseur', 'options'); ?>'), default;}
+body{cursor: url('<?php the_field('curseur', 'options'); ?>'), default; background-color: <?php the_field('background_body', 'options'); ?>;}
 a:hover {cursor: url('<?php the_field('curseur_hover', 'options'); ?>'), pointer;}
 .rendu ul.projet li.article .back:hover {cursor: url('<?php the_field('curseur_hover_negatif', 'options'); ?>'), pointer;}
-.active_gauche, .active_droite, .homepagecolor {<?php if ( have_rows('degrade_ou_aplat_copie', 'option' ) ): ?><?php while ( have_rows( 'degrade_ou_aplat_copie', 'option' ) ) : the_row(); ?><?php if ( get_row_layout() == 'aplatbloc' ) : ?>
+.active_home {<?php if ( have_rows('hover_home', 'option' ) ): ?><?php while ( have_rows( 'hover_home', 'option' ) ) : the_row(); ?><?php if ( get_row_layout() == 'aplatbloc' ) : ?>
 background-color: <?php the_sub_field( 'aplat' ); ?>;<?php elseif ( get_row_layout() == 'degrade_de_couleurs' ) : ?> background: linear-gradient(<?php the_sub_field( 'degrade_un' ); ?>, <?php the_sub_field( 'degrade_deux' ); ?>);<?php endif; ?><?php endwhile; ?>
 <?php else: ?><?php // no layouts found ?><?php endif; ?>}
-.active_droite_second, .pageinformationcolor {<?php if ( have_rows( 'degrade_ou_aplat', 'option' ) ): ?><?php while ( have_rows( 'degrade_ou_aplat', 'option' ) ) : the_row(); ?><?php if ( get_row_layout() == 'aplatbloc' ) : ?> background-color:<?php the_sub_field( 'aplat' ); ?>;
+.active_work {<?php if ( have_rows('hover_work', 'option' ) ): ?><?php while ( have_rows( 'hover_work', 'option' ) ) : the_row(); ?><?php if ( get_row_layout() == 'aplatbloc' ) : ?>
+background-color: <?php the_sub_field( 'aplat' ); ?>;<?php elseif ( get_row_layout() == 'degrade_de_couleurs' ) : ?> background: linear-gradient(<?php the_sub_field( 'degrade_un' ); ?>, <?php the_sub_field( 'degrade_deux' ); ?>);<?php endif; ?><?php endwhile; ?>
+<?php else: ?><?php // no layouts found ?><?php endif; ?>}
+.active_infos, .pageinformationcolor {<?php if ( have_rows( 'degrade_ou_aplat', 'option' ) ): ?><?php while ( have_rows( 'degrade_ou_aplat', 'option' ) ) : the_row(); ?><?php if ( get_row_layout() == 'aplatbloc' ) : ?> background-color:<?php the_sub_field( 'aplat' ); ?>;
   		<?php elseif ( get_row_layout() == 'degrade_de_couleurs' ) : ?>background: linear-gradient(<?php the_sub_field( 'degrade_un' ); ?>, <?php the_sub_field( 'degrade_deux' ); ?>);<?php endif; ?><?php endwhile; ?><?php else: ?><?php // no layouts found ?><?php endif; ?>}
 </style>
 </head>

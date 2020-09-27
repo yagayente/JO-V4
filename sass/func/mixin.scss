@@ -4,6 +4,11 @@ $border: 1px;
 $border_x_deux: $border;
 $border_johl: $border solid black;
 
+/* padding  */
+$petit_espace_small: $gouttiere_small/2;
+$petit_espace_medium: $gouttiere_medium/2;
+$petit_espace_large: $gouttiere_large/2;
+
 @mixin fadein($time) {
 animation: fadein $time;
  -moz-animation: fadein $time; /* Firefox */

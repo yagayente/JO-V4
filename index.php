@@ -1,12 +1,12 @@
 <?php get_header(); ?>
 
-	<section class="liste" id="listing" style="display:none;">
+	<section class="liste" id="listing" style="display:none; z-index:4;">
 		<?php get_template_part('template-parts/liste_article');?>
 	</section>
 
 	<main data-barba="container" data-barba-namespace="homepage">
 		<?php get_template_part('template-parts/menu');?>
-		<div class="top_color homepagecolor">&nbsp</div>
+		<div class="top_color homepagecolor" style="background-color:<?php the_field('background_body', 'options'); ?>;">&nbsp</div>
 		<div class="rendu">
 			<ul class="projet">
 				<?php

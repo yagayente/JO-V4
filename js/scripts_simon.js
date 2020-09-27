@@ -1,21 +1,30 @@
 
 ////// MENU HOVER COLOR
 
+function changeColorIn_home() {
+    var fond = document.getElementById("Menu_background");
+    fond.classList.toggle('active_home');
+}
+function changeColorOut_home() {
+    var fond = document.getElementById("Menu_background");
+    fond.classList.toggle('active_home');
+}
+
 function changeColorIn_work() {
     var fond = document.getElementById("Menu_background");
-    fond.classList.toggle('active_gauche');
+    fond.classList.toggle('active_work');
 }
 function changeColorOut_work() {
     var fond = document.getElementById("Menu_background");
-    fond.classList.toggle('active_gauche');
+    fond.classList.toggle('active_work');
 }
 function changeColorIn_infos() {
     var fond = document.getElementById("Menu_background");
-    fond.classList.toggle('active_droite_second');
+    fond.classList.toggle('active_infos');
 }
 function changeColorOut_infos() {
     var fond = document.getElementById("Menu_background");
-    fond.classList.toggle('active_droite_second');
+    fond.classList.toggle('active_infos');
 }
 
 ////// CALL THE MOBILE MENU

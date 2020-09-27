@@ -24,21 +24,21 @@ $input_margin: $space/2;
 $exposant:  0.6em;
 
 // NORMALISATION
-$font_size_norm:17px;
-$line_height_norm: 20px;
+$font_size_norm:22px;
+$line_height_norm: 26px;
 
 
 @font-face {
-    font-family: 'vonnesttthinregular';
-    src: url('fonts/vonntthn-webfont.woff2') format('woff2'),
-         url('fonts/vonntthn-webfont.woff') format('woff');
+    font-family: 'gt_flexaextended_light';
+    src: url('fonts/flexa/GT-Flexa-Extended-Light.woff2') format('woff2'),
+         url('fonts/flexa/GT-Flexa-Extended-Light.woff') format('woff');
     font-weight: normal;
     font-style: normal;
 }
 @font-face {
-    font-family: 'vonnesttmediumextregular';
-    src: url('fonts/vonntmde-webfont.woff2') format('woff2'),
-         url('fonts/vonntmde-webfont.woff') format('woff');
+    font-family: 'gt_flexaextended_medium';
+    src: url('fonts/flexa/GT-Flexa-Extended-Medium.woff2') format('woff2'),
+         url('fonts/flexa/GT-Flexa-Extended-Medium.woff') format('woff');
     font-weight: normal;
     font-style: normal;
 }
@@ -62,11 +62,11 @@ $trait:  $font_size_norm/19 solid black;
 $trait_over: $font_size_norm/15 solid white;
 
 
-@mixin fontstack_1 {font-family: 'vonnesttthinregular', arial;
+@mixin fontstack_1 {font-family: 'gt_flexaextended_light', arial;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;}
 
-@mixin fontstack_2 {font-family: 'vonnesttmediumextregular', arial;
+@mixin fontstack_2 {font-family: 'gt_flexaextended_medium', arial;
         -webkit-font-smoothing: antialiased;
         -moz-osx-font-smoothing: grayscale;}
 
@@ -81,9 +81,9 @@ $font_1 : times;
 // Feuille de style texte 1
 @mixin typo_texte{@include fontstack_1; @include parameter($font_size_norm, $line_height_norm, 0);}
 // Feuille de style BOLD
-@mixin typo_bold{@include fontstack_2; @include parameter($font_size_norm/1.1, $line_height_norm/1.1, 0);}
+@mixin typo_bold{@include fontstack_2; @include parameter($font_size_norm, $line_height_norm, 0);}
 // Feuille de style BOLD titre
-@mixin typo_bold_titre{@include typo_bold; text-transform: uppercase;}
+@mixin typo_bold_titre{@include fontstack_2; text-transform: uppercase;}
 // Feuille de style BOLD titre
 @mixin typo_titre_caps{@include typo_texte; text-transform: uppercase;}
 
@@ -96,7 +96,7 @@ $font_1 : times;
 // Feuille de style italic
 @mixin italic{@include fontstack_1; font-style: italic; @include parameter($font_size_norm, $line_height_norm, 0);}
 // Feuille de style barré
-@mixin typo_titre_liste_mobile{color: $black; @include fontstack_1; @include parameter($font_size_norm/1.5, $line_height_norm/1.5, 0);}
+@mixin typo_titre_liste_mobile{color: $black; @include fontstack_1; @include parameter($font_size_norm/1.3, $line_height_norm/1.3, 0);}
 // Typo nom des projets sur mobile
 
 // Feuille de style petit texte

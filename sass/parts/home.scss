@@ -33,11 +33,9 @@
 
       .back:hover img {
         opacity: 0;
-        @include prefix(transition, 0.3s, moz webkit ms);
       }
       .back:hover  {
         background-color: black;
-        @include prefix(transition, 0.3s, moz webkit ms);
       }
 
       .Box {

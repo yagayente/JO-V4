@@ -11,7 +11,8 @@ if ( have_posts() ) :
 	<main data-barba="container" data-barba-namespace="single">
 		<style>
 		section ul.project_list li.current a.link_to_post, section ul.project_list li.current .icon_active .icone_current{color: <?php the_field( 'couleur_en-tete' ); ?>}
-
+		.liste_mobile .project_mobile_liste {color: <?php the_field('background_body', 'options'); ?>}
+		.contenu .embed-container {position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; max-width: 100%; } .embed-container iframe, .embed-container object, .embed-container embed { position: absolute; top: 0; left: 0; width: 100%; height: 100%; }
 	</style>
 
 	<?php get_template_part('template-parts/menu');?>
@@ -30,10 +31,6 @@ if ( have_posts() ) :
 
 
 			<div class="rendu" id="rendu_single" style="position: relative; z-index:-3;">
-
-<style>.contenu .embed-container {position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; max-width: 100%; } .embed-container iframe, .embed-container object, .embed-container embed { position: absolute; top: 0; left: 0; width: 100%; height: 100%; }</style>
-
-
 
 
 	<div class="en_tete_article">

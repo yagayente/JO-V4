@@ -91,7 +91,7 @@
 
 									<div class="detail_mobile">
 										<h3><?php the_field( 'location_title', 'option' ); ?></h3>
-										<p class="lieu"><?php the_field( 'location_basdepage', 'option' ); ?></p>
+										<p class="lieu"><?php the_field( 'location', 'option' ); ?></p>
 
 										<h3><?php the_field( 'social__basdepage', 'option' ); ?></h3>
 										<ul class="social">

@@ -113,7 +113,7 @@ $font_1 : times;
 
 
 // Mixin à ne pas toucher (? pour l'instant)
-@mixin h1 {@include typo_titre;} // h2h3h4h5...
+@mixin h1 {@include typo_titre_caps; text-decoration: none; color: $black;} // h2h3h4h5...
 @mixin a{position: relative; text-decoration: none; color:$black;}
 @mixin a_hover{color:$color_hover;}
 @mixin b{@include typo_bold;} // bold html

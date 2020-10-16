@@ -1,8 +1,10 @@
 @import "menu_mobile.scss";
+@import "../func/mixin.scss";
 
-$border_johl: 1px solid black;
+
 $hauteur_li: 50px;
 $hauteur_li_moins_border: 48px;
+
 
 $col_gauche: 25%;
 $col_droite: 75%;
@@ -17,7 +19,7 @@ section.liste {
   position: fixed;
   overflow-y: scroll;
   top:$hauteur_menu;
-  border-right: 1px solid black;
+  @include border(right);
   @include respond-to(small-screens){display: none !important;};
   @include respond-to(medium-screens){width: calc(#{$col_gauche} - #{$gouttiere_medium_double}); padding-left: $gouttiere_medium; padding-right: $gouttiere_medium};
   @include respond-to(wide-screens){width: calc(#{$col_gauche} - #{$gouttiere_large_double}); padding-left: $gouttiere_large; padding-right: $gouttiere_large};
@@ -84,8 +86,8 @@ section.liste {
         float: left;
         text-align: right;
         @include center-vertically;
-        @include fontstack_3;
-        font-size: 160%;
+        @include fontstack_1;
+        font-size: 100%;
       }
     }
   }

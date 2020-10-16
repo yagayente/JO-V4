@@ -40,7 +40,7 @@ $espacelistearticlemobile : $hauteur_bouton_project_mobile + $hauteur_menu_mobil
         text-transform: uppercase;
       }
       .arrowdeux {
-        @include glyph;
+        @include fontstack_1;
         width: 5%;
         float: left;
         text-align: right;
@@ -50,7 +50,8 @@ $espacelistearticlemobile : $hauteur_bouton_project_mobile + $hauteur_menu_mobil
       #animationfleche, #animationflechedeux {
         transition: transform 0.5s;
         text-align: center;
-        @include glyph;
+        @include fontstack_1;
+        font-size: 100%;
       }
       .tourne  {
         transform: rotate(180deg);

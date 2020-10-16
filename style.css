@@ -321,35 +321,36 @@ h1, h2, h3, h4, h5, h6, h1 a, h2 a, h3 a, h4 a, h5 a, h6 a, .signe {
   font-family: "gt_flexaextended_light", arial;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  color: black;
+  font-size: 22px;
+  font-size: 1.375rem;
+  line-height: 26px;
+  line-height: 1.625rem;
+  text-transform: uppercase;
   text-decoration: none;
-  font-size: 26.4px;
-  font-size: 1.65rem;
-  line-height: 31.2px;
-  line-height: 1.95rem;
+  color: black;
 }
 @media only screen and (min-width: 1524px) {
   h1, h2, h3, h4, h5, h6, h1 a, h2 a, h3 a, h4 a, h5 a, h6 a, .signe {
-    font-size: 26.4px;
-    font-size: 1.65rem;
-    line-height: 31.2px;
-    line-height: 1.95rem;
+    font-size: 22px;
+    font-size: 1.375rem;
+    line-height: 26px;
+    line-height: 1.625rem;
   }
 }
 @media only screen and (min-width: 721px) and (max-width: 1523px) {
   h1, h2, h3, h4, h5, h6, h1 a, h2 a, h3 a, h4 a, h5 a, h6 a, .signe {
-    font-size: 24px;
-    font-size: 1.5rem;
-    line-height: 28.3636363636px;
-    line-height: 1.7727272727rem;
+    font-size: 20px;
+    font-size: 1.25rem;
+    line-height: 23.6363636364px;
+    line-height: 1.4772727273rem;
   }
 }
 @media only screen and (max-width: 720px) {
   h1, h2, h3, h4, h5, h6, h1 a, h2 a, h3 a, h4 a, h5 a, h6 a, .signe {
-    font-size: 29.04px;
-    font-size: 1.815rem;
-    line-height: 34.32px;
-    line-height: 2.145rem;
+    font-size: 24.2px;
+    font-size: 1.5125rem;
+    line-height: 28.6px;
+    line-height: 1.7875rem;
   }
 }
 
@@ -1438,35 +1439,36 @@ h1, h2, h3, h4, h5, h6, h1 a, h2 a, h3 a, h4 a, h5 a, h6 a, .signe {
   font-family: "gt_flexaextended_light", arial;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  color: black;
+  font-size: 22px;
+  font-size: 1.375rem;
+  line-height: 26px;
+  line-height: 1.625rem;
+  text-transform: uppercase;
   text-decoration: none;
-  font-size: 26.4px;
-  font-size: 1.65rem;
-  line-height: 31.2px;
-  line-height: 1.95rem;
+  color: black;
 }
 @media only screen and (min-width: 1524px) {
   h1, h2, h3, h4, h5, h6, h1 a, h2 a, h3 a, h4 a, h5 a, h6 a, .signe {
-    font-size: 26.4px;
-    font-size: 1.65rem;
-    line-height: 31.2px;
-    line-height: 1.95rem;
+    font-size: 22px;
+    font-size: 1.375rem;
+    line-height: 26px;
+    line-height: 1.625rem;
   }
 }
 @media only screen and (min-width: 721px) and (max-width: 1523px) {
   h1, h2, h3, h4, h5, h6, h1 a, h2 a, h3 a, h4 a, h5 a, h6 a, .signe {
-    font-size: 24px;
-    font-size: 1.5rem;
-    line-height: 28.3636363636px;
-    line-height: 1.7727272727rem;
+    font-size: 20px;
+    font-size: 1.25rem;
+    line-height: 23.6363636364px;
+    line-height: 1.4772727273rem;
   }
 }
 @media only screen and (max-width: 720px) {
   h1, h2, h3, h4, h5, h6, h1 a, h2 a, h3 a, h4 a, h5 a, h6 a, .signe {
-    font-size: 29.04px;
-    font-size: 1.815rem;
-    line-height: 34.32px;
-    line-height: 2.145rem;
+    font-size: 24.2px;
+    font-size: 1.5125rem;
+    line-height: 28.6px;
+    line-height: 1.7875rem;
   }
 }
 
@@ -2697,35 +2699,36 @@ h1, h2, h3, h4, h5, h6, h1 a, h2 a, h3 a, h4 a, h5 a, h6 a, .signe {
   font-family: "gt_flexaextended_light", arial;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  color: black;
+  font-size: 22px;
+  font-size: 1.375rem;
+  line-height: 26px;
+  line-height: 1.625rem;
+  text-transform: uppercase;
   text-decoration: none;
-  font-size: 26.4px;
-  font-size: 1.65rem;
-  line-height: 31.2px;
-  line-height: 1.95rem;
+  color: black;
 }
 @media only screen and (min-width: 1524px) {
   h1, h2, h3, h4, h5, h6, h1 a, h2 a, h3 a, h4 a, h5 a, h6 a, .signe {
-    font-size: 26.4px;
-    font-size: 1.65rem;
-    line-height: 31.2px;
-    line-height: 1.95rem;
+    font-size: 22px;
+    font-size: 1.375rem;
+    line-height: 26px;
+    line-height: 1.625rem;
   }
 }
 @media only screen and (min-width: 721px) and (max-width: 1523px) {
   h1, h2, h3, h4, h5, h6, h1 a, h2 a, h3 a, h4 a, h5 a, h6 a, .signe {
-    font-size: 24px;
-    font-size: 1.5rem;
-    line-height: 28.3636363636px;
-    line-height: 1.7727272727rem;
+    font-size: 20px;
+    font-size: 1.25rem;
+    line-height: 23.6363636364px;
+    line-height: 1.4772727273rem;
   }
 }
 @media only screen and (max-width: 720px) {
   h1, h2, h3, h4, h5, h6, h1 a, h2 a, h3 a, h4 a, h5 a, h6 a, .signe {
-    font-size: 29.04px;
-    font-size: 1.815rem;
-    line-height: 34.32px;
-    line-height: 2.145rem;
+    font-size: 24.2px;
+    font-size: 1.5125rem;
+    line-height: 28.6px;
+    line-height: 1.7875rem;
   }
 }
 
@@ -3625,7 +3628,7 @@ s::after, del::after {
   height: 150px;
   position: fixed;
   z-index: 2;
-  border-bottom: 1px solid black;
+  border-bottom: 1.8px solid black;
   top: 0px;
 }
 @media only screen and (min-width: 1524px) {
@@ -3722,35 +3725,36 @@ s::after, del::after {
   font-family: "gt_flexaextended_light", arial;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  color: black;
+  font-size: 22px;
+  font-size: 1.375rem;
+  line-height: 26px;
+  line-height: 1.625rem;
+  text-transform: uppercase;
   text-decoration: none;
-  font-size: 26.4px;
-  font-size: 1.65rem;
-  line-height: 31.2px;
-  line-height: 1.95rem;
+  color: black;
 }
 @media only screen and (min-width: 1524px) {
   .menu .right ul#menu li {
-    font-size: 26.4px;
-    font-size: 1.65rem;
-    line-height: 31.2px;
-    line-height: 1.95rem;
+    font-size: 22px;
+    font-size: 1.375rem;
+    line-height: 26px;
+    line-height: 1.625rem;
   }
 }
 @media only screen and (min-width: 721px) and (max-width: 1523px) {
   .menu .right ul#menu li {
-    font-size: 24px;
-    font-size: 1.5rem;
-    line-height: 28.3636363636px;
-    line-height: 1.7727272727rem;
+    font-size: 20px;
+    font-size: 1.25rem;
+    line-height: 23.6363636364px;
+    line-height: 1.4772727273rem;
   }
 }
 @media only screen and (max-width: 720px) {
   .menu .right ul#menu li {
-    font-size: 29.04px;
-    font-size: 1.815rem;
-    line-height: 34.32px;
-    line-height: 2.145rem;
+    font-size: 24.2px;
+    font-size: 1.5125rem;
+    line-height: 28.6px;
+    line-height: 1.7875rem;
   }
 }
 @media only screen and (max-width: 720px) {
@@ -3981,35 +3985,36 @@ h1, h2, h3, h4, h5, h6, h1 a, h2 a, h3 a, h4 a, h5 a, h6 a, .signe {
   font-family: "gt_flexaextended_light", arial;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  color: black;
+  font-size: 22px;
+  font-size: 1.375rem;
+  line-height: 26px;
+  line-height: 1.625rem;
+  text-transform: uppercase;
   text-decoration: none;
-  font-size: 26.4px;
-  font-size: 1.65rem;
-  line-height: 31.2px;
-  line-height: 1.95rem;
+  color: black;
 }
 @media only screen and (min-width: 1524px) {
   h1, h2, h3, h4, h5, h6, h1 a, h2 a, h3 a, h4 a, h5 a, h6 a, .signe {
-    font-size: 26.4px;
-    font-size: 1.65rem;
-    line-height: 31.2px;
-    line-height: 1.95rem;
+    font-size: 22px;
+    font-size: 1.375rem;
+    line-height: 26px;
+    line-height: 1.625rem;
   }
 }
 @media only screen and (min-width: 721px) and (max-width: 1523px) {
   h1, h2, h3, h4, h5, h6, h1 a, h2 a, h3 a, h4 a, h5 a, h6 a, .signe {
-    font-size: 24px;
-    font-size: 1.5rem;
-    line-height: 28.3636363636px;
-    line-height: 1.7727272727rem;
+    font-size: 20px;
+    font-size: 1.25rem;
+    line-height: 23.6363636364px;
+    line-height: 1.4772727273rem;
   }
 }
 @media only screen and (max-width: 720px) {
   h1, h2, h3, h4, h5, h6, h1 a, h2 a, h3 a, h4 a, h5 a, h6 a, .signe {
-    font-size: 29.04px;
-    font-size: 1.815rem;
-    line-height: 34.32px;
-    line-height: 2.145rem;
+    font-size: 24.2px;
+    font-size: 1.5125rem;
+    line-height: 28.6px;
+    line-height: 1.7875rem;
   }
 }
 
@@ -4909,7 +4914,7 @@ s::after, del::after {
   height: 150px;
   position: fixed;
   z-index: 2;
-  border-bottom: 1px solid black;
+  border-bottom: 1.8px solid black;
   top: 0px;
 }
 @media only screen and (min-width: 1524px) {
@@ -5006,35 +5011,36 @@ s::after, del::after {
   font-family: "gt_flexaextended_light", arial;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  color: black;
+  font-size: 22px;
+  font-size: 1.375rem;
+  line-height: 26px;
+  line-height: 1.625rem;
+  text-transform: uppercase;
   text-decoration: none;
-  font-size: 26.4px;
-  font-size: 1.65rem;
-  line-height: 31.2px;
-  line-height: 1.95rem;
+  color: black;
 }
 @media only screen and (min-width: 1524px) {
   .menu .right ul#menu li {
-    font-size: 26.4px;
-    font-size: 1.65rem;
-    line-height: 31.2px;
-    line-height: 1.95rem;
+    font-size: 22px;
+    font-size: 1.375rem;
+    line-height: 26px;
+    line-height: 1.625rem;
   }
 }
 @media only screen and (min-width: 721px) and (max-width: 1523px) {
   .menu .right ul#menu li {
-    font-size: 24px;
-    font-size: 1.5rem;
-    line-height: 28.3636363636px;
-    line-height: 1.7727272727rem;
+    font-size: 20px;
+    font-size: 1.25rem;
+    line-height: 23.6363636364px;
+    line-height: 1.4772727273rem;
   }
 }
 @media only screen and (max-width: 720px) {
   .menu .right ul#menu li {
-    font-size: 29.04px;
-    font-size: 1.815rem;
-    line-height: 34.32px;
-    line-height: 2.145rem;
+    font-size: 24.2px;
+    font-size: 1.5125rem;
+    line-height: 28.6px;
+    line-height: 1.7875rem;
   }
 }
 @media only screen and (max-width: 720px) {
@@ -5170,35 +5176,36 @@ h1, h2, h3, h4, h5, h6, h1 a, h2 a, h3 a, h4 a, h5 a, h6 a, .signe {
   font-family: "gt_flexaextended_light", arial;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  color: black;
+  font-size: 22px;
+  font-size: 1.375rem;
+  line-height: 26px;
+  line-height: 1.625rem;
+  text-transform: uppercase;
   text-decoration: none;
-  font-size: 26.4px;
-  font-size: 1.65rem;
-  line-height: 31.2px;
-  line-height: 1.95rem;
+  color: black;
 }
 @media only screen and (min-width: 1524px) {
   h1, h2, h3, h4, h5, h6, h1 a, h2 a, h3 a, h4 a, h5 a, h6 a, .signe {
-    font-size: 26.4px;
-    font-size: 1.65rem;
-    line-height: 31.2px;
-    line-height: 1.95rem;
+    font-size: 22px;
+    font-size: 1.375rem;
+    line-height: 26px;
+    line-height: 1.625rem;
   }
 }
 @media only screen and (min-width: 721px) and (max-width: 1523px) {
   h1, h2, h3, h4, h5, h6, h1 a, h2 a, h3 a, h4 a, h5 a, h6 a, .signe {
-    font-size: 24px;
-    font-size: 1.5rem;
-    line-height: 28.3636363636px;
-    line-height: 1.7727272727rem;
+    font-size: 20px;
+    font-size: 1.25rem;
+    line-height: 23.6363636364px;
+    line-height: 1.4772727273rem;
   }
 }
 @media only screen and (max-width: 720px) {
   h1, h2, h3, h4, h5, h6, h1 a, h2 a, h3 a, h4 a, h5 a, h6 a, .signe {
-    font-size: 29.04px;
-    font-size: 1.815rem;
-    line-height: 34.32px;
-    line-height: 2.145rem;
+    font-size: 24.2px;
+    font-size: 1.5125rem;
+    line-height: 28.6px;
+    line-height: 1.7875rem;
   }
 }
 
@@ -6057,7 +6064,7 @@ s::after, del::after {
 .liste_mobile_access {
   width: 100%;
   z-index: 66666;
-  border-top: 1px solid black;
+  border-top: 1.8px solid black;
   bottom: 0;
   position: fixed;
   height: 80.5px;
@@ -6103,12 +6110,13 @@ s::after, del::after {
   font-family: "gt_flexaextended_light", arial;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  color: black;
+  font-size: 22px;
+  font-size: 1.375rem;
+  line-height: 26px;
+  line-height: 1.625rem;
+  text-transform: uppercase;
   text-decoration: none;
-  font-size: 26.4px;
-  font-size: 1.65rem;
-  line-height: 31.2px;
-  line-height: 1.95rem;
+  color: black;
   width: 90%;
   float: left;
   text-align: center;
@@ -6116,30 +6124,30 @@ s::after, del::after {
 }
 @media only screen and (min-width: 1524px) {
   .liste_mobile_access .block_link .block_link_centering .nameit {
-    font-size: 26.4px;
-    font-size: 1.65rem;
-    line-height: 31.2px;
-    line-height: 1.95rem;
+    font-size: 22px;
+    font-size: 1.375rem;
+    line-height: 26px;
+    line-height: 1.625rem;
   }
 }
 @media only screen and (min-width: 721px) and (max-width: 1523px) {
   .liste_mobile_access .block_link .block_link_centering .nameit {
-    font-size: 24px;
-    font-size: 1.5rem;
-    line-height: 28.3636363636px;
-    line-height: 1.7727272727rem;
+    font-size: 20px;
+    font-size: 1.25rem;
+    line-height: 23.6363636364px;
+    line-height: 1.4772727273rem;
   }
 }
 @media only screen and (max-width: 720px) {
   .liste_mobile_access .block_link .block_link_centering .nameit {
-    font-size: 29.04px;
-    font-size: 1.815rem;
-    line-height: 34.32px;
-    line-height: 2.145rem;
+    font-size: 24.2px;
+    font-size: 1.5125rem;
+    line-height: 28.6px;
+    line-height: 1.7875rem;
   }
 }
 .liste_mobile_access .block_link .block_link_centering .arrowdeux {
-  font-family: "gt_alpina_typewriterlight", arial;
+  font-family: "gt_flexaextended_light", arial;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   width: 5%;
@@ -6151,9 +6159,10 @@ s::after, del::after {
 .liste_mobile_access .block_link .block_link_centering #animationfleche, .liste_mobile_access .block_link .block_link_centering #animationflechedeux {
   transition: transform 0.5s;
   text-align: center;
-  font-family: "gt_alpina_typewriterlight", arial;
+  font-family: "gt_flexaextended_light", arial;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  font-size: 100%;
 }
 .liste_mobile_access .block_link .block_link_centering .tourne {
   transform: rotate(180deg);
@@ -6173,7 +6182,7 @@ s::after, del::after {
   width: 100%;
   height: calc(100% - 230.5px );
   top: 150px;
-  border-top: 1px solid black;
+  border-top: 1.8px solid black;
   box-sizing: border-box;
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
@@ -6203,7 +6212,7 @@ s::after, del::after {
   min-height: 100%;
 }
 .liste_mobile .project_mobile_liste #block_list:nth-child(2n+1) {
-  border-right: 1px solid black;
+  border-right: 1.8px solid black;
   box-sizing: border-box;
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
@@ -6214,7 +6223,7 @@ s::after, del::after {
   height: 40vw;
   float: left;
   text-align: center;
-  border-bottom: 1px solid black;
+  border-bottom: 1.8px solid black;
   box-sizing: border-box;
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
@@ -6277,18 +6286,115 @@ s::after, del::after {
   }
 }
 
+/*LARGE */
+/* MEDIUM */
+/* SMALL */
+/* RESPONSIVE */
+/* padding  */
+@keyframes fadein {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@-moz-keyframes fadein {
+  /* Firefox */
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@-webkit-keyframes fadein {
+  /* Safari and Chrome */
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@-o-keyframes fadein {
+  /* Opera */
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@keyframes fadeout {
+  0% {
+    opacity: 1;
+    display: block;
+  }
+  70% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 0;
+    display: none;
+  }
+}
+@-moz-keyframes fadeout {
+  /* Firefox */
+  0% {
+    opacity: 1;
+    display: block;
+  }
+  70% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 0;
+    display: none;
+  }
+}
+@-webkit-keyframes fadeout {
+  /* Safari and Chrome */
+  0% {
+    opacity: 1;
+    display: block;
+  }
+  70% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 0;
+    display: none;
+  }
+}
+@-o-keyframes fadeout {
+  /* Opera */
+  0% {
+    opacity: 1;
+    display: block;
+  }
+  70% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 0;
+    display: none;
+  }
+}
 section.liste::-webkit-scrollbar {
   display: none;
   /* Hide scrollbar for Chrome, Safari and Opera */
 }
 
 section.liste {
-  border-top: 1px solid black;
+  border-top: 1.8px solid black;
   height: calc(100% - 150px);
   position: fixed;
   overflow-y: scroll;
   top: 150px;
-  border-right: 1px solid black;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  border-right: 1.8px solid black;
   -ms-overflow-style: none;
   /* Hide scrollbar for  IE and Edge */
   scrollbar-width: none;
@@ -6381,7 +6487,7 @@ section.liste ul.project_list li.current a {
   }
 }
 section.liste ul.project_list li {
-  border-bottom: 1px solid black;
+  border-bottom: 1.8px solid black;
   font-family: "gt_flexaextended_light", arial;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -6463,10 +6569,10 @@ section.liste ul.project_list li .arrow {
   -webkit-transform: translateY(-50%);
   -ms-transform: translateY(-50%);
   transform: translateY(-50%);
-  font-family: "gt_alpina_typewriterlight", arial;
+  font-family: "gt_flexaextended_light", arial;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  font-size: 160%;
+  font-size: 100%;
 }
 
 #rendu_single {
@@ -7022,35 +7128,36 @@ h1, h2, h3, h4, h5, h6, h1 a, h2 a, h3 a, h4 a, h5 a, h6 a, .signe {
   font-family: "gt_flexaextended_light", arial;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  color: black;
+  font-size: 22px;
+  font-size: 1.375rem;
+  line-height: 26px;
+  line-height: 1.625rem;
+  text-transform: uppercase;
   text-decoration: none;
-  font-size: 26.4px;
-  font-size: 1.65rem;
-  line-height: 31.2px;
-  line-height: 1.95rem;
+  color: black;
 }
 @media only screen and (min-width: 1524px) {
   h1, h2, h3, h4, h5, h6, h1 a, h2 a, h3 a, h4 a, h5 a, h6 a, .signe {
-    font-size: 26.4px;
-    font-size: 1.65rem;
-    line-height: 31.2px;
-    line-height: 1.95rem;
+    font-size: 22px;
+    font-size: 1.375rem;
+    line-height: 26px;
+    line-height: 1.625rem;
   }
 }
 @media only screen and (min-width: 721px) and (max-width: 1523px) {
   h1, h2, h3, h4, h5, h6, h1 a, h2 a, h3 a, h4 a, h5 a, h6 a, .signe {
-    font-size: 24px;
-    font-size: 1.5rem;
-    line-height: 28.3636363636px;
-    line-height: 1.7727272727rem;
+    font-size: 20px;
+    font-size: 1.25rem;
+    line-height: 23.6363636364px;
+    line-height: 1.4772727273rem;
   }
 }
 @media only screen and (max-width: 720px) {
   h1, h2, h3, h4, h5, h6, h1 a, h2 a, h3 a, h4 a, h5 a, h6 a, .signe {
-    font-size: 29.04px;
-    font-size: 1.815rem;
-    line-height: 34.32px;
-    line-height: 2.145rem;
+    font-size: 24.2px;
+    font-size: 1.5125rem;
+    line-height: 28.6px;
+    line-height: 1.7875rem;
   }
 }
 
@@ -7982,7 +8089,7 @@ s::after, del::after {
 #pageinfos .ligne_info_un .texte_gauche {
   width: 50%;
   height: 100%;
-  border-right: 1px solid black;
+  border-right: 1.8px solid black;
   box-sizing: border-box;
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
@@ -8003,7 +8110,7 @@ s::after, del::after {
 @media only screen and (max-width: 720px) {
   #pageinfos .ligne_info_un .texte_gauche {
     padding: 23px;
-    border-bottom: 1px solid black;
+    border-bottom: 1.8px solid black;
     width: 100%;
     border-right: none;
     height: unset;
@@ -8074,7 +8181,7 @@ s::after, del::after {
 }
 #pageinfos .ligne_info_deux {
   width: 100%;
-  border-top: 1px solid black;
+  border-top: 1.8px solid black;
   display: block;
 }
 #pageinfos .ligne_info_deux .info_block01 {
@@ -8556,35 +8663,36 @@ h1, h2, h3, h4, h5, h6, h1 a, h2 a, h3 a, h4 a, h5 a, h6 a, .signe {
   font-family: "gt_flexaextended_light", arial;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  color: black;
+  font-size: 22px;
+  font-size: 1.375rem;
+  line-height: 26px;
+  line-height: 1.625rem;
+  text-transform: uppercase;
   text-decoration: none;
-  font-size: 26.4px;
-  font-size: 1.65rem;
-  line-height: 31.2px;
-  line-height: 1.95rem;
+  color: black;
 }
 @media only screen and (min-width: 1524px) {
   h1, h2, h3, h4, h5, h6, h1 a, h2 a, h3 a, h4 a, h5 a, h6 a, .signe {
-    font-size: 26.4px;
-    font-size: 1.65rem;
-    line-height: 31.2px;
-    line-height: 1.95rem;
+    font-size: 22px;
+    font-size: 1.375rem;
+    line-height: 26px;
+    line-height: 1.625rem;
   }
 }
 @media only screen and (min-width: 721px) and (max-width: 1523px) {
   h1, h2, h3, h4, h5, h6, h1 a, h2 a, h3 a, h4 a, h5 a, h6 a, .signe {
-    font-size: 24px;
-    font-size: 1.5rem;
-    line-height: 28.3636363636px;
-    line-height: 1.7727272727rem;
+    font-size: 20px;
+    font-size: 1.25rem;
+    line-height: 23.6363636364px;
+    line-height: 1.4772727273rem;
   }
 }
 @media only screen and (max-width: 720px) {
   h1, h2, h3, h4, h5, h6, h1 a, h2 a, h3 a, h4 a, h5 a, h6 a, .signe {
-    font-size: 29.04px;
-    font-size: 1.815rem;
-    line-height: 34.32px;
-    line-height: 2.145rem;
+    font-size: 24.2px;
+    font-size: 1.5125rem;
+    line-height: 28.6px;
+    line-height: 1.7875rem;
   }
 }
 
@@ -9484,7 +9592,7 @@ s::after, del::after {
   height: 150px;
   position: fixed;
   z-index: 2;
-  border-bottom: 1px solid black;
+  border-bottom: 1.8px solid black;
   top: 0px;
 }
 @media only screen and (min-width: 1524px) {
@@ -9581,35 +9689,36 @@ s::after, del::after {
   font-family: "gt_flexaextended_light", arial;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  color: black;
+  font-size: 22px;
+  font-size: 1.375rem;
+  line-height: 26px;
+  line-height: 1.625rem;
+  text-transform: uppercase;
   text-decoration: none;
-  font-size: 26.4px;
-  font-size: 1.65rem;
-  line-height: 31.2px;
-  line-height: 1.95rem;
+  color: black;
 }
 @media only screen and (min-width: 1524px) {
   .menu .right ul#menu li {
-    font-size: 26.4px;
-    font-size: 1.65rem;
-    line-height: 31.2px;
-    line-height: 1.95rem;
+    font-size: 22px;
+    font-size: 1.375rem;
+    line-height: 26px;
+    line-height: 1.625rem;
   }
 }
 @media only screen and (min-width: 721px) and (max-width: 1523px) {
   .menu .right ul#menu li {
-    font-size: 24px;
-    font-size: 1.5rem;
-    line-height: 28.3636363636px;
-    line-height: 1.7727272727rem;
+    font-size: 20px;
+    font-size: 1.25rem;
+    line-height: 23.6363636364px;
+    line-height: 1.4772727273rem;
   }
 }
 @media only screen and (max-width: 720px) {
   .menu .right ul#menu li {
-    font-size: 29.04px;
-    font-size: 1.815rem;
-    line-height: 34.32px;
-    line-height: 2.145rem;
+    font-size: 24.2px;
+    font-size: 1.5125rem;
+    line-height: 28.6px;
+    line-height: 1.7875rem;
   }
 }
 @media only screen and (max-width: 720px) {
@@ -9745,35 +9854,36 @@ h1, h2, h3, h4, h5, h6, h1 a, h2 a, h3 a, h4 a, h5 a, h6 a, .signe {
   font-family: "gt_flexaextended_light", arial;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  color: black;
+  font-size: 22px;
+  font-size: 1.375rem;
+  line-height: 26px;
+  line-height: 1.625rem;
+  text-transform: uppercase;
   text-decoration: none;
-  font-size: 26.4px;
-  font-size: 1.65rem;
-  line-height: 31.2px;
-  line-height: 1.95rem;
+  color: black;
 }
 @media only screen and (min-width: 1524px) {
   h1, h2, h3, h4, h5, h6, h1 a, h2 a, h3 a, h4 a, h5 a, h6 a, .signe {
-    font-size: 26.4px;
-    font-size: 1.65rem;
-    line-height: 31.2px;
-    line-height: 1.95rem;
+    font-size: 22px;
+    font-size: 1.375rem;
+    line-height: 26px;
+    line-height: 1.625rem;
   }
 }
 @media only screen and (min-width: 721px) and (max-width: 1523px) {
   h1, h2, h3, h4, h5, h6, h1 a, h2 a, h3 a, h4 a, h5 a, h6 a, .signe {
-    font-size: 24px;
-    font-size: 1.5rem;
-    line-height: 28.3636363636px;
-    line-height: 1.7727272727rem;
+    font-size: 20px;
+    font-size: 1.25rem;
+    line-height: 23.6363636364px;
+    line-height: 1.4772727273rem;
   }
 }
 @media only screen and (max-width: 720px) {
   h1, h2, h3, h4, h5, h6, h1 a, h2 a, h3 a, h4 a, h5 a, h6 a, .signe {
-    font-size: 29.04px;
-    font-size: 1.815rem;
-    line-height: 34.32px;
-    line-height: 2.145rem;
+    font-size: 24.2px;
+    font-size: 1.5125rem;
+    line-height: 28.6px;
+    line-height: 1.7875rem;
   }
 }
 
@@ -10632,7 +10742,7 @@ s::after, del::after {
 .liste_mobile_access {
   width: 100%;
   z-index: 66666;
-  border-top: 1px solid black;
+  border-top: 1.8px solid black;
   bottom: 0;
   position: fixed;
   height: 80.5px;
@@ -10678,12 +10788,13 @@ s::after, del::after {
   font-family: "gt_flexaextended_light", arial;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  color: black;
+  font-size: 22px;
+  font-size: 1.375rem;
+  line-height: 26px;
+  line-height: 1.625rem;
+  text-transform: uppercase;
   text-decoration: none;
-  font-size: 26.4px;
-  font-size: 1.65rem;
-  line-height: 31.2px;
-  line-height: 1.95rem;
+  color: black;
   width: 90%;
   float: left;
   text-align: center;
@@ -10691,30 +10802,30 @@ s::after, del::after {
 }
 @media only screen and (min-width: 1524px) {
   .liste_mobile_access .block_link .block_link_centering .nameit {
-    font-size: 26.4px;
-    font-size: 1.65rem;
-    line-height: 31.2px;
-    line-height: 1.95rem;
+    font-size: 22px;
+    font-size: 1.375rem;
+    line-height: 26px;
+    line-height: 1.625rem;
   }
 }
 @media only screen and (min-width: 721px) and (max-width: 1523px) {
   .liste_mobile_access .block_link .block_link_centering .nameit {
-    font-size: 24px;
-    font-size: 1.5rem;
-    line-height: 28.3636363636px;
-    line-height: 1.7727272727rem;
+    font-size: 20px;
+    font-size: 1.25rem;
+    line-height: 23.6363636364px;
+    line-height: 1.4772727273rem;
   }
 }
 @media only screen and (max-width: 720px) {
   .liste_mobile_access .block_link .block_link_centering .nameit {
-    font-size: 29.04px;
-    font-size: 1.815rem;
-    line-height: 34.32px;
-    line-height: 2.145rem;
+    font-size: 24.2px;
+    font-size: 1.5125rem;
+    line-height: 28.6px;
+    line-height: 1.7875rem;
   }
 }
 .liste_mobile_access .block_link .block_link_centering .arrowdeux {
-  font-family: "gt_alpina_typewriterlight", arial;
+  font-family: "gt_flexaextended_light", arial;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   width: 5%;
@@ -10726,9 +10837,10 @@ s::after, del::after {
 .liste_mobile_access .block_link .block_link_centering #animationfleche, .liste_mobile_access .block_link .block_link_centering #animationflechedeux {
   transition: transform 0.5s;
   text-align: center;
-  font-family: "gt_alpina_typewriterlight", arial;
+  font-family: "gt_flexaextended_light", arial;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  font-size: 100%;
 }
 .liste_mobile_access .block_link .block_link_centering .tourne {
   transform: rotate(180deg);
@@ -10748,7 +10860,7 @@ s::after, del::after {
   width: 100%;
   height: calc(100% - 230.5px );
   top: 150px;
-  border-top: 1px solid black;
+  border-top: 1.8px solid black;
   box-sizing: border-box;
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
@@ -10778,7 +10890,7 @@ s::after, del::after {
   min-height: 100%;
 }
 .liste_mobile .project_mobile_liste #block_list:nth-child(2n+1) {
-  border-right: 1px solid black;
+  border-right: 1.8px solid black;
   box-sizing: border-box;
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
@@ -10789,7 +10901,7 @@ s::after, del::after {
   height: 40vw;
   float: left;
   text-align: center;
-  border-bottom: 1px solid black;
+  border-bottom: 1.8px solid black;
   box-sizing: border-box;
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;

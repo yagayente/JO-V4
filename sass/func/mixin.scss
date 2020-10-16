@@ -1,9 +1,15 @@
 @import "grid.scss";
 
-$border: 1px;
+$border: 1.8px;
 $border_x_deux: $border;
 $border_johl: $border solid black;
 
+
+@mixin border($dir) {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  border-#{$dir}: $border_johl;
+}
 /* padding  */
 $petit_espace_small: $gouttiere_small/2;
 $petit_espace_medium: $gouttiere_medium/2;

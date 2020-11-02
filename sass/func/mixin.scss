@@ -1,15 +1,41 @@
 @import "grid.scss";
 
-$border: 1.8px;
-$border_x_deux: $border;
+$border_unit: px;
+$value_menu: 150;
+$hauteur_li: 50px;
+$hauteur_li_moins_border: 48px;
+
+/* Border */
+$value_border: 1.7;
+
+$border: $value_border + $border_unit;
 $border_johl: $border solid black;
 
+$value_section_liste: $value_menu + $value_border;
+$hauteur_section_liste: $value_section_liste + $border_unit;
 
 @mixin border($dir) {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    border-#{$dir}: $border_johl;
+  }
+
+/* Border for Retina */
+$value_border_retina: 1.5;
+$border_retina: $value_border_retina + $border_unit;
+$border_johl_retina: $border_retina solid black;
+
+$value_section_liste_retina: $value_menu + $value_border_retina;
+$hauteur_section_liste_retina: $value_section_liste_retina + $border_unit;
+
+@mixin border_retina($dir) {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  border-#{$dir}: $border_johl;
+  border-#{$dir}: $border_johl_retina;
 }
+
+
+
 /* padding  */
 $petit_espace_small: $gouttiere_small/2;
 $petit_espace_medium: $gouttiere_medium/2;

@@ -25,6 +25,7 @@ h3{
       width: 50%;
       height: 100%;
       border-right: $border_johl;
+      @include respond-to(retina){@include border_retina(right);}
       @include global_border;
       float: left;
       overflow-y: hidden;
@@ -63,6 +64,7 @@ h3{
   .ligne_info_deux {
     width: 100%;
     border-top: $border_johl;
+    @include respond-to(retina){@include border_retina(top);}
     display: block;
 
     .info_block01 {

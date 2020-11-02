@@ -2,8 +2,6 @@
 @import "../func/mixin.scss";
 
 
-$hauteur_li: 50px;
-$hauteur_li_moins_border: 48px;
 
 
 $col_gauche: 25%;
@@ -14,19 +12,24 @@ section.liste::-webkit-scrollbar {
 
 }
 section.liste {
-  border-top: $border_johl;
-  height: calc(100% - #{$hauteur_menu});
+  height: calc(100% - #{$hauteur_section_liste});
   position: fixed;
   overflow-y: scroll;
-  top:$hauteur_menu;
+  top: $hauteur_section_liste;
+  @include respond-to(firefox){top: $value_menu + $border_unit;}
   @include border(right);
+  @include respond-to(retina){
+    @include border_retina(right);
+    height: calc(100% - #{$hauteur_section_liste_retina});
+    top: $hauteur_section_liste_retina;
+  }
   @include respond-to(small-screens){display: none !important;};
   @include respond-to(medium-screens){width: calc(#{$col_gauche} - #{$gouttiere_medium_double}); padding-left: $gouttiere_medium; padding-right: $gouttiere_medium};
   @include respond-to(wide-screens){width: calc(#{$col_gauche} - #{$gouttiere_large_double}); padding-left: $gouttiere_large; padding-right: $gouttiere_large};
   -ms-overflow-style: none;  /* Hide scrollbar for  IE and Edge */
   scrollbar-width: none;  /* Hide scrollbar for Firefox */
   -webkit-overflow-scrolling: auto !important;
-  overflow: visible;
+
   ul.project_list {
     padding-bottom: 50px;
     li:first-child {
@@ -53,6 +56,7 @@ section.liste {
     }
     li {
       border-bottom: $border_johl;
+      @include respond-to(retina) {border-bottom: $border_johl_retina;}
       @include typo_titre_caps;
       height: $hauteur_li;
       position: relative;

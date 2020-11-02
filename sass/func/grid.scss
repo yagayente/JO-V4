@@ -32,7 +32,14 @@ $break-large: 1524px;
   @else if $media == wide-screens {
     @media only screen and (min-width: $break-large) { @content; }
   }
+  @else if $media == retina {
+    @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) { @content; }
+  }
+  @else if $media == firefox {
+    @-moz-document url-prefix() { @content; }
+  }
 }
+
 @mixin respond-to-middle($media) {
   @if $media == MD-screens {
     @media only screen and (min-width: $break-small + 1) and (max-width: $break-MD - 1) { @content; }

@@ -8,10 +8,17 @@
 }
 
 @supports not (-ms-high-contrast: none) { /* Non-IE styles here */
-.back img, .back_small img{
+.back img{
      object-fit: cover;
      height: 100%;
      width: 100%;
+     object-position: 50% 50%;
+   }
+
+.back_small img{
+     object-fit: cover;
+     height: 140px;
+     width: 200px;
      object-position: 50% 50%;
    }
 .back_small_mobile img{

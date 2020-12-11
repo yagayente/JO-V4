@@ -122,7 +122,7 @@
       </div>
     </div>
     <div class="bloc_droite" style="background-color: <?php the_field( 'couleur_arriere_cadre', 'option' ); ?>">
-      <div class="marges_image">
+      <div class="marges_image lazyload">
         <?php $image_presentation = get_field( 'image_presentation', 'option' ); ?>
         <?php if ( $image_presentation ) : ?>
         <?php $size = 'large'; // (thumbnail, medium, large, full or custom size) ?>

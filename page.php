@@ -122,12 +122,12 @@
       </div>
     </div>
     <div class="bloc_droite" style="background-color: <?php the_field( 'couleur_arriere_cadre', 'option' ); ?>">
-      <div class="marges_image lazyload">
-        <?php $image_presentation = get_field( 'image_presentation', 'option' ); ?>
-        <?php if ( $image_presentation ) : ?>
-        <?php $size = 'large'; // (thumbnail, medium, large, full or custom size) ?>
-        <div class="image_droite" style="background-image: url(<?php echo esc_url( $image_presentation['url'] ); ?>)">
-        </div>
+      <div class="marges_image">
+
+				<picture class="back">
+					<img
+							 <?php responsive_image(get_field( 'image_presentation', 'option' ),'Full size','2500px'); ?> />
+				</picture>
       </div>
       <div class="bloc_bas" style="background-color: <?php the_field( 'couleur_arriere_cercle', 'option' ); ?>">
         <div class="cerle"  style="background-color: <?php the_field( 'couleur_du_cercle', 'option' ); ?>"  data-barba-prevent="all">
@@ -145,7 +145,6 @@
         <?php get_template_part('template-parts/mobileonly');?>
       </div>
     </div>
-    <?php endif; ?>
     </main>
   </div>
 <?php

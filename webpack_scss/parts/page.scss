@@ -95,29 +95,42 @@
       @include respond-to(medium-screens){display: none};
       }
     .marges_image {
-      @include respond-to(wide-screens){  width: 100%; float: left;
+
+      @include respond-to(wide-screens){
+        padding: $gouttiere_large;
+        width: calc(100% - #{$gouttiere_large}*2); float: left;
         height: 300px;
-        height: 32vw;
-        -webkit-height: 32vw;
-        -moz-height: 32vw;
-        -ms-height: 32vw;
-        -o-height: 32vw;
+        height: calc(32vw - #{$gouttiere_large}*2);
+        -webkit-height: calc(32vw - #{$gouttiere_large}*2);
+        -moz-height: calc(32vw - #{$gouttiere_large}*2);
+        -ms-height: calc(32vw - #{$gouttiere_large}*2);
+        -o-height: calc(32vw - #{$gouttiere_large}*2);
         };
-      @include respond-to(medium-screens){  width: 100%; float: left;
+      @include respond-to(medium-screens){
+        padding: $gouttiere_medium;
+        width: calc(100% - #{$gouttiere_medium}*2);
+        float: left;
         height: 300px;
-        height: 32vw;
-        -webkit-height: 32vw;
-        -moz-height: 32vw;
-        -ms-height: 32vw;
-        -o-height: 32vw;};
-      @include respond-to-middle(MD-screens){width: 100%;
+        height: calc(32vw - #{$gouttiere_medium}*2);
+        -webkit-height: calc(32vw - #{$gouttiere_medium}*2);
+        -moz-height: calc(32vw - #{$gouttiere_medium}*2);
+        -ms-height: calc(32vw - #{$gouttiere_medium}*2);
+        -o-height: calc(32vw - #{$gouttiere_medium}*2);};
+      @include respond-to-middle(MD-screens){
+        padding: $gouttiere_medium;
+        width: calc(100% - #{$gouttiere_medium}*2);
         height: 300px;
-        height: 32vw;
-        -webkit-height: 32vw;
-        -moz-height: 32vw;
-        -ms-height: 32vw;
-        -o-height: 32vw;};
-      @include respond-to(small-screens){width: 100%; display: inline-block;};
+        height: calc(32vw - #{$gouttiere_medium}*2);
+        -webkit-height: calc(32vw - #{$gouttiere_medium}*2);
+        -moz-height:calc(32vw - #{$gouttiere_medium}*2);
+        -ms-height: calc(32vw - #{$gouttiere_medium}*2);
+        -o-height: calc(32vw - #{$gouttiere_medium}*2);};
+      @include respond-to(small-screens){
+        padding: $gouttiere_small;
+        width: calc(100% - #{$gouttiere_small}*2);
+        height: 300px;
+        height: 60vw;
+        display: inline-block;};
       .image_droite {
           display: block;
           background-color: rgb(77, 77, 255);

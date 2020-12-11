@@ -12,7 +12,7 @@ get_template_part( 'func/nettoyer_le_back' );
 function portfolio_scripts() {
 	wp_enqueue_style ('theme-style', get_template_directory_uri().'/assets/index.css');
 		wp_enqueue_script('hover', get_template_directory_uri() . '/js/scrollfunc.js', array());
-		wp_enqueue_script('wp-webpack-starter-script', get_template_directory_uri() . '/assets/ASB.js', array(), false, true);
+		wp_enqueue_script('AtelierSimonBouchard', get_template_directory_uri() . '/assets/ASB.js', array(), false, true);
 
 }
 add_action( 'wp_enqueue_scripts', 'portfolio_scripts' );

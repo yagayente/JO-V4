@@ -1,0 +1,53 @@
+// GRID V.2 - sans gutter
+// 8 juillet 2020
+
+/*LARGE */
+$gouttiere_large:18px;
+  $gouttiere_large_double: $gouttiere_large * 2;
+  $gouttiere_large_divide: $gouttiere_large / 2;
+
+/* MEDIUM */
+$gouttiere_medium: 15px;
+  $gouttiere_medium_double: $gouttiere_medium * 2;
+  $gouttiere_medium_divide: $gouttiere_medium / 2;
+
+/* SMALL */
+$gouttiere_small: 23px;
+  $gouttiere_small_double: $gouttiere_small * 2;
+  $gouttiere_small_divide: $gouttiere_small / 2;
+
+/* RESPONSIVE */
+$break-small: 720px;
+$break-middle: 1000px; $break-MD: 950px;
+$break-large: 1524px;
+
+
+@mixin respond-to($media) {
+  @if $media == small-screens {
+    @media only screen and (max-width: $break-small) { @content; }
+  }
+  @else if $media == medium-screens {
+    @media only screen and (min-width: $break-small + 1) and (max-width: $break-large - 1) { @content; }
+  }
+  @else if $media == wide-screens {
+    @media only screen and (min-width: $break-large) { @content; }
+  }
+  @else if $media == retina {
+    @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) { @content; }
+  }
+  @else if $media == firefox {
+    @-moz-document url-prefix() { @content; }
+  }
+}
+
+@mixin respond-to-middle($media) {
+  @if $media == MD-screens {
+    @media only screen and (min-width: $break-small + 1) and (max-width: $break-MD - 1) { @content; }
+  }
+}
+
+
+
+$small: "only screen and (max-width:"$break-small")";
+$medium: "only screen and (min-width:"$break-small + 1") and (max-width: "$break-large - 1")";
+$large: "only screen and (min-width: "$break-large")";

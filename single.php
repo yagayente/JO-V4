@@ -1,6 +1,6 @@
 <?php get_header(); ?>
 
-<section class="liste" id="listing" style="z-index:4;">
+<section class="liste" id="listing" style="z-index:4; background-color: <?php the_field('background_liste', 'options'); ?>">
 	<?php get_template_part('template-parts/liste_article');?>
 </section>
 
@@ -8,12 +8,12 @@
 if ( have_posts() ) :
 	while ( have_posts() ) : the_post();
 	?>
-	<main data-barba="container" data-barba-namespace="single">
+	<main data-barba="container" data-barba-namespace="single" id="it_is_single">
 		<style>
 		section ul.project_list li.current a.link_to_post, section ul.project_list li.current .icon_active .icone_current{color: <?php the_field( 'couleur_en-tete' ); ?>}
 		.liste_mobile {background-color: <?php the_field('background_body', 'options'); ?>}
 		.contenu .embed-container {position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; max-width: 100%; } .embed-container iframe, .embed-container object, .embed-container embed { position: absolute; top: 0; left: 0; width: 100%; height: 100%; }
-	</style>
+		</style>
 
 	<?php get_template_part('template-parts/menu');?>
 		<div	class="top_color" style="background-color:
@@ -37,6 +37,10 @@ if ( have_posts() ) :
 				<?php get_template_part('template-parts/presentation_projet');?>
 			</div><!-- en-tête-->
 			<div class="contenu" id="scroll" style="z-index:1;">
+
+				<span class="titre_mobile"><?php the_field( 'titre' ); ?></span>
+
+
 			<?php $en_tete = get_field( 'en-tete' ); ?>
 				<?php if ( $en_tete ) : ?>
 					<div class="entier" id="imageliste">
@@ -45,6 +49,7 @@ if ( have_posts() ) :
 						</picture>
 					</div>
 				<?php endif; ?>
+
 				<div class="en_tete_article_mobile" id="imagelisteone">
 					<?php get_template_part('template-parts/presentation_projet_mobile');?>
 				</div>

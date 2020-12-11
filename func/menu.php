@@ -31,6 +31,7 @@ function add_custom_data_atts_to_nav( $atts, $item, $args )
 {
   $atts['onmouseover'] = "changeColorIn_$item->title()";
   $atts['onmouseout'] = "changeColorOut_$item->title()";
+  $atts['id'] = "$item->title";
   return $atts;
 }
 

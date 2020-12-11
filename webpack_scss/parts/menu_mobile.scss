@@ -1,0 +1,153 @@
+@import "../func/mixin.scss";
+@import "menu.scss";
+@import "../func/typo.scss";
+
+$hauteur_bouton_project_mobile: $gouttiere_small*3.5;
+$espacelistearticlemobile : $hauteur_bouton_project_mobile + $hauteur_menu_mobile;
+
+
+.liste_mobile_access :hover {
+  cursor: pointer;
+}
+.liste_mobile_access {
+  width: 100%;
+  z-index: 66666;
+  bottom: 0;
+  position: fixed;
+  box-shadow: 1px 1px 7px #555;
+  height: $hauteur_bouton_project_mobile;
+  @include respond-to(small-screens){display: block};
+  @include respond-to(medium-screens){display: none};
+  @include respond-to(wide-screens){display: none};
+  .block_link {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    .block_link_centering {
+      @include center-vertically;
+      width: calc(100% - #{$gouttiere_small*2} );
+      padding-left: $gouttiere_small;
+      padding-right: $gouttiere_small;
+      .arrow {
+        @include glyph;
+        width: 5%;
+        float: left;
+      }
+      .nameit {
+        @include typo_titre_roman;
+        width: 90%;
+        float: left;
+        text-align: center;
+      }
+      .bold_link {
+        @include fontstack_2important;
+      }
+      .arrowdeux {
+        @include fontstack_1;
+        width: 5%;
+        float: left;
+        text-align: right;
+        transform-origin: center;
+        transition: transform 1s
+      }
+      #animationfleche, #animationflechedeux {
+        transition: transform 0.5s;
+        text-align: center;
+        @include fontstack_2;
+        font-size: 100%;
+      }
+      .tourne  {
+        transform: rotate(180deg);
+      }
+      .tournedeux  {
+        transform: rotate(-180deg);
+      }
+
+    }
+  }
+}
+.liste_mobile.close {
+  top: 100%;
+  height: 0;
+}
+.liste_mobile {
+
+  z-index: 55555;
+  position: fixed;
+  width: 100%;
+  height: calc(100% - #{$espacelistearticlemobile} );
+  top: $hauteur_menu_mobile;
+  @include global_border;
+  color: $black;
+  transition: all 1s;
+  overflow-y: scroll;
+  -webkit-overflow-scrolling:touch; // mobile safari
+  @include respond-to(medium-screens){display: none;};
+  @include respond-to(wide-screens){display: none;};
+  a {
+    text-decoration: none;
+  }
+.project_mobile_liste {
+
+    padding: $gouttiere_small $gouttiere_small $gouttiere_small $gouttiere_small;
+    display: block;
+    min-height: 100%;
+    #block_list:nth-child(2n+1) {
+      border-right: $border_johl;
+      @include global_border;
+    }
+    .currentmobile a, .current a {
+      .bottom_block_mb {
+        p {font-family: 'gt_flexaextended_medium' !important;}
+      }
+    }
+
+    #block_list {
+      &:first-child {
+        height: 40vw;
+        padding-top: 0vw;
+      }
+      &:last-child {
+        border-bottom: unset;
+      }
+      &:nth-child(2) {
+        height: 40vw;
+        padding-top: 0vw;
+      }
+      width: 50%;
+      height: 45vw;
+      padding-top: 5vw;
+      float: left;
+      text-align: center;
+      border-bottom: $border_johl;
+      @include global_border;
+      &:nth-child(2n+2) {
+        .top_block_mb, .bottom_block_mb {
+          padding-left: $gouttiere_small;
+          p {text-align: center; width: 90%; padding-left: $gouttiere_small;}
+        }
+      }
+      .top_block_mb {
+        height: calc(25vw + #{$gouttiere_small});
+        width: calc(100% - #{$gouttiere_small});
+
+      }
+      .bottom_block_mb {
+        height: calc(15vw - #{$gouttiere_small});
+        width: calc(100% - #{$gouttiere_small});
+        position: relative;
+        p {
+          @include typo_titre_liste_mobile;
+          @include center-vertically-horizontally;
+          width: 90%;
+          overflow: hidden;
+          white-space: nowrap; /* Needed for the ellipsis to work. */
+          text-overflow: ellipsis;
+          display: -webkit-box;
+          -webkit-line-clamp: 1; /* number of lines to show */
+          -webkit-box-orient: vertical;
+        }
+      }
+    }
+  }
+}

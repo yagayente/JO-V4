@@ -1,4 +1,3 @@
-<div class="first_mb"><?php the_field( 'titre' ); ?></div>
 <div class="third_mb"><?php the_field( 'description' ); ?></div>
 <div class="second_mb">
   <?php if( have_rows('collaborateurs') ): ?>

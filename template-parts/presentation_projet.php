@@ -1,9 +1,10 @@
-<div class="first"><?php the_field( 'titre' ); ?></div>
-<div class="third"><?php the_field( 'description' ); ?></div>
+<div class="third">
+  <h2><?php the_field( 'titre' ); ?></h2>
+  <?php the_field( 'description' ); ?></div>
 <div class="second">
 
   <?php if( have_rows('collaborateurs') ): ?>
-    <p class="collaborators">collaborators</p>
+    <p class="collaborators">Collaborators</p>
     <ul>
       <?php while( have_rows('collaborateurs') ): the_row();
       $content = get_sub_field('prenom_et_nom');
@@ -11,9 +12,9 @@
       ?>
       <?php
       if ( $link ) {
-        echo '<li><a target="_blank" href="' . $link . '">' . $content . '</a></li>';
+        echo '<li class="collab"><span class="fleche_collab">↪</span><a target="_blank" href="' . $link . '">' . $content . '</a></li>';
       } else if ( $content ){
-        echo '<li>' . $content . '<li>';
+        echo '<li class="collab"><span class="fleche_collab">↪</span>' . $content . '<li>';
       } ?>
     <?php endwhile; ?>
   </ul>

@@ -1,0 +1,29 @@
+@import 'reset';
+
+@import "func/mixin.scss";
+@import "func/hover.scss";
+@import 'func/object_fit.scss';
+@import "func/grid.scss";
+@import "func/typo.scss";
+
+@import "parts/home.scss";
+@import "parts/menu.scss";
+@import "parts/single.scss";
+@import "parts/page.scss";
+@import "parts/menu_mobile.scss";
+
+
+body.noscroll {
+  overflow-y: hidden;
+  @include respond-to(medium-screens){overflow-y: scroll;};
+  @include respond-to(wide-screens){overflow-y: scroll;};
+}
+
+.lazyload,
+.lazyloading {
+	opacity: 0;
+}
+.lazyloaded {
+	opacity: 1;
+	transition: opacity 500ms;
+}

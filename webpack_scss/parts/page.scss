@@ -1,0 +1,171 @@
+@import "../func/mixin.scss";
+@import "../func/typo.scss";
+
+#pageinfos {
+  height: calc(100vh - #{$value_section_liste}) ;
+  position: fixed;
+    @include respond-to(small-screens) { position: unset; height: unset;}
+  .bloc_gauche {
+  height: 100%;
+    width: 50%;
+    float: left;
+    overflow: scroll;
+    @include respond-to(small-screens) {  width: 100%;}
+    .article {
+      position: relative;
+      @include responsive_function(padding, $gouttiere_small, $gouttiere_medium, $gouttiere_large);
+      p.bolding {
+        @include typo_bold_titre;
+        @include responsive_function(padding-bottom, $gouttiere_small, $gouttiere_medium*3, $gouttiere_large*3);
+
+      }
+      .colonnes_listes {
+        @include respond-to(small-screens) {display: none;}
+        ul li a {
+          text-decoration: none; color: $black;
+        }
+        .info_block03 {
+          @include responsive_function(padding-bottom, $gouttiere_small, $gouttiere_medium, $gouttiere_large);
+
+        }
+        .info_block02 {
+          min-height: calc(100vh - #{$value_section_liste}) ;
+          @include respond-to-middle(MD-screens){min-height: unset; padding-bottom: $gouttiere_medium;};
+        }
+        .info_block02, .info_block03, .info_block04 {
+          width: 50%;
+          float: left;
+          @include respond-to-middle(MD-screens){width: 100%;};
+        }
+        .info_block04 {
+          @include respond-to-middle(MD-screens){padding-bottom: $gouttiere_medium*3;};
+        }
+          h3 {
+              @include typo_bold_titre;
+              white-space: nowrap;
+              .signe {@include typo_bold_titre;}
+          }
+
+          .reseau_lieu {
+            width: 100%;
+            display: inline-block;
+            h3 {@include typo_bold_titre;}
+            .info_detail_01 {
+              width: 50%;
+              float: left;
+              @include respond-to-middle(MD-screens){width: 100%;}
+              @include responsive_function(padding-bottom, $gouttiere_small, $gouttiere_medium, $gouttiere_large);
+            }
+            .info_detail_02 {
+              width: 50%;
+              @include respond-to-middle(MD-screens){width: 100%;}
+              @include responsive_function(padding-bottom, $gouttiere_small, $gouttiere_medium, $gouttiere_large);
+              float: left;
+            }
+          }
+      }
+      .simon {
+        width: 100%;
+        display: inline-block;
+        @include respond-to(small-screens) {display: none;}
+        a { text-decoration: none; color: black;}
+      }
+    }
+
+  }
+  .bloc_droite {
+    height: 100%;
+    float: left;
+    width: 50%;
+    left: 50%;
+    @include respond-to(small-screens){width: 100%;};
+    .mobile_only {
+        @include respond-to(small-screens){
+        display: block;
+        padding: $gouttiere_small;
+        h3, .signe {@include typo_bold_titre; }
+        ul {
+          li a { text-decoration: none; color: black;}
+          padding-bottom: $gouttiere_small;}
+        .simon a {text-decoration: none; color: black;}
+      };
+
+
+      @include respond-to(wide-screens){display: none};
+      @include respond-to(medium-screens){display: none};
+      }
+    .marges_image {
+      @include respond-to(wide-screens){  width: 100%; float: left;
+        height: 300px;
+        height: 32vw;
+        -webkit-height: 32vw;
+        -moz-height: 32vw;
+        -ms-height: 32vw;
+        -o-height: 32vw;
+        };
+      @include respond-to(medium-screens){  width: 100%; float: left;
+        height: 300px;
+        height: 32vw;
+        -webkit-height: 32vw;
+        -moz-height: 32vw;
+        -ms-height: 32vw;
+        -o-height: 32vw;};
+      @include respond-to-middle(MD-screens){width: 100%;
+        height: 300px;
+        height: 32vw;
+        -webkit-height: 32vw;
+        -moz-height: 32vw;
+        -ms-height: 32vw;
+        -o-height: 32vw;};
+      @include respond-to(small-screens){width: 100%; display: inline-block;};
+      .image_droite {
+          display: block;
+          background-color: rgb(77, 77, 255);
+          float: left;
+          overflow: hidden;
+          height: 100%;
+          background-position: 50% 50%;
+          background-repeat: no-repeat;
+          text-indent: -9999px;
+          -moz-background-size: cover;
+          -webkit-background-size: cover;
+          background-size: cover;
+          background-color: white;
+          @include respond-to(wide-screens){width: calc(100% - #{$gouttiere_large*2}); height: calc(100% - #{$gouttiere_large*2});  margin: $gouttiere_large;};
+          @include respond-to(medium-screens){width: calc(100% - #{$gouttiere_medium*2});height: calc(100% - #{$gouttiere_medium*2}); margin: $gouttiere_medium;};
+          @include respond-to(small-screens){display: inline-block; position: relative; height: 60vw; width: calc(100% - #{$gouttiere_small*2}); margin: $gouttiere_small;};
+      }
+    }
+    .bloc_bas {
+      width: 100%;
+      float: left;
+      @include respond-to(wide-screens){  width: 100%; float: left; height: calc(100% - 32vw);};
+      @include respond-to(medium-screens){  width: 100%; float: left; height: calc(100% - 32vw)};
+      @include respond-to-middle(MD-screens){width: 100%;  height: calc(100% - 32vw)};
+      @include respond-to(small-screens){width: 100%; height: 300px; display: inline-block;};
+      .cerle {
+        background-color: white;
+        @include height_width_cent_pour_cent_moins ($gouttiere_small, $gouttiere_medium, $gouttiere_large );
+        @include responsive_function (margin, $gouttiere_small, $gouttiere_medium, $gouttiere_large );
+        -webkit-border-radius: 50% / 50% ;
+        -moz-border-radius:    50% / 50% ;
+        border-radius:         50% / 50% ;
+        overflow: hidden;
+        position: relative;
+        .text {
+          text-align: center;
+          width: 100%;
+          @include center-vertically-horizontally;
+          .email_me {
+            @include typo_bold_titre;
+            display: block;
+            a {
+              text-decoration: none;
+              color: $black;
+            }
+          }
+        }
+      }
+    }
+  }
+}

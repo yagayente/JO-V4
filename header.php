@@ -20,6 +20,8 @@ a:hover {cursor: url('<?php the_field('curseur_hover', 'options'); ?>'), pointer
 .active_work {background-color: <?php the_field( 'hover_work', 'option' ); ?>;}
 .active_infos, .pageinformationcolor {<?php if ( have_rows( 'degrade_ou_aplat', 'option' ) ): ?><?php while ( have_rows( 'degrade_ou_aplat', 'option' ) ) : the_row(); ?><?php if ( get_row_layout() == 'aplatbloc' ) : ?> background-color:<?php the_sub_field( 'aplat' ); ?>;
   		<?php elseif ( get_row_layout() == 'degrade_de_couleurs' ) : ?>background: linear-gradient(<?php the_sub_field( 'degrade_un' ); ?>, <?php the_sub_field( 'couleur_du_milieu' ); ?>, <?php the_sub_field( 'degrade_deux' ); ?>);<?php endif; ?><?php endwhile; ?><?php else: ?><?php // no layouts found ?><?php endif; ?>}
+<?php  $args = array('posts_per_page' => -1, 'orderby' => 'date','order' => 'DESC',); $lastposts = get_posts($args); foreach($lastposts as $post) : setup_postdata($post); ?>.post_color<?php the_ID(); ?> {color: <?php  $value = get_field( "couleur_en-tete" ); if( $value ) { echo $value;} else {echo 'empty';}?>!important}
+<?php endforeach; ?><?php  wp_reset_postdata();?>
 </style>
 </head>
 <body id="johl" onmousemove="fn(event)">

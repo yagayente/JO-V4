@@ -1,0 +1,59 @@
+@import "grid.scss";
+
+.back {
+  z-index: 3!important;
+  bottom: 0px;
+  height: 85%;
+  width: 100%;
+}
+
+@supports not (-ms-high-contrast: none) { /* Non-IE styles here */
+.back img{
+     object-fit: cover;
+     height: 100%;
+     width: 100%;
+     object-position: 50% 50%;
+   }
+
+.back_small img{
+     object-fit: cover;
+     height: 140px;
+     width: 200px;
+     object-position: 50% 50%;
+   }
+.back_small_mobile img{
+        object-fit: cover;
+        height: 100%;
+        width: 100%;
+        object-position: 50% 50%;
+      }
+}
+
+@media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+  /* IE styles here */
+  .back img, .back_small img {
+    height: none;
+    width: none;
+    object-position: none;
+    object-fit: none;
+    min-height: 100%;
+    min-width: 102%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);
+  }
+  .back_small_mobile img {
+    height: none;
+    width: none;
+    object-position: none;
+    object-fit: none;
+    min-height: 100%;
+    min-width: 102%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);
+  }
+
+}

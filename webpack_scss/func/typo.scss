@@ -110,7 +110,7 @@ $font_1 : times;
 @mixin typo_titre_liste_mobile_current{color: red; @include fontstack_2; @include parameter($font_size_norm/1.3, $line_height_norm/1.3, 0);}
 
 // Typo nom des projets sur mobile
-@mixin h1 {@include fontstack_2; @include parameter($font_size_norm*1.2, $line_height_norm*1.2, 0); text-transform: unset !important; text-decoration: none !important; color: $black;} // h2h3h4h5...
+@mixin h1 {@include fontstack_2; @include parameter($font_size_norm*1.5, $line_height_norm*1.5, 0); text-transform: unset !important; text-decoration: none !important; color: $black;} // h2h3h4h5...
 
 // Feuille de style petit texte
 @mixin petit_texte {font-size: 70%; line-height: 70%;}

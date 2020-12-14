@@ -125,8 +125,8 @@
       <div class="marges_image">
 
 				<picture class="back">
-					<img
-							 <?php responsive_image(get_field( 'image_presentation', 'option' ),'Full size','2500px'); ?> />
+					<img id="one" <?php responsive_image(get_field( 'image_presentation', 'option' ),'Full size','2500px'); ?> />
+          <img id="two" <?php responsive_image(get_field( 'image_presentation_copie', 'option' ),'Full size','2500px'); ?> />
 				</picture>
       </div>
       <div class="bloc_bas" style="background-color: <?php the_field( 'couleur_arriere_cercle', 'option' ); ?>">

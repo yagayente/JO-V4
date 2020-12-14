@@ -15,7 +15,7 @@ $glyph_current_page_width: 20px;
   width: 100%;
   height: $hauteur_menu;
   position: fixed;
-  z-index: 1;
+  z-index: 2;
   top: 0px;
   @include respond-to(wide-screens){height: $hauteur_menu;};
   @include respond-to(medium-screens){height: $hauteur_menu;};
@@ -26,11 +26,12 @@ $glyph_current_page_width: 20px;
   width: 100%;
   height: $hauteur_menu;
   position: fixed;
-  z-index: 2;
+  z-index: 3;
   top: 0px;
   @include respond-to(wide-screens){height: $hauteur_menu;};
   @include respond-to(medium-screens){height: $hauteur_menu;};
   @include respond-to(small-screens){height: $hauteur_menu_mobile;};
+    box-shadow: 1px 1px 7px rgba(0, 0, 0, 0.1);
   .left {
     @include respond-to(wide-screens){width: 50%;};
     @include respond-to(medium-screens){width: 50%;};
@@ -39,7 +40,7 @@ $glyph_current_page_width: 20px;
     h1 {
       @include respond-to(wide-screens){padding: $gouttiere_large 0 0 $gouttiere_large;   @include h1;};
       @include respond-to(medium-screens){padding: $gouttiere_medium 0 0 $gouttiere_medium;   @include h1;};
-      @include respond-to(small-screens){ a {@include typo_bold_titre;} padding: $gouttiere_small 0 0 0; font-size: unset !important;};
+      @include respond-to(small-screens){ padding: $gouttiere_small 0 0 0; font-size: 140% !important;};
     }
   }
   .right {

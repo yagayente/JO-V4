@@ -15,7 +15,7 @@ $espacelistearticlemobile : $hauteur_bouton_project_mobile + $hauteur_menu_mobil
   z-index: 66666;
   bottom: 0;
   position: fixed;
-  box-shadow: 1px 1px 7px #555;
+  box-shadow: 1px 1px 7px rgba(0, 0, 0, 0.1);
   height: $hauteur_bouton_project_mobile;
   @include respond-to(small-screens){display: block};
   @include respond-to(medium-screens){display: none};

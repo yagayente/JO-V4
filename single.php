@@ -69,7 +69,7 @@ while ( have_posts() ) : the_post();
       <div class="entier image_et_espacement" id="imageliste">
         <picture class="back">
           <img
-               <?php responsive_image(get_sub_field( 'full' ),'Full size','2500px'); ?> />
+               <?php responsive_image(get_sub_field( 'full' ),'large','2500px'); ?> />
         </picture>
       </div>
       <?php endif; ?>
@@ -79,7 +79,7 @@ while ( have_posts() ) : the_post();
       <div class="moitie image_et_espacement" id="imageliste">
         <picture class="back">
           <img
-               <?php responsive_image(get_sub_field( 'half' ),'Full size','2500px'); ?> />
+               <?php responsive_image(get_sub_field( 'half' ),'large','2500px'); ?> />
         </picture>
       </div>
       <?php endif; ?>
@@ -89,7 +89,7 @@ while ( have_posts() ) : the_post();
       <div class="moitiedeux image_et_espacement" id="imageliste">
         <picture class="back">
           <img
-               <?php responsive_image(get_sub_field( 'other_half' ),'Full size','2500px'); ?> />
+               <?php responsive_image(get_sub_field( 'other_half' ),'large','2500px'); ?> />
         </picture>
       </div>
       <?php endif; ?>

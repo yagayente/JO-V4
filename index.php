@@ -16,7 +16,7 @@ while ( have_posts() ) : the_post();
         <a class="linked" href="<?php the_permalink(); ?>">
           <picture class="back" onmouseover="myFunction(<?php the_ID(); ?>)" onmouseout="normalImg(<?php the_ID(); ?>)" >
             <img
-                 <?php responsive_image(get_field( 'image_article' ),'Full size','2500px'); ?> />
+                 <?php responsive_image(get_field( 'image_article' ),'BIG','2500px'); ?> />
           </picture>
         </a>
         <div id="<?php the_ID(); ?>_liste" class="post_hover post_hover_home" style="opacity:0;">

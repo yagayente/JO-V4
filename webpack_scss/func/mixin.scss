@@ -22,7 +22,7 @@ $value_section_liste: $value_menu + $border_unit;
 /* Border for Retina */
 $value_border_retina: 1.5;
 $border_retina: $value_border_retina + $border_unit;
-$border_johl_retina: $border_retina solid black;
+$border_johl_retina: $border_retina solid #ababab;
 
 $value_section_liste_retina: $value_menu + $value_border_retina;
 $hauteur_section_liste_retina: $value_section_liste_retina + $border_unit;

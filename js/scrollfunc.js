@@ -10,14 +10,14 @@ function setuphover() {
 
                 var box = document.getElementById(this.id + '_boxx');
                 box.style.display = 'block';
-                box.style.top = (mousePos[1]-200) + 'px';
+                box.style.top = (mousePos[1]-100) + 'px';
                 box.style.left = (mousePos[0]+50) + 'px';
             };
             el[i].onmousemove = function(e) {
                 var mousePos = getMouseLocation(e);
 
                 var box = document.getElementById(this.id + '_boxx');
-                box.style.top = (mousePos[1]-200) + 'px';
+                box.style.top = (mousePos[1]-100) + 'px';
                 box.style.left = (mousePos[0]+50) + 'px';
             };
             el[i].onmouseout = function() {

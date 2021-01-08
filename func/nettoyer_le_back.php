@@ -112,7 +112,6 @@ function wpdocs_remove_menus(){ //enlever des menus
 	remove_menu_page( 'users.php' );
 	remove_menu_page( 'edit.php?post_type=page' );
 	remove_menu_page( 'upload.php' );
-	remove_menu_page( 'tools.php' );
 	remove_menu_page( 'profile.php' );
 }
 add_action( 'admin_menu', 'wpdocs_remove_menus' );

@@ -98,8 +98,29 @@ barba.hooks.enter(() => {
 });
 
 barba.init({
+
+
     sync: true,
     transitions: [
+      {
+          name: 'go_home',
+          to: {
+              namespace: [
+                'homepage',
+              ]
+           },
+            async leave(data) {
+              const done = this.async();
+              PageTransition();
+              ListeTransition(); // disparition de la liste
+              remove_no_scroll();// disparition de la class no scroll body
+              await delay(700);
+              done();
+          },
+          async enter(date) {
+              PageTransitionEnter();
+          },
+      },
         {
         name: 'default',
         async beforeOnce(data) {
@@ -166,6 +187,9 @@ barba.init({
 
       },
     },
+
+
+
     {
         name: 'effet de fade pour la liste et la page lors de la fermeture',
         from: {

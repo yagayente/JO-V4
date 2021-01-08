@@ -103,6 +103,40 @@ barba.init({
     sync: true,
     transitions: [
       {
+          name: 'fade liste après avoir été sur la page info',
+          from: {
+              namespace: [
+                'informations',
+              ]
+           },
+          to: {
+              namespace: [
+                'single',
+              ]
+           },
+           async beforeOnce(data) {
+             ListeTransitionEnter();
+           },
+           async leave(data) {
+               const done = this.async();
+               PageTransition();
+               await delay(700);
+               done();
+           },
+           async enter(data) {
+             PageTransitionEnter();
+             AddCurrentClass();
+             AddCurrentClassMobile();
+             contentAnimation();
+             ListeTransitionEnter();
+         },
+         async once(date) {
+             contentAnimation();
+         }
+
+      },
+
+      {
           name: 'go_home',
           to: {
               namespace: [
@@ -121,6 +155,8 @@ barba.init({
               PageTransitionEnter();
           },
       },
+
+
         {
         name: 'default',
         async beforeOnce(data) {

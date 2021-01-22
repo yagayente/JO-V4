@@ -25,6 +25,7 @@ function setuphover() {
                 box.style.display = 'none';
             };
         }
+
     }
 
     function getMouseLocation(e) {
@@ -64,6 +65,7 @@ function setuphover() {
             tooltip[i].style.top = e.clientY + 'px';
         }
     }
+
 
     function myFunction(i) {
             var box = document.getElementById(i + '_liste');

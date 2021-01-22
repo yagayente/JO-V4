@@ -14,6 +14,7 @@ Author: Simon Bouchard
 // 2 -
 
 add_image_size( 'BIG', 2500 );
+add_image_size( 'small', 400 );
 
 function responsive_image($image_id,$image_size,$max_width){
 	if($image_id != '') {

@@ -30,8 +30,8 @@ setup_postdata($post); ?>
     <a id="<?php the_ID(); ?>_colorMobile" class="menulienmobile link_to_post_mobile" href="<?php the_permalink() ?>">
       <div class="top_block_mb">
         <picture class="back_small_mobile">
-          <?php $image_article = get_field( 'image_article' ); ?>
-          <?php $size = 'thumbnail'; ?>
+          <?php $image_article = get_field( 'en-tete' ); ?>
+          <?php $size = 'small'; ?>
           <?php if ( $image_article ) : ?>
           <?php echo wp_get_attachment_image( $image_article, $size ); ?>
           <?php endif; ?>

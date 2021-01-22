@@ -105,18 +105,18 @@ $espacelistearticlemobile : $hauteur_bouton_project_mobile + $hauteur_menu_mobil
 
     #block_list {
       &:first-child {
-        height: 40vw;
+        height: 37vw;
         padding-top: 0vw;
       }
       &:last-child {
         border-bottom: unset;
       }
       &:nth-child(2) {
-        height: 40vw;
+        height: 37vw;
         padding-top: 0vw;
       }
       width: 50%;
-      height: 45vw;
+      height: 42vw;
       padding-top: 5vw;
       float: left;
       text-align: center;
@@ -129,12 +129,12 @@ $espacelistearticlemobile : $hauteur_bouton_project_mobile + $hauteur_menu_mobil
         }
       }
       .top_block_mb {
-        height: calc(25vw + #{$gouttiere_small});
+        height: calc(23.8vw + #{$gouttiere_small});
         width: calc(100% - #{$gouttiere_small});
 
       }
       .bottom_block_mb {
-        height: calc(15vw - #{$gouttiere_small});
+        height: calc(12vw - #{$gouttiere_small});
         width: calc(100% - #{$gouttiere_small});
         position: relative;
         p {

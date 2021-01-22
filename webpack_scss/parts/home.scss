@@ -71,7 +71,7 @@ $hauteur_deuxieme_ligne : 29.2vw;
       li.article:nth-child(8n+5) {
       @include respond-to(medium-screens){width: 33%;padding: 0 $gouttiere_medium/2 0 $gouttiere_medium;}
       @include respond-to(wide-screens){width: 33%;padding: 0 $gouttiere_large/2 0 $gouttiere_large;}
-      @include respond-to(small-screens){width: 100%; height: $hauteur_deuxieme_ligne; padding: 0 $gouttiere_small 0 $gouttiere_small;}}
+      @include respond-to(small-screens){width: 100%; height: 110vw; padding: 0 $gouttiere_small 0 $gouttiere_small;}}
       li.article:nth-child(8n+6) {
       @include respond-to(medium-screens){ width: 67%;padding: 0 $gouttiere_medium 0 $gouttiere_medium/2;}
       @include respond-to(wide-screens){ width: 67%;padding: 0 $gouttiere_large 0 $gouttiere_large/2;}

@@ -101,7 +101,7 @@
         padding: $gouttiere_large;
         width: calc(100% - #{$gouttiere_large*2}); float: left;
         height: 300px;
-        height: calc($hauteur_image - #{$gouttiere_large*2});
+        height: calc(#{$hauteur_image} - #{$gouttiere_large*2});
         -webkit-height: calc(#{$hauteur_image} - #{$gouttiere_large*2});
         -moz-height: calc(#{$hauteur_image}  - #{$gouttiere_large*2});
         -ms-height: calc(#{$hauteur_image}  - #{$gouttiere_large*2});
